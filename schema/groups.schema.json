@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Map of Evolution — groups",
+  "type": "object",
+  "required": ["groups"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "label", "emoji", "description"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "emoji": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    }
+  }
+}

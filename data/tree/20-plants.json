@@ -1,0 +1,3775 @@
+{
+  "$schema": "../../schema/tree.schema.json",
+  "description": "Green plants: green algae, mosses, ferns, conifers and flowering plants, with a focus on fruits, vegetables and crops and the wild ancestors (and hybrid crosses) they came from.",
+  "nodes": [
+    {
+      "id": "chlorophytes",
+      "name": "Chlorophyte green algae",
+      "scientific": "Chlorophyta",
+      "parent": "viridiplantae",
+      "rank": "phylum",
+      "group": "plants",
+      "appeared": 1000,
+      "emoji": "🟢",
+      "summary": "The 'classic' green algae of ponds, puddles and oceans, from single swimming cells to seaweeds. They are cousins of land plants, not their ancestors.",
+      "facts": [
+        "Sea lettuce, a chlorophyte seaweed, is eaten in salads and soups around the world.",
+        "Many lichens are partnerships between a fungus and a chlorophyte alga, and a green alga even grows in sloth fur."
+      ],
+      "wiki": "Chlorophyta",
+      "confidence": "low"
+    },
+    {
+      "id": "chlamydomonas",
+      "name": "Chlamydomonas",
+      "parent": "chlorophytes",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 300,
+      "emoji": "🟢",
+      "summary": "A single green cell that swims with two whip-like flagella and steers toward light using a red eyespot. Biologists use it as a 'lab rat' for studying photosynthesis and flagella.",
+      "facts": [
+        "A light-sensing protein from Chlamydomonas, channelrhodopsin, launched optogenetics: switching brain cells on and off with flashes of light.",
+        "It snows red in some mountains in summer because of related snow algae."
+      ],
+      "wiki": "Chlamydomonas",
+      "confidence": "low"
+    },
+    {
+      "id": "volvox",
+      "name": "Volvox",
+      "parent": "chlorophytes",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 200,
+      "emoji": "🔮",
+      "summary": "Hollow, spinning green balls made of up to 50,000 cells working together. Volvox is a living example of how single cells can team up into a multicellular body.",
+      "facts": [
+        "Baby colonies grow inside the parent ball, then turn themselves inside out before hatching.",
+        "Antonie van Leeuwenhoek described Volvox in 1700, peering through his homemade microscope."
+      ],
+      "wiki": "Volvox",
+      "confidence": "low"
+    },
+    {
+      "id": "streptophytes",
+      "name": "Streptophytes",
+      "scientific": "Streptophyta",
+      "parent": "viridiplantae",
+      "rank": "clade",
+      "group": "plants",
+      "appeared": 1000,
+      "emoji": "🌱",
+      "summary": "The branch of green life that includes some freshwater algae and every land plant. Their algae ancestors already had tricks that later helped plants survive on dry land.",
+      "wiki": "Streptophyta",
+      "confidence": "low"
+    },
+    {
+      "id": "stoneworts",
+      "name": "Stoneworts",
+      "scientific": "Charophyceae",
+      "parent": "streptophytes",
+      "rank": "class",
+      "group": "plants",
+      "appeared": 500,
+      "emoji": "🪨",
+      "summary": "Freshwater algae that look surprisingly like little plants, with stems and whorls of branches. Many coat themselves in crunchy lime, which gives them their name.",
+      "facts": [
+        "Chara is nicknamed 'muskgrass' because it smells musky, a bit like garlic or skunk.",
+        "Their limey crusts build up into lake-bottom sediments and even fossils over 400 million years old."
+      ],
+      "wiki": "Charophyceae",
+      "confidence": "low"
+    },
+    {
+      "id": "zygnematophytes",
+      "name": "Conjugating green algae",
+      "scientific": "Zygnematophyceae",
+      "parent": "streptophytes",
+      "rank": "class",
+      "group": "plants",
+      "appeared": 600,
+      "emoji": "🧬",
+      "summary": "Simple green threads and single cells such as Spirogyra, with spiral ribbon-shaped chloroplasts. DNA studies show they are the closest living relatives of all land plants.",
+      "facts": [
+        "Surprisingly, the closest algal cousins of trees and flowers are these slimy pond threads, not the more plant-like stoneworts.",
+        "They mate by building a tube between two filaments and sliding one cell's contents across: 'conjugation'."
+      ],
+      "wiki": "Zygnematophyceae",
+      "confidence": "low"
+    },
+    {
+      "id": "land-plants",
+      "name": "Land plants",
+      "scientific": "Embryophyta",
+      "parent": "streptophytes",
+      "rank": "clade",
+      "group": "plants",
+      "appeared": 470,
+      "emoji": "🌱",
+      "summary": "Plants that left the water and turned bare rock into green land. They protect their baby plant (the embryo) inside the parent, which is where the name Embryophyta comes from.",
+      "facts": [
+        "The oldest fossil spores of land plants are about 470 million years old, but DNA clocks hint they may be older still.",
+        "Early land plants teamed up with fungi to get water and nutrients from rock, a partnership most plants still rely on.",
+        "By weathering rocks and pulling carbon dioxide from the air, early land plants may have helped trigger an ice age."
+      ],
+      "tags": [
+        "landmark"
+      ],
+      "wiki": "Embryophyte",
+      "confidence": "medium"
+    },
+    {
+      "id": "liverworts",
+      "name": "Liverworts",
+      "scientific": "Marchantiophyta",
+      "parent": "land-plants",
+      "rank": "phylum",
+      "group": "plants",
+      "appeared": 460,
+      "emoji": "🍃",
+      "summary": "Small, flat or leafy plants that hug damp ground. With no roots or water pipes, they are among the simplest land plants alive.",
+      "facts": [
+        "Their name comes from the old belief that liver-shaped plants could cure liver illnesses.",
+        "Some grow tiny 'splash cups': raindrops knock out little clones that grow into new plants."
+      ],
+      "wiki": "Marchantiophyta",
+      "confidence": "low"
+    },
+    {
+      "id": "mosses",
+      "name": "Mosses",
+      "scientific": "Bryophyta",
+      "parent": "land-plants",
+      "rank": "phylum",
+      "group": "plants",
+      "appeared": 450,
+      "emoji": "🌿",
+      "summary": "Soft green cushions made of tiny leafy stems. Mosses have no true roots and can dry out completely, then spring back to life when it rains.",
+      "facts": [
+        "Moss frozen under Antarctic ice for over 1,500 years started growing again when scientists thawed it.",
+        "There are roughly 12,000 species of moss."
+      ],
+      "wiki": "Moss",
+      "confidence": "low"
+    },
+    {
+      "id": "peat-moss",
+      "name": "Peat moss",
+      "scientific": "Sphagnum",
+      "parent": "mosses",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 200,
+      "emoji": "🟫",
+      "summary": "Sphagnum moss builds bogs: it soaks up water like a sponge and makes its surroundings acidic, so dead plants pile up as peat instead of rotting.",
+      "facts": [
+        "Sphagnum can hold up to about 20 times its own dry weight in water and was used as wound dressing in World War I.",
+        "Peatlands cover only about 3% of the land but store more carbon than all other kinds of vegetation in the world combined.",
+        "The acidic bogs it creates have preserved 'bog bodies', people who died thousands of years ago, with skin and hair intact."
+      ],
+      "wiki": "Sphagnum",
+      "confidence": "low"
+    },
+    {
+      "id": "hornworts",
+      "name": "Hornworts",
+      "scientific": "Anthocerotophyta",
+      "parent": "land-plants",
+      "rank": "phylum",
+      "group": "plants",
+      "appeared": 450,
+      "emoji": "🦄",
+      "summary": "Flat green plants that send up little horn-shaped spore stalks. They are small and easy to overlook, yet hold clues to how the first land plants lived.",
+      "facts": [
+        "Hornworts keep nitrogen-fixing cyanobacteria inside slimy pockets, a built-in fertiliser factory.",
+        "Their cells contain an algae-like carbon-concentrating structure that no other land plants have."
+      ],
+      "wiki": "Hornwort",
+      "confidence": "low"
+    },
+    {
+      "id": "vascular-plants",
+      "name": "Vascular plants",
+      "scientific": "Tracheophyta",
+      "parent": "land-plants",
+      "rank": "clade",
+      "group": "plants",
+      "appeared": 435,
+      "emoji": "🌳",
+      "summary": "Plants with internal plumbing: xylem pipes carry water up and phloem carries sugar around. Stiffened with lignin, they could finally grow tall.",
+      "facts": [
+        "Lignin, the tough stuff in wood, is so hard to break down that for millions of years few microbes could digest it.",
+        "Almost every plant you can name, from ferns to oak trees to grass, is a vascular plant."
+      ],
+      "tags": [
+        "landmark"
+      ],
+      "wiki": "Vascular plant",
+      "confidence": "medium"
+    },
+    {
+      "id": "cooksonia",
+      "name": "Cooksonia",
+      "parent": "vascular-plants",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 433,
+      "extinct": 393,
+      "emoji": "🌱",
+      "summary": "One of the earliest known upright land plants: forked green stems a few centimetres tall, topped with spore capsules. It had no leaves and no roots.",
+      "facts": [
+        "Most Cooksonia were shorter than your little finger.",
+        "It is named after Australian botanist Isabel Cookson."
+      ],
+      "wiki": "Cooksonia",
+      "confidence": "medium"
+    },
+    {
+      "id": "lycophytes",
+      "name": "Lycophytes",
+      "scientific": "Lycopodiophyta",
+      "parent": "vascular-plants",
+      "rank": "clade",
+      "group": "plants",
+      "appeared": 425,
+      "emoji": "🌿",
+      "summary": "Clubmosses, spikemosses and quillworts: the oldest surviving branch of vascular plants. Today they are small, but their ancestors were giant trees.",
+      "wiki": "Lycophyte",
+      "confidence": "medium"
+    },
+    {
+      "id": "lepidodendron",
+      "name": "Lepidodendron",
+      "parent": "lycophytes",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 359,
+      "extinct": 299,
+      "emoji": "🌴",
+      "summary": "A giant 'scale tree' of the Carboniferous coal swamps, growing to 30 metres or more. Its trunk was covered in diamond-shaped leaf scars like reptile skin.",
+      "facts": [
+        "Much of the coal burned since the Industrial Revolution formed from the buried remains of scale trees like Lepidodendron.",
+        "It was a relative of today's tiny clubmosses, not of modern trees.",
+        "Fossil trunk pieces have been mistaken for the skin of giant snakes or lizards."
+      ],
+      "wiki": "Lepidodendron",
+      "confidence": "medium"
+    },
+    {
+      "id": "clubmosses",
+      "name": "Clubmosses",
+      "scientific": "Lycopodiaceae",
+      "parent": "lycophytes",
+      "rank": "family",
+      "group": "plants",
+      "appeared": 350,
+      "emoji": "🌿",
+      "summary": "Small evergreen plants that look like mossy miniature pine trees. They are the living cousins of the giant coal-swamp lycopsids.",
+      "facts": [
+        "Clubmoss spores, called lycopodium powder, burst into a bright flash when blown into a flame and were used in early flash photography and stage magic."
+      ],
+      "wiki": "Lycopodiaceae",
+      "confidence": "low"
+    },
+    {
+      "id": "euphyllophytes",
+      "name": "Euphyllophytes",
+      "scientific": "Euphyllophyta",
+      "parent": "vascular-plants",
+      "rank": "clade",
+      "group": "plants",
+      "appeared": 410,
+      "emoji": "🍃",
+      "summary": "The plants with true, broad leaves: ferns, horsetails and all seed plants. Their leaves evolved from flattened, webbed branches.",
+      "wiki": "Euphyllophyte",
+      "confidence": "low"
+    },
+    {
+      "id": "ferns",
+      "name": "Ferns",
+      "scientific": "Polypodiopsida",
+      "parent": "euphyllophytes",
+      "rank": "class",
+      "group": "plants",
+      "appeared": 395,
+      "emoji": "🌿",
+      "summary": "Feathery-leaved plants that spread by spores instead of seeds. New fronds uncurl from tight spirals called fiddleheads.",
+      "facts": [
+        "A small fern from New Caledonia, Tmesipteris oblanceolata, has the largest genome known: about 50 times bigger than yours.",
+        "Victorian Britain had a 'fern craze' called pteridomania, with fern patterns on everything from teapots to gravestones.",
+        "There are about 10,500 species of ferns alive today."
+      ],
+      "wiki": "Fern",
+      "confidence": "low"
+    },
+    {
+      "id": "horsetails",
+      "name": "Horsetails",
+      "scientific": "Equisetum",
+      "parent": "ferns",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 375,
+      "emoji": "🎋",
+      "summary": "Jointed, hollow-stemmed plants that look like green bottlebrushes. Equisetum is the last survivor of a group that once included tree-sized Calamites.",
+      "facts": [
+        "Their stems are full of silica, so people once used them to scrub pots: they're also called 'scouring rush'.",
+        "Horsetails have barely changed for over 100 million years, making them true 'living fossils'."
+      ],
+      "wiki": "Equisetum",
+      "confidence": "low"
+    },
+    {
+      "id": "azolla",
+      "name": "Mosquito fern",
+      "scientific": "Azolla",
+      "parent": "ferns",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 70,
+      "emoji": "🍀",
+      "summary": "A tiny floating fern that partners with nitrogen-fixing cyanobacteria living inside its leaves. It can double its mass in just a few days.",
+      "facts": [
+        "Farmers in Asia have grown Azolla in rice paddies for centuries as a natural fertiliser.",
+        "About 49 million years ago, Azolla blooms covered the Arctic Ocean and may have helped cool the whole planet."
+      ],
+      "wiki": "Azolla",
+      "confidence": "low"
+    },
+    {
+      "id": "archaeopteris",
+      "name": "Archaeopteris",
+      "parent": "euphyllophytes",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 385,
+      "extinct": 359,
+      "emoji": "🌳",
+      "summary": "One of the first true trees, with real wood and spreading branches, forming Earth's earliest forests. It still reproduced with spores, not seeds.",
+      "facts": [
+        "Archaeopteris could reach 20–30 metres tall and covered much of the Late Devonian world.",
+        "Its wood looked so much like a conifer's that the trunks were first described as a different plant."
+      ],
+      "wiki": "Archaeopteris",
+      "confidence": "medium"
+    },
+    {
+      "id": "seed-plants",
+      "name": "Seed plants",
+      "scientific": "Spermatophyta",
+      "parent": "euphyllophytes",
+      "rank": "clade",
+      "group": "plants",
+      "appeared": 365,
+      "emoji": "🌰",
+      "summary": "Plants that package their babies in seeds: an embryo, a packed lunch and a protective coat. With pollen instead of swimming sperm, they no longer needed water to reproduce.",
+      "facts": [
+        "The oldest known seeds are about 365 million years old, from West Virginia.",
+        "Seeds can wait: sacred lotus seeds about 1,300 years old have sprouted."
+      ],
+      "tags": [
+        "landmark"
+      ],
+      "wiki": "Spermatophyte",
+      "confidence": "medium"
+    },
+    {
+      "id": "seed-ferns",
+      "name": "Seed ferns",
+      "scientific": "Pteridospermatophyta",
+      "parent": "seed-plants",
+      "rank": "clade",
+      "group": "plants",
+      "appeared": 360,
+      "extinct": 66,
+      "emoji": "🌿",
+      "summary": "Extinct plants with fern-like leaves that carried seeds instead of spores. They were common in the coal forests and later.",
+      "facts": [
+        "For decades, people assumed their fossil leaves belonged to ordinary ferns until seeds were found attached."
+      ],
+      "wiki": "Pteridospermatophyta",
+      "confidence": "low"
+    },
+    {
+      "id": "glossopteris",
+      "name": "Glossopteris",
+      "parent": "seed-ferns",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 299,
+      "extinct": 252,
+      "emoji": "🍂",
+      "summary": "A tongue-leaved seed plant that dominated the cold southern continents of the Permian. It vanished in the great end-Permian extinction.",
+      "facts": [
+        "Its fossils are found in South America, Africa, India, Australia and Antarctica, proof that these were once joined as Gondwana.",
+        "Captain Scott's doomed Antarctic team hauled about 16 kg of Glossopteris fossils with them to the very end."
+      ],
+      "wiki": "Glossopteris",
+      "confidence": "medium"
+    },
+    {
+      "id": "gymnosperms",
+      "name": "Gymnosperms",
+      "scientific": "Acrogymnospermae",
+      "parent": "seed-plants",
+      "rank": "clade",
+      "group": "plants",
+      "appeared": 320,
+      "emoji": "🌲",
+      "summary": "'Naked seed' plants whose seeds sit exposed on cones or scales instead of inside a fruit. They include conifers, cycads, ginkgo and gnetophytes.",
+      "wiki": "Gymnosperm",
+      "confidence": "medium"
+    },
+    {
+      "id": "cycads",
+      "name": "Cycads",
+      "scientific": "Cycadophyta",
+      "parent": "gymnosperms",
+      "rank": "phylum",
+      "group": "plants",
+      "appeared": 280,
+      "emoji": "🌴",
+      "summary": "Palm-like plants with stiff leaves and big cones, common in the age of dinosaurs. They are not palms at all.",
+      "facts": [
+        "Cycads are among the most endangered plant groups on Earth.",
+        "Some cycad cones heat themselves up to attract the insects that pollinate them.",
+        "Like ginkgo, cycads still have swimming sperm, a leftover from their water-loving ancestors."
+      ],
+      "wiki": "Cycad",
+      "confidence": "medium"
+    },
+    {
+      "id": "ginkgo",
+      "name": "Ginkgo",
+      "scientific": "Ginkgo biloba",
+      "parent": "gymnosperms",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 270,
+      "emoji": "🍂",
+      "summary": "The maidenhair tree, last survivor of a group that has existed since before the dinosaurs. Its fan-shaped leaves turn brilliant gold in autumn.",
+      "facts": [
+        "Six ginkgo trees survived the Hiroshima atomic bomb within 2 km of the blast and are still alive.",
+        "Female ginkgo seeds smell like rancid butter or vomit because of butyric acid.",
+        "Ginkgo pollen makes swimming sperm cells, discovered by a Japanese botanist in 1896."
+      ],
+      "wiki": "Ginkgo biloba",
+      "confidence": "low"
+    },
+    {
+      "id": "conifers",
+      "name": "Conifers",
+      "scientific": "Pinophyta",
+      "parent": "gymnosperms",
+      "rank": "phylum",
+      "group": "plants",
+      "appeared": 300,
+      "emoji": "🌲",
+      "summary": "Cone-bearing trees such as pines, firs, cypresses and sequoias. They hold the records for the tallest, biggest and oldest living trees.",
+      "facts": [
+        "Vast conifer forests of the north, the taiga, form the largest land biome on Earth."
+      ],
+      "wiki": "Conifer",
+      "confidence": "medium"
+    },
+    {
+      "id": "pine-family",
+      "name": "Pine family",
+      "scientific": "Pinaceae",
+      "parent": "conifers",
+      "rank": "family",
+      "group": "plants",
+      "appeared": 200,
+      "emoji": "🌲",
+      "summary": "Pines, firs, spruces, larches and cedars. Most have needle leaves and woody cones.",
+      "facts": [
+        "Larches are conifers that drop all their needles every autumn."
+      ],
+      "wiki": "Pinaceae",
+      "confidence": "low"
+    },
+    {
+      "id": "pines",
+      "name": "Pines",
+      "scientific": "Pinus",
+      "parent": "pine-family",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 130,
+      "emoji": "🌲",
+      "summary": "About 120 species of needle-leaved trees with woody cones, found across the Northern Hemisphere. Their resin seals wounds and once caulked ships.",
+      "facts": [
+        "Pine nuts, eaten in pesto, are the seeds of certain pine species.",
+        "Some pine cones only open after a fire has heated them."
+      ],
+      "wiki": "Pine",
+      "confidence": "medium"
+    },
+    {
+      "id": "bristlecone-pine",
+      "name": "Great Basin bristlecone pine",
+      "scientific": "Pinus longaeva",
+      "parent": "pines",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 5,
+      "emoji": "🌲",
+      "summary": "Gnarled pines of the high, dry mountains of the western USA, and some of the oldest individual living things on Earth.",
+      "facts": [
+        "A tree nicknamed Methuselah, in California's White Mountains, is more than 4,800 years old: it sprouted before the Great Pyramid of Giza was built.",
+        "In 1964 a researcher cut down a bristlecone called Prometheus and only afterwards discovered it was about 4,900 years old."
+      ],
+      "wiki": "Pinus longaeva",
+      "confidence": "low"
+    },
+    {
+      "id": "cypress-family",
+      "name": "Cypress family",
+      "scientific": "Cupressaceae",
+      "parent": "conifers",
+      "rank": "family",
+      "group": "plants",
+      "appeared": 200,
+      "emoji": "🌲",
+      "summary": "Cypresses, junipers, redwoods and sequoias. Many have scale-like leaves, and the family includes the tallest and most massive trees on Earth.",
+      "facts": [
+        "Juniper 'berries', used to flavour gin, are really tiny fleshy cones."
+      ],
+      "wiki": "Cupressaceae",
+      "confidence": "low"
+    },
+    {
+      "id": "giant-sequoia",
+      "name": "Giant sequoia",
+      "scientific": "Sequoiadendron giganteum",
+      "parent": "cypress-family",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 20,
+      "emoji": "🌳",
+      "summary": "The most massive trees on Earth, growing in California's Sierra Nevada. They can live for more than 3,000 years.",
+      "facts": [
+        "The tree General Sherman holds about 1,500 cubic metres of wood, the largest single tree by volume.",
+        "Its bark can be over half a metre thick and protects it from forest fires; fire even helps its cones release seeds.",
+        "Its close cousin the coast redwood is the tallest tree: Hyperion is about 116 metres high."
+      ],
+      "wiki": "Sequoiadendron giganteum",
+      "confidence": "low"
+    },
+    {
+      "id": "wollemi-pine",
+      "name": "Wollemi pine",
+      "scientific": "Wollemia nobilis",
+      "parent": "conifers",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 90,
+      "emoji": "🌲",
+      "summary": "A 'dinosaur tree' of the araucaria family, known only from fossils until 1994, when a ranger found a few dozen growing in a hidden canyon near Sydney, Australia.",
+      "facts": [
+        "Fewer than 100 adult trees survive in the wild, at a secret location.",
+        "During the 2019–2020 bushfires, firefighters were flown in to protect the last wild grove with sprinklers and fire retardant.",
+        "Nurseries now sell Wollemi pines worldwide to help keep the species alive."
+      ],
+      "wiki": "Wollemia",
+      "confidence": "low"
+    },
+    {
+      "id": "welwitschia",
+      "name": "Welwitschia",
+      "scientific": "Welwitschia mirabilis",
+      "parent": "gymnosperms",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 100,
+      "emoji": "🏜️",
+      "summary": "A bizarre desert plant from Namibia and Angola that grows only two leaves in its entire life, which keep growing and shred into ribbons.",
+      "facts": [
+        "Some Welwitschia plants are estimated to be over 1,000 years old.",
+        "It survives in the Namib Desert partly by catching moisture from coastal fog."
+      ],
+      "wiki": "Welwitschia",
+      "confidence": "low"
+    },
+    {
+      "id": "flowering-plants",
+      "name": "Flowering plants",
+      "scientific": "Angiospermae",
+      "parent": "seed-plants",
+      "rank": "clade",
+      "group": "plants",
+      "appeared": 140,
+      "emoji": "🌸",
+      "summary": "Plants with flowers and fruits. Teaming up with insects and other animals for pollination and seed dispersal, they exploded into about 300,000 species and now dominate most landscapes.",
+      "facts": [
+        "Almost all of the food humans eat comes, directly or indirectly, from flowering plants.",
+        "Charles Darwin called their sudden appearance in the fossil record an 'abominable mystery'.",
+        "A fruit is just a ripened ovary: the part of the flower that wraps the seeds."
+      ],
+      "tags": [
+        "landmark"
+      ],
+      "wiki": "Flowering plant",
+      "confidence": "medium"
+    },
+    {
+      "id": "amborella",
+      "name": "Amborella",
+      "scientific": "Amborella trichopoda",
+      "parent": "flowering-plants",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 135,
+      "emoji": "🌼",
+      "summary": "A small shrub found only on the Pacific island of New Caledonia. It sits on the very first branch of the flowering-plant family tree, sister to all the others.",
+      "facts": [
+        "Its mitochondria hold huge chunks of DNA stolen from other plants, including mosses and green algae.",
+        "Studying Amborella helps scientists imagine what the very first flowers were like."
+      ],
+      "wiki": "Amborella",
+      "confidence": "low"
+    },
+    {
+      "id": "water-lilies",
+      "name": "Water lilies",
+      "scientific": "Nymphaeales",
+      "parent": "flowering-plants",
+      "rank": "order",
+      "group": "plants",
+      "appeared": 130,
+      "emoji": "🪷",
+      "summary": "One of the oldest branches of flowering plants, floating their round leaves on ponds and lakes.",
+      "facts": [
+        "The giant Amazon water lily has leaves up to 3 metres across that can hold the weight of a small child.",
+        "Its ribbed leaves inspired the iron-and-glass design of London's Crystal Palace in 1851.",
+        "Lotus flowers look like water lilies but are actually closer relatives of plane trees."
+      ],
+      "wiki": "Nymphaeales",
+      "confidence": "low"
+    },
+    {
+      "id": "magnoliids",
+      "name": "Magnoliids",
+      "scientific": "Magnoliidae",
+      "parent": "flowering-plants",
+      "rank": "clade",
+      "group": "plants",
+      "appeared": 130,
+      "emoji": "🌺",
+      "summary": "An early branch of flowering plants including magnolias, laurels, avocado, cinnamon, nutmeg and black pepper.",
+      "wiki": "Magnoliids",
+      "confidence": "low"
+    },
+    {
+      "id": "magnolias",
+      "name": "Magnolias",
+      "scientific": "Magnolia",
+      "parent": "magnoliids",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 95,
+      "emoji": "🌸",
+      "summary": "Big, waxy, ancient-looking flowers. Magnolias evolved before bees existed and are mostly pollinated by beetles.",
+      "facts": [
+        "Their tough flower parts help them survive clumsy, chewing beetle pollinators.",
+        "The genus is named after French botanist Pierre Magnol."
+      ],
+      "wiki": "Magnolia",
+      "confidence": "low"
+    },
+    {
+      "id": "laurel-family",
+      "name": "Laurel family",
+      "scientific": "Lauraceae",
+      "parent": "magnoliids",
+      "rank": "family",
+      "group": "plants",
+      "appeared": 100,
+      "emoji": "🍃",
+      "summary": "Aromatic trees and shrubs that give us bay leaves, cinnamon, camphor and avocados.",
+      "facts": [
+        "Ancient Greeks crowned victors with wreaths of bay laurel leaves."
+      ],
+      "wiki": "Lauraceae",
+      "confidence": "low"
+    },
+    {
+      "id": "avocado",
+      "name": "Avocado",
+      "scientific": "Persea americana",
+      "parent": "laurel-family",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 5,
+      "emoji": "🥑",
+      "summary": "A tree from Mexico and Central America with a huge seed. Its big fruit evolved to be swallowed whole by giant animals that are now extinct.",
+      "facts": [
+        "The avocado is a 'ghost of evolution': its seed was likely spread by giant ground sloths, gomphotheres and other megafauna that vanished about 13,000 years ago.",
+        "The word comes from the Aztec (Nahuatl) word āhuacatl.",
+        "Avocado leaves, skin and pits contain persin, which is toxic to birds and many pets."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "People in southern Mexico ate wild avocados about 10,000 years ago and began cultivating them several thousand years later; Mesoamerican farmers selected bigger, fleshier fruit.",
+      "wiki": "Avocado",
+      "confidence": "low"
+    },
+    {
+      "id": "hass-avocado",
+      "name": "Hass avocado",
+      "parent": "avocado",
+      "rank": "cultivar",
+      "group": "plants",
+      "appeared": 0.0001,
+      "emoji": "🥑",
+      "summary": "The bumpy, dark-skinned avocado in almost every supermarket. Every single Hass tree is a grafted clone of one seedling from a Californian backyard.",
+      "facts": [
+        "Hass accounts for most avocados eaten worldwide.",
+        "The original 'mother tree' lived until 2002, when it died of root rot."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Grown from a chance seedling by postman Rudolph Hass in La Habra Heights, California, in the 1920s; patented in 1935.",
+      "wiki": "Hass avocado"
+    },
+    {
+      "id": "monocots",
+      "name": "Monocots",
+      "scientific": "Monocotyledoneae",
+      "parent": "flowering-plants",
+      "rank": "clade",
+      "group": "plants",
+      "appeared": 130,
+      "emoji": "🌾",
+      "summary": "Flowering plants that sprout with a single seed leaf and usually have long leaves with parallel veins. Grasses, palms, orchids, lilies and bananas are monocots.",
+      "facts": [
+        "Rice, wheat, maize, sugarcane, bananas and coconuts are all monocots, so they feed much of humanity."
+      ],
+      "wiki": "Monocotyledon",
+      "confidence": "low"
+    },
+    {
+      "id": "asparagales",
+      "name": "Asparagales",
+      "scientific": "Asparagales",
+      "parent": "monocots",
+      "rank": "order",
+      "group": "plants",
+      "appeared": 120,
+      "emoji": "🌷",
+      "summary": "A huge order of monocots including orchids, asparagus, onions, garlic, irises, aloe and agave.",
+      "wiki": "Asparagales",
+      "confidence": "low"
+    },
+    {
+      "id": "orchids",
+      "name": "Orchids",
+      "scientific": "Orchidaceae",
+      "parent": "asparagales",
+      "rank": "family",
+      "group": "plants",
+      "appeared": 85,
+      "emoji": "🌸",
+      "summary": "One of the two largest plant families, with around 28,000 species and endlessly strange flowers. Many trick insects into pollinating them.",
+      "facts": [
+        "Orchid seeds are as fine as dust and have no food stores; they need a fungus partner to germinate.",
+        "Bee orchids grow flowers that look and smell like female bees to lure males."
+      ],
+      "wiki": "Orchidaceae",
+      "confidence": "medium"
+    },
+    {
+      "id": "vanilla",
+      "name": "Vanilla",
+      "scientific": "Vanilla planifolia",
+      "parent": "orchids",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 5,
+      "emoji": "🍦",
+      "summary": "A climbing orchid vine from Mexico whose cured seed pods give us vanilla flavour. Each flower opens for just one day.",
+      "facts": [
+        "In 1841 a 12-year-old enslaved boy on Réunion, Edmond Albius, invented the quick hand-pollination method still used today.",
+        "Vanilla is the second most expensive spice after saffron, because every flower must be pollinated by hand outside Mexico."
+      ],
+      "tags": [
+        "crop",
+        "domesticated"
+      ],
+      "origin": "First cultivated by the Totonac people of eastern Mexico and prized by the Aztecs; hand-pollination, invented in 1841 on Réunion, let it be farmed worldwide.",
+      "wiki": "Vanilla planifolia",
+      "confidence": "low"
+    },
+    {
+      "id": "onion",
+      "name": "Onion",
+      "scientific": "Allium cepa",
+      "parent": "asparagales",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.007,
+      "emoji": "🧅",
+      "summary": "A layered bulb grown and eaten worldwide for thousands of years. No truly wild onion has ever been found: it exists only as a crop.",
+      "facts": [
+        "Cutting an onion releases a gas, syn-propanethial-S-oxide, that stings your eyes and makes you cry.",
+        "Ancient Egyptians placed onions in tombs; Pharaoh Ramesses IV was mummified with onions in his eye sockets."
+      ],
+      "tags": [
+        "vegetable",
+        "domesticated"
+      ],
+      "origin": "Probably domesticated in Central Asia at least 5,000–7,000 years ago from wild Allium relatives.",
+      "wiki": "Onion",
+      "confidence": "low"
+    },
+    {
+      "id": "palms",
+      "name": "Palms",
+      "scientific": "Arecaceae",
+      "parent": "monocots",
+      "rank": "family",
+      "group": "plants",
+      "appeared": 100,
+      "emoji": "🌴",
+      "summary": "About 2,600 species of tropical trees with crowns of big fan or feather leaves. Palm 'trunks' are not true wood and have no growth rings.",
+      "facts": [
+        "The coco de mer palm has the biggest seed in the world, which can weigh more than 15 kg."
+      ],
+      "wiki": "Arecaceae",
+      "confidence": "low"
+    },
+    {
+      "id": "coconut",
+      "name": "Coconut",
+      "scientific": "Cocos nucifera",
+      "parent": "palms",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 10,
+      "emoji": "🥥",
+      "summary": "A palm whose giant floating seeds can drift across oceans and still sprout. It supplies food, drink, oil, fibre and building material across the tropics.",
+      "facts": [
+        "A coconut is not a true nut but a drupe, like a peach with a fibrous husk instead of juicy flesh.",
+        "Portuguese sailors named it 'coco', meaning a grinning goblin face, after the three holes on the shell."
+      ],
+      "tags": [
+        "fruit",
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Cultivated at least twice: once in island Southeast Asia and the Pacific, and once around southern India; Austronesian sailors spread it across the oceans.",
+      "wiki": "Coconut",
+      "confidence": "low"
+    },
+    {
+      "id": "date-palm",
+      "name": "Date palm",
+      "scientific": "Phoenix dactylifera",
+      "parent": "palms",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 5,
+      "emoji": "🌴",
+      "summary": "A desert palm whose sweet, sticky fruits have fed people in the Middle East and North Africa for thousands of years. Trees are either male or female.",
+      "facts": [
+        "A tree nicknamed Methuselah was grown in 2005 from a roughly 2,000-year-old seed found at Masada in Israel.",
+        "Ancient Mesopotamian farmers hand-pollinated dates, one of the earliest examples of deliberate plant breeding."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Domesticated around the Persian Gulf at least 7,000 years ago; farmers learned to hand-pollinate female trees.",
+      "wiki": "Date palm",
+      "confidence": "low"
+    },
+    {
+      "id": "zingiberales",
+      "name": "Gingers and bananas",
+      "scientific": "Zingiberales",
+      "parent": "monocots",
+      "rank": "order",
+      "group": "plants",
+      "appeared": 90,
+      "emoji": "🫚",
+      "summary": "A tropical order including bananas, ginger, turmeric, cardamom, birds-of-paradise flowers and arrowroot.",
+      "facts": [
+        "Ginger, turmeric and cardamom are all spices from this order."
+      ],
+      "wiki": "Zingiberales",
+      "confidence": "low"
+    },
+    {
+      "id": "bananas",
+      "name": "Bananas",
+      "scientific": "Musa",
+      "parent": "zingiberales",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 30,
+      "emoji": "🍌",
+      "summary": "Giant herbs, not trees: the 'trunk' is a tight roll of leaf bases. Wild bananas are full of hard seeds; the ones we eat are seedless mutants kept alive by people.",
+      "facts": [
+        "Botanically, a banana is a berry.",
+        "Bananas are slightly radioactive because they contain potassium-40, a natural isotope.",
+        "A banana plant grows its fruit only once, then dies back and new shoots take over."
+      ],
+      "wiki": "Musa (genus)",
+      "confidence": "low"
+    },
+    {
+      "id": "musa-acuminata",
+      "name": "Wild banana (acuminata)",
+      "scientific": "Musa acuminata",
+      "parent": "bananas",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 5,
+      "emoji": "🍌",
+      "summary": "A wild banana of Southeast Asia and New Guinea, packed with hard seeds. It is the main ancestor of almost all dessert bananas.",
+      "facts": [
+        "Wild bananas have so many pea-sized seeds that there is very little flesh to eat.",
+        "Its genetic letter 'A' appears in banana codes: dessert bananas are 'AAA'.",
+        "People in New Guinea were cultivating bananas about 7,000 years ago."
+      ],
+      "tags": [
+        "fruit"
+      ],
+      "wiki": "Musa acuminata",
+      "confidence": "low"
+    },
+    {
+      "id": "musa-balbisiana",
+      "name": "Wild banana (balbisiana)",
+      "scientific": "Musa balbisiana",
+      "parent": "bananas",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 5,
+      "emoji": "🍌",
+      "summary": "A tough, drought-tolerant wild banana from South Asia and southern China. Its 'B' genome adds hardiness and starchiness to plantains and cooking bananas.",
+      "tags": [
+        "fruit"
+      ],
+      "wiki": "Musa balbisiana",
+      "confidence": "low"
+    },
+    {
+      "id": "cavendish-banana",
+      "name": "Cavendish banana",
+      "parent": "musa-acuminata",
+      "rank": "cultivar",
+      "group": "plants",
+      "appeared": 0.001,
+      "emoji": "🍌",
+      "summary": "The supermarket banana. It is a sterile triploid (three sets of acuminata chromosomes, 'AAA'), so it has no seeds and every plant is a clone grown from a cutting.",
+      "facts": [
+        "Nearly all bananas traded internationally are Cavendish, which makes them all genetically identical.",
+        "Because clones can't evolve resistance, a fungus called Tropical Race 4 now threatens Cavendish plantations worldwide."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Arose from cultivated Musa acuminata in Southeast Asia or southern China; named after the 6th Duke of Devonshire, William Cavendish, whose gardener Joseph Paxton grew it at Chatsworth House, England, in the 1830s.",
+      "wiki": "Cavendish banana",
+      "confidence": "low"
+    },
+    {
+      "id": "gros-michel-banana",
+      "name": "Gros Michel banana",
+      "parent": "musa-acuminata",
+      "rank": "cultivar",
+      "group": "plants",
+      "appeared": 0.001,
+      "emoji": "🍌",
+      "summary": "'Big Mike', the creamy, sweeter banana everyone ate until the 1950s. A soil fungus, Panama disease, wiped out the world's export plantations.",
+      "facts": [
+        "Banana companies switched to the Cavendish because it resisted that strain of Panama disease.",
+        "Many people say artificial banana flavour tastes more like Gros Michel than like today's bananas.",
+        "It is still grown in small farms, so it is rare rather than extinct."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "A seedless 'AAA' clone from Southeast Asia, carried to the Caribbean in the 1830s and grown on vast Central American plantations.",
+      "wiki": "Gros Michel banana",
+      "confidence": "low"
+    },
+    {
+      "id": "plantain",
+      "name": "Plantain",
+      "parent": "musa-acuminata",
+      "hybridOf": [
+        "musa-balbisiana"
+      ],
+      "rank": "hybrid",
+      "group": "plants",
+      "appeared": 0.003,
+      "emoji": "🍌",
+      "summary": "A starchy cooking banana with genomes from both wild species ('AAB'). Fried, boiled or mashed, it is a staple food across Africa, Latin America and the Caribbean.",
+      "facts": [
+        "Plantains are usually cooked, even when ripe and black-skinned."
+      ],
+      "tags": [
+        "fruit",
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Formed when cultivated Musa acuminata crossed with Musa balbisiana in Southeast Asia; reached Africa thousands of years ago, where Central and West Africa became a huge centre of plantain diversity.",
+      "wiki": "Cooking banana",
+      "confidence": "low"
+    },
+    {
+      "id": "poales",
+      "name": "Grasses, sedges and bromeliads",
+      "scientific": "Poales",
+      "parent": "monocots",
+      "rank": "order",
+      "group": "plants",
+      "appeared": 110,
+      "emoji": "🌾",
+      "summary": "A big order that includes the grasses, sedges, rushes, cattails and the bromeliads such as pineapple.",
+      "wiki": "Poales",
+      "confidence": "low"
+    },
+    {
+      "id": "pineapple",
+      "name": "Pineapple",
+      "scientific": "Ananas comosus",
+      "parent": "poales",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 3,
+      "emoji": "🍍",
+      "summary": "A bromeliad from South America. Each pineapple is really 100 or more small fruits fused together around a stem.",
+      "facts": [
+        "In 18th-century Britain pineapples were such luxury items that people rented them to show off at parties.",
+        "Pineapple contains bromelain, an enzyme that breaks down proteins, which is why it tingles your tongue.",
+        "Europeans named it 'pine apple' because it looked like a pine cone."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Domesticated by Indigenous peoples of lowland South America, probably around today's Paraguay and southern Brazil; Columbus's crew met it on Guadeloupe in 1493.",
+      "wiki": "Pineapple",
+      "confidence": "low"
+    },
+    {
+      "id": "grasses",
+      "name": "Grasses",
+      "scientific": "Poaceae",
+      "parent": "poales",
+      "rank": "family",
+      "group": "plants",
+      "appeared": 70,
+      "emoji": "🌾",
+      "summary": "About 12,000 species, from lawn grass to bamboo, covering prairies and savannas worldwide. Their seeds, as cereals, built human civilisation.",
+      "facts": [
+        "Rice, wheat and maize alone provide about half of all the calories people eat.",
+        "Grass grows from the base of the leaf, so it keeps growing after being grazed or mowed.",
+        "Grass fragments found in fossil dinosaur dung from India show that some dinosaurs ate grass."
+      ],
+      "tags": [
+        "landmark"
+      ],
+      "wiki": "Poaceae",
+      "confidence": "medium"
+    },
+    {
+      "id": "bamboo",
+      "name": "Bamboo",
+      "scientific": "Bambusoideae",
+      "parent": "grasses",
+      "rank": "clade",
+      "group": "plants",
+      "appeared": 40,
+      "emoji": "🎋",
+      "summary": "Giant woody grasses, some taller than a house. Certain bamboos are the fastest-growing plants on Earth.",
+      "facts": [
+        "Some bamboos can grow nearly a metre in a single day.",
+        "Some species flower only once every 100+ years, and all plants of that species bloom at the same time worldwide, then die.",
+        "Giant pandas eat 12–38 kg of bamboo every day."
+      ],
+      "tags": [
+        "crop"
+      ],
+      "wiki": "Bamboo",
+      "confidence": "low"
+    },
+    {
+      "id": "oryza",
+      "name": "Rices",
+      "scientific": "Oryza",
+      "parent": "grasses",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 15,
+      "emoji": "🌾",
+      "summary": "The genus of rice plants: about 20 wild species of wet tropical places, plus Asian and African rice.",
+      "facts": [
+        "Rice was domesticated twice: Asian rice in China and African rice along the Niger River."
+      ],
+      "wiki": "Oryza",
+      "confidence": "low"
+    },
+    {
+      "id": "wild-rice",
+      "name": "Wild rice (Oryza rufipogon)",
+      "scientific": "Oryza rufipogon",
+      "parent": "oryza",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.4,
+      "emoji": "🌾",
+      "summary": "A wild rice of Asian marshes and riversides. Its grains fall off as soon as they ripen, great for spreading seeds but terrible for harvesting.",
+      "facts": [
+        "Not to be confused with North American 'wild rice', which is a different grass genus, Zizania."
+      ],
+      "tags": [
+        "crop"
+      ],
+      "wiki": "Oryza rufipogon",
+      "confidence": "low"
+    },
+    {
+      "id": "rice",
+      "name": "Rice",
+      "scientific": "Oryza sativa",
+      "parent": "wild-rice",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.009,
+      "emoji": "🍚",
+      "summary": "The staple food of more than half the people on Earth. Grown in flooded paddies, it was domesticated from wild Oryza rufipogon in China.",
+      "facts": [
+        "A single mutation in a gene called sh4 helped stop rice grains from shattering, so farmers could harvest them.",
+        "There are more than 40,000 varieties of rice.",
+        "Rice grows on every continent except Antarctica."
+      ],
+      "tags": [
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Domesticated in the Yangtze River valley of China around 9,000 years ago; farmers selected plants whose grains stayed on the stalk. Spread across Asia and later the world.",
+      "wiki": "Oryza sativa",
+      "confidence": "medium"
+    },
+    {
+      "id": "wheat-tribe",
+      "name": "Wheat tribe",
+      "scientific": "Triticeae",
+      "parent": "grasses",
+      "rank": "clade",
+      "group": "plants",
+      "appeared": 15,
+      "emoji": "🌾",
+      "summary": "The grass tribe of wheat, barley, rye and goat grasses. These grasses hybridise readily, which is how bread wheat was born.",
+      "wiki": "Triticeae",
+      "confidence": "low"
+    },
+    {
+      "id": "goat-grasses",
+      "name": "Goat grasses",
+      "scientific": "Aegilops",
+      "parent": "wheat-tribe",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 5,
+      "emoji": "🐐",
+      "summary": "Weedy wild grasses of the Middle East and Central Asia. Two of them donated whole genomes to modern wheat.",
+      "wiki": "Aegilops",
+      "confidence": "low"
+    },
+    {
+      "id": "tausch-goat-grass",
+      "name": "Tausch's goat grass",
+      "scientific": "Aegilops tauschii",
+      "parent": "goat-grasses",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 2,
+      "emoji": "🌾",
+      "summary": "A scrappy wild grass from around the Caspian Sea. By crossing with farmers' emmer wheat, it became the third parent of bread wheat.",
+      "facts": [
+        "Its 'D' genome gave bread wheat its stretchy, bread-making gluten and its ability to grow in colder climates."
+      ],
+      "wiki": "Aegilops tauschii",
+      "confidence": "low"
+    },
+    {
+      "id": "einkorn",
+      "name": "Einkorn wheat",
+      "scientific": "Triticum monococcum",
+      "parent": "wheat-tribe",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.0105,
+      "emoji": "🌾",
+      "summary": "One of the very first crops ever domesticated: a small, hulled wheat with just one grain per spikelet ('einkorn' means 'one grain').",
+      "facts": [
+        "Ötzi the Iceman, who died in the Alps about 5,300 years ago, had einkorn in his last meal."
+      ],
+      "tags": [
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Domesticated about 10,500 years ago from wild einkorn in the Karacadağ mountains of south-eastern Turkey.",
+      "wiki": "Einkorn wheat",
+      "confidence": "medium"
+    },
+    {
+      "id": "wild-emmer",
+      "name": "Wild emmer",
+      "scientific": "Triticum dicoccoides",
+      "parent": "wheat-tribe",
+      "hybridOf": [
+        "goat-grasses"
+      ],
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.8,
+      "emoji": "🌾",
+      "summary": "A wild wheat of the Fertile Crescent with four sets of chromosomes. It formed naturally when a wild einkorn-like wheat crossed with a goat grass.",
+      "facts": [
+        "Its parents were Triticum urartu and a goat grass close to Aegilops speltoides.",
+        "Wild emmer was rediscovered in 1906 growing on a hillside in Galilee by agronomist Aaron Aaronsohn."
+      ],
+      "tags": [
+        "crop"
+      ],
+      "wiki": "Emmer",
+      "confidence": "low"
+    },
+    {
+      "id": "emmer",
+      "name": "Emmer wheat",
+      "scientific": "Triticum dicoccum",
+      "parent": "wild-emmer",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.0105,
+      "emoji": "🌾",
+      "summary": "The main wheat of the ancient Near East and Egypt, used for bread and beer. Its descendant durum wheat gives us pasta.",
+      "facts": [
+        "Italians still grow emmer and call it farro."
+      ],
+      "tags": [
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Domesticated from wild emmer in the Fertile Crescent (south-eastern Turkey and the Levant) about 10,000–10,500 years ago.",
+      "wiki": "Emmer",
+      "confidence": "medium"
+    },
+    {
+      "id": "bread-wheat",
+      "name": "Bread wheat",
+      "scientific": "Triticum aestivum",
+      "parent": "emmer",
+      "hybridOf": [
+        "tausch-goat-grass"
+      ],
+      "rank": "hybrid",
+      "group": "plants",
+      "appeared": 0.009,
+      "emoji": "🍞",
+      "summary": "The world's most widely planted crop. It carries six sets of chromosomes from three different grasses, the result of an accidental cross in an ancient farmer's field.",
+      "facts": [
+        "Its genome is about five times larger than a human's.",
+        "Wheat covers more of the world's farmland than any other crop."
+      ],
+      "tags": [
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Arose about 8,000–9,000 years ago when farmers' emmer wheat crossed with wild Tausch's goat grass, south-west of the Caspian Sea; spread with farming across Europe and Asia.",
+      "wiki": "Common wheat",
+      "confidence": "medium"
+    },
+    {
+      "id": "wild-barley",
+      "name": "Wild barley",
+      "scientific": "Hordeum vulgare subsp. spontaneum",
+      "parent": "wheat-tribe",
+      "rank": "subspecies",
+      "group": "plants",
+      "appeared": 2,
+      "emoji": "🌾",
+      "summary": "The wild grass of the Fertile Crescent whose shattering ears scatter seeds as soon as they ripen. It is the direct ancestor of barley.",
+      "tags": [
+        "crop"
+      ],
+      "wiki": "Barley",
+      "confidence": "low"
+    },
+    {
+      "id": "barley",
+      "name": "Barley",
+      "scientific": "Hordeum vulgare subsp. vulgare",
+      "parent": "wild-barley",
+      "rank": "subspecies",
+      "group": "plants",
+      "appeared": 0.0105,
+      "emoji": "🍺",
+      "summary": "One of the first cereals farmed by humans, used for bread, porridge, animal feed and, of course, beer and whisky.",
+      "facts": [
+        "UK and US shoe sizes still go up in steps of one 'barleycorn', an old unit equal to a third of an inch.",
+        "Barley was one of the main crops of ancient Egypt, where beer was part of workers' daily rations."
+      ],
+      "tags": [
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Domesticated from wild barley in the Fertile Crescent about 10,000 years ago, and possibly again further east.",
+      "wiki": "Barley",
+      "confidence": "medium"
+    },
+    {
+      "id": "andropogoneae",
+      "name": "Tropical tall grasses",
+      "scientific": "Andropogoneae",
+      "parent": "grasses",
+      "rank": "clade",
+      "group": "plants",
+      "appeared": 20,
+      "emoji": "🌾",
+      "summary": "A grass tribe of warm places, with super-efficient C4 photosynthesis. It includes maize, sugarcane and sorghum.",
+      "wiki": "Andropogoneae",
+      "confidence": "low"
+    },
+    {
+      "id": "sugarcane",
+      "name": "Sugarcane",
+      "scientific": "Saccharum officinarum",
+      "parent": "andropogoneae",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.008,
+      "emoji": "🎋",
+      "summary": "A giant grass with sweet, juicy stems. It is the world's biggest crop by weight, harvested at nearly 2 billion tonnes a year.",
+      "facts": [
+        "The word 'sugar' comes from the Sanskrit word śarkarā.",
+        "Sugar plantations in the Americas drove the transatlantic slave trade."
+      ],
+      "tags": [
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Domesticated from wild Saccharum robustum in New Guinea around 8,000 years ago; people in India first learned to crystallise sugar about 2,000 years ago.",
+      "wiki": "Sugarcane",
+      "confidence": "low"
+    },
+    {
+      "id": "teosinte",
+      "name": "Teosinte",
+      "scientific": "Zea mays subsp. parviglumis",
+      "parent": "andropogoneae",
+      "rank": "subspecies",
+      "group": "plants",
+      "appeared": 0.1,
+      "emoji": "🌾",
+      "summary": "A bushy wild grass from Mexico with tiny ears of 5–12 rock-hard kernels. It looks so unlike corn that it was once put in a different genus.",
+      "facts": [
+        "Teosinte kernels can be popped like popcorn.",
+        "A handful of genes, like teosinte branched1, explain most of the dramatic change from teosinte to maize."
+      ],
+      "tags": [
+        "crop"
+      ],
+      "wiki": "Teosinte",
+      "confidence": "low"
+    },
+    {
+      "id": "maize",
+      "name": "Maize (corn)",
+      "scientific": "Zea mays subsp. mays",
+      "parent": "teosinte",
+      "rank": "subspecies",
+      "group": "plants",
+      "appeared": 0.009,
+      "emoji": "🌽",
+      "summary": "The most produced grain on Earth, bred from scrawny teosinte into ears with hundreds of kernels. Popcorn, sweetcorn and cornflakes all come from it.",
+      "facts": [
+        "Modern maize cannot survive without people: its kernels stay locked on the cob and cannot spread themselves.",
+        "Indigenous farmers often grew maize with beans and squash: the 'Three Sisters'."
+      ],
+      "tags": [
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Domesticated from Balsas teosinte in the Balsas River valley of southern Mexico about 9,000 years ago; spread across the Americas long before Europeans arrived.",
+      "wiki": "Maize",
+      "confidence": "medium"
+    },
+    {
+      "id": "eudicots",
+      "name": "Eudicots",
+      "scientific": "Eudicotyledons",
+      "parent": "flowering-plants",
+      "rank": "clade",
+      "group": "plants",
+      "appeared": 125,
+      "emoji": "🌼",
+      "summary": "About three-quarters of all flowering plants, from daisies and roses to oaks and tomatoes. They usually sprout with two seed leaves and have net-veined leaves.",
+      "facts": [
+        "Eudicots are recognised by their pollen grains, which have three grooves."
+      ],
+      "wiki": "Eudicots",
+      "confidence": "medium"
+    },
+    {
+      "id": "caryophyllales",
+      "name": "Caryophyllales",
+      "scientific": "Caryophyllales",
+      "parent": "eudicots",
+      "rank": "order",
+      "group": "plants",
+      "appeared": 110,
+      "emoji": "🌵",
+      "summary": "A surprising order that includes cacti, carnivorous plants, carnations, spinach, quinoa and beets.",
+      "facts": [
+        "Venus flytraps and sundews belong to this order, as do the cacti.",
+        "The famous story that spinach's iron was overestimated because of a misplaced decimal point is itself a myth."
+      ],
+      "wiki": "Caryophyllales",
+      "confidence": "low"
+    },
+    {
+      "id": "sea-beet",
+      "name": "Sea beet",
+      "scientific": "Beta vulgaris subsp. maritima",
+      "parent": "caryophyllales",
+      "rank": "subspecies",
+      "group": "plants",
+      "appeared": 2,
+      "emoji": "🌿",
+      "summary": "A wild, leafy beet of European seashores. Beetroot, chard, sugar beet and fodder beet are all varieties of this same species.",
+      "tags": [
+        "vegetable"
+      ],
+      "wiki": "Beta vulgaris subsp. maritima",
+      "confidence": "low"
+    },
+    {
+      "id": "beetroot",
+      "name": "Beetroot",
+      "scientific": "Beta vulgaris",
+      "parent": "sea-beet",
+      "rank": "cultivar",
+      "group": "plants",
+      "appeared": 0.0005,
+      "emoji": "🔴",
+      "summary": "A beet bred for its swollen, deep-red root. Ancient people ate beet leaves; fat red roots came much later.",
+      "facts": [
+        "Some people pee pink after eating beetroot, a harmless condition called beeturia.",
+        "Its red pigment, betanin, is used to colour foods like strawberry ice cream."
+      ],
+      "tags": [
+        "vegetable",
+        "domesticated"
+      ],
+      "origin": "Leafy beets were grown around the Mediterranean in ancient times; the round red root types were developed in Europe by around the 16th century.",
+      "wiki": "Beetroot",
+      "confidence": "low"
+    },
+    {
+      "id": "sugar-beet",
+      "name": "Sugar beet",
+      "scientific": "Beta vulgaris",
+      "parent": "sea-beet",
+      "rank": "cultivar",
+      "group": "plants",
+      "appeared": 0.00025,
+      "emoji": "🍬",
+      "summary": "A pale beet bred to store sugar in its root. It supplies about a fifth of the world's sugar.",
+      "facts": [
+        "Napoleon promoted sugar beet after British blockades cut France off from Caribbean cane sugar."
+      ],
+      "tags": [
+        "crop",
+        "domesticated"
+      ],
+      "origin": "In 1747 German chemist Andreas Marggraf found beet sugar identical to cane sugar; Franz Achard bred high-sugar beets and opened the first beet sugar factory in Silesia in 1801.",
+      "wiki": "Sugar beet",
+      "confidence": "medium"
+    },
+    {
+      "id": "rosids",
+      "name": "Rosids",
+      "parent": "eudicots",
+      "rank": "clade",
+      "group": "plants",
+      "appeared": 115,
+      "emoji": "🌹",
+      "summary": "A vast branch of eudicots including roses, legumes, citrus, cabbages, melons, grapes, maples and oaks. Many of our favourite fruits are rosids.",
+      "wiki": "Rosids",
+      "confidence": "low"
+    },
+    {
+      "id": "vitis",
+      "name": "Grapevines",
+      "scientific": "Vitis",
+      "parent": "rosids",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 40,
+      "emoji": "🍇",
+      "summary": "Climbing woody vines that hold on with tendrils. About 70 wild species grow across the Northern Hemisphere.",
+      "facts": [
+        "In the 1860s–1880s a tiny American aphid, phylloxera, destroyed most of Europe's vineyards; they were saved by grafting onto resistant American grape roots."
+      ],
+      "wiki": "Vitis",
+      "confidence": "low"
+    },
+    {
+      "id": "wild-grape",
+      "name": "Wild grapevine",
+      "scientific": "Vitis vinifera subsp. sylvestris",
+      "parent": "vitis",
+      "rank": "subspecies",
+      "group": "plants",
+      "appeared": 0.4,
+      "emoji": "🍇",
+      "summary": "The wild ancestor of the wine grape, a forest vine from Western Europe to Central Asia. Each wild vine is either male or female.",
+      "tags": [
+        "fruit"
+      ],
+      "wiki": "Vitis vinifera",
+      "confidence": "low"
+    },
+    {
+      "id": "grapevine",
+      "name": "Grape",
+      "scientific": "Vitis vinifera subsp. vinifera",
+      "parent": "wild-grape",
+      "rank": "subspecies",
+      "group": "plants",
+      "appeared": 0.011,
+      "emoji": "🍇",
+      "summary": "The grapevine of vineyards, table grapes and raisins. Farmers chose rare vines with flowers that were both male and female, so every plant bears fruit.",
+      "facts": [
+        "Grapes are grown from cuttings, so famous varieties are ancient clones; DNA showed that Cabernet Sauvignon came from a chance cross of Cabernet Franc and Sauvignon Blanc.",
+        "The oldest known winery, in a cave in Armenia, is about 6,100 years old."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Domesticated about 11,000 years ago, at almost the same time in Western Asia and the South Caucasus, first for eating; wine-making grapes were developed as vines spread into Europe.",
+      "wiki": "Vitis vinifera",
+      "confidence": "medium"
+    },
+    {
+      "id": "legumes",
+      "name": "Legumes",
+      "scientific": "Fabaceae",
+      "parent": "rosids",
+      "rank": "family",
+      "group": "plants",
+      "appeared": 65,
+      "emoji": "🫛",
+      "summary": "The bean family: peas, beans, lentils, peanuts, clover and acacias. Bacteria in their root nodules turn nitrogen from the air into natural fertiliser.",
+      "facts": [
+        "With about 20,000 species, it is the third-largest plant family.",
+        "Farmers rotate legumes with other crops to enrich the soil with nitrogen."
+      ],
+      "wiki": "Fabaceae",
+      "confidence": "medium"
+    },
+    {
+      "id": "pea",
+      "name": "Pea",
+      "scientific": "Pisum sativum",
+      "parent": "legumes",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.011,
+      "emoji": "🫛",
+      "summary": "Round green seeds in a pod, one of the 'founder crops' farmed alongside wheat and barley at the dawn of agriculture.",
+      "facts": [
+        "Gregor Mendel discovered the basic rules of heredity by breeding nearly 30,000 pea plants in his monastery garden.",
+        "Mendel's 'wrinkled' peas are caused by a jumping gene that broke a starch-making enzyme."
+      ],
+      "tags": [
+        "vegetable",
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Domesticated in the Fertile Crescent about 10,000–11,000 years ago from wild Pisum relatives.",
+      "wiki": "Pea",
+      "confidence": "low"
+    },
+    {
+      "id": "soybean",
+      "name": "Soybean",
+      "scientific": "Glycine max",
+      "parent": "legumes",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.006,
+      "emoji": "🫘",
+      "summary": "A protein-rich bean used for tofu, soy sauce, oil and animal feed. It was domesticated from the wild soybean, a thin twining vine of East Asia.",
+      "facts": [
+        "Most of the world's soybeans are fed to farm animals, not eaten directly by people."
+      ],
+      "tags": [
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Domesticated from wild Glycine soja in northern and central China roughly 5,000–9,000 years ago.",
+      "wiki": "Soybean",
+      "confidence": "low"
+    },
+    {
+      "id": "peanut",
+      "name": "Peanut",
+      "scientific": "Arachis hypogaea",
+      "parent": "legumes",
+      "rank": "hybrid",
+      "group": "plants",
+      "appeared": 0.009,
+      "emoji": "🥜",
+      "summary": "Not a nut but a legume. After pollination, the flower stalk bends down and pushes the young pod into the soil, where the peanuts grow.",
+      "facts": [
+        "George Washington Carver promoted hundreds of uses for peanuts, but he did not invent peanut butter.",
+        "The two wild parents normally grow hundreds of kilometres apart; people may have carried one to the other."
+      ],
+      "tags": [
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Formed in South America from a cross between two wild species, Arachis duranensis and Arachis ipaensis, probably about 10,000 years ago after people brought them together; domesticated in the region of Bolivia and northern Argentina.",
+      "wiki": "Peanut",
+      "confidence": "low"
+    },
+    {
+      "id": "rosales",
+      "name": "Rosales",
+      "scientific": "Rosales",
+      "parent": "rosids",
+      "rank": "order",
+      "group": "plants",
+      "appeared": 100,
+      "emoji": "🌹",
+      "summary": "The rose order: roses and their fruit-bearing relatives, plus figs, mulberries, hemp, hops, elms and nettles.",
+      "wiki": "Rosales",
+      "confidence": "low"
+    },
+    {
+      "id": "rose-family",
+      "name": "Rose family",
+      "scientific": "Rosaceae",
+      "parent": "rosales",
+      "rank": "family",
+      "group": "plants",
+      "appeared": 90,
+      "emoji": "🌹",
+      "summary": "A family that fills fruit bowls: apples, pears, plums, cherries, peaches, apricots, almonds, strawberries, raspberries and roses are all close relatives.",
+      "facts": [
+        "Apple, cherry and almond blossoms all have five petals, a family trademark shared with wild roses.",
+        "The seeds of many family members, like apples and apricots, contain amygdalin, which can release cyanide."
+      ],
+      "wiki": "Rosaceae",
+      "confidence": "low"
+    },
+    {
+      "id": "malus",
+      "name": "Apples",
+      "scientific": "Malus",
+      "parent": "rose-family",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 45,
+      "emoji": "🍎",
+      "summary": "About 35 species of apple and crab apple trees across the Northern Hemisphere. Most wild ones have small, sour fruits.",
+      "wiki": "Malus",
+      "confidence": "low"
+    },
+    {
+      "id": "wild-apple",
+      "name": "Wild apple",
+      "scientific": "Malus sieversii",
+      "parent": "malus",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 3,
+      "emoji": "🍏",
+      "summary": "The wild forests of Malus sieversii in the Tian Shan mountains are where the apple began. Some of its fruits already taste like modern apples.",
+      "facts": [
+        "Kazakhstan's biggest city, Almaty, takes its name from the Kazakh word for apple.",
+        "Bears and wild horses probably ate the biggest, sweetest apples and spread their seeds, giving the species a head start toward big fruit.",
+        "These wild apple forests are now threatened and the species is listed as vulnerable."
+      ],
+      "tags": [
+        "fruit"
+      ],
+      "wiki": "Malus sieversii",
+      "confidence": "low"
+    },
+    {
+      "id": "crab-apple",
+      "name": "European crab apple",
+      "scientific": "Malus sylvestris",
+      "parent": "malus",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 3,
+      "emoji": "🍏",
+      "summary": "A thorny wild apple of European woods with small, mouth-puckeringly sour fruits. It mixed into domestic apples once they reached Europe.",
+      "facts": [
+        "DNA shows modern apples got a large share of their genes from this crab apple, not just from their Central Asian ancestor."
+      ],
+      "tags": [
+        "fruit"
+      ],
+      "wiki": "Malus sylvestris",
+      "confidence": "low"
+    },
+    {
+      "id": "apple",
+      "name": "Apple",
+      "scientific": "Malus domestica",
+      "parent": "wild-apple",
+      "hybridOf": [
+        "crab-apple"
+      ],
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.004,
+      "emoji": "🍎",
+      "summary": "The domestic apple: over 7,500 varieties, all descended from wild Tian Shan apples that crossed with European crab apples along the way.",
+      "facts": [
+        "Apple seeds don't grow true: plant a seed and you'll get a completely new kind of apple, usually a sour one. Every named variety is kept going by grafting.",
+        "Johnny Appleseed planted apple seeds across the American frontier, but most of his apples were used for cider."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Domesticated from Malus sieversii in the Tian Shan mountains of Kazakhstan; carried west along the Silk Road, where it hybridised with crab apples. Grafting, known by about 3,800 years ago, let growers copy the best trees.",
+      "wiki": "Apple",
+      "confidence": "low"
+    },
+    {
+      "id": "granny-smith",
+      "name": "Granny Smith",
+      "parent": "apple",
+      "rank": "cultivar",
+      "group": "plants",
+      "appeared": 0.00016,
+      "emoji": "🍏",
+      "summary": "The bright green, tart apple. Every Granny Smith tree in the world is a grafted copy of one lucky seedling.",
+      "facts": [
+        "The seedling probably sprouted from leftover French crab apples she had thrown away."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Discovered as a chance seedling by Maria Ann Smith in her orchard at Eastwood, Sydney, Australia, in 1868.",
+      "wiki": "Granny Smith"
+    },
+    {
+      "id": "pears",
+      "name": "Pears",
+      "scientific": "Pyrus",
+      "parent": "rose-family",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 35,
+      "emoji": "🍐",
+      "summary": "Pear trees, close cousins of apples, which probably first evolved in the mountains of western China.",
+      "facts": [
+        "Asian pears, or nashi, are round and crunchy like apples but belong to a separate pear species."
+      ],
+      "wiki": "Pear",
+      "confidence": "low"
+    },
+    {
+      "id": "european-pear",
+      "name": "European pear",
+      "scientific": "Pyrus communis",
+      "parent": "pears",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.003,
+      "emoji": "🍐",
+      "summary": "The juicy, bell-shaped pear of Europe and the Americas. Unusually, it ripens best after picking.",
+      "facts": [
+        "Pears ripen from the inside out, so a pear that's soft on the outside may already be mushy in the middle."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Domesticated from wild pears of Europe and western Asia (such as Pyrus pyraster and Pyrus caucasica) about 3,000 years ago; the ancient Greeks and Romans grew many varieties.",
+      "wiki": "Pyrus communis",
+      "confidence": "low"
+    },
+    {
+      "id": "prunus",
+      "name": "Stone fruits",
+      "scientific": "Prunus",
+      "parent": "rose-family",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 55,
+      "emoji": "🍑",
+      "summary": "The genus Prunus: peaches, plums, cherries, apricots and almonds. Their fruits are drupes, with a hard stone around a single seed.",
+      "facts": [
+        "An almond is the seed inside the stone of a fruit very like a peach."
+      ],
+      "wiki": "Prunus",
+      "confidence": "low"
+    },
+    {
+      "id": "peach",
+      "name": "Peach",
+      "scientific": "Prunus persica",
+      "parent": "prunus",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 2.6,
+      "emoji": "🍑",
+      "summary": "Fuzzy, juicy stone fruit from China. Fossil peach stones 2.6 million years old show the fruit existed long before people.",
+      "facts": [
+        "Fossil peach pits from Kunming, China, look almost identical to modern ones, though humans hadn't evolved yet.",
+        "In Chinese tradition the peach is a symbol of long life."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Domesticated in the Yangtze River valley of China at least 7,500 years ago; it reached Europe via Persia, which is why its scientific name means 'Persian'.",
+      "wiki": "Peach",
+      "confidence": "low"
+    },
+    {
+      "id": "nectarine",
+      "name": "Nectarine",
+      "scientific": "Prunus persica var. nucipersica",
+      "parent": "peach",
+      "rank": "cultivar",
+      "group": "plants",
+      "appeared": 0.002,
+      "emoji": "🍑",
+      "summary": "A peach without fuzz. A single gene change makes the skin smooth, and nectarine and peach trees sometimes sprout from each other's seeds.",
+      "facts": [
+        "A peach tree can grow a branch that makes nectarines, and vice versa."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Arose as a natural mutation of the peach, probably in China, more than 2,000 years ago.",
+      "wiki": "Nectarine",
+      "confidence": "low"
+    },
+    {
+      "id": "wild-almond",
+      "name": "Wild almond",
+      "scientific": "Prunus dulcis (wild forms)",
+      "parent": "prunus",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 5,
+      "emoji": "🌰",
+      "summary": "Wild almond trees of the dry hills of Western and Central Asia. Their nuts are bitter and full of amygdalin, which turns into deadly cyanide.",
+      "facts": [
+        "Eating a few dozen wild bitter almonds could kill an adult."
+      ],
+      "wiki": "Almond",
+      "confidence": "low"
+    },
+    {
+      "id": "almond",
+      "name": "Almond",
+      "scientific": "Prunus dulcis",
+      "parent": "wild-almond",
+      "rank": "cultivar",
+      "group": "plants",
+      "appeared": 0.005,
+      "emoji": "🌰",
+      "summary": "Sweet almonds exist because of a single mutation that switched off the bitter poison. Early farmers spotted and planted those rare sweet trees.",
+      "facts": [
+        "A 2019 study found the 'sweet kernel' mutation in a gene called bHLH2 that blocks amygdalin production.",
+        "California grows about 80% of the world's almonds, and their bloom needs more than two million rented beehives."
+      ],
+      "tags": [
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Domesticated in the Near East (the Levant) about 5,000–6,000 years ago from rare sweet-kernelled trees; spread around the Mediterranean.",
+      "wiki": "Almond",
+      "confidence": "low"
+    },
+    {
+      "id": "cherry-plum",
+      "name": "Cherry plum",
+      "scientific": "Prunus cerasifera",
+      "parent": "prunus",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 3,
+      "emoji": "🍒",
+      "summary": "A small wild plum from south-east Europe and western Asia with cherry-sized red or yellow fruits. It is thought to be one parent of the European plum.",
+      "tags": [
+        "fruit"
+      ],
+      "wiki": "Prunus cerasifera",
+      "confidence": "low"
+    },
+    {
+      "id": "sloe",
+      "name": "Sloe (blackthorn)",
+      "scientific": "Prunus spinosa",
+      "parent": "prunus",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 3,
+      "emoji": "🫐",
+      "summary": "A thorny hedge shrub of Europe with tiny, sour, blue-black fruits. Probably the other parent of the European plum.",
+      "facts": [
+        "Sloes are famous for flavouring sloe gin."
+      ],
+      "tags": [
+        "fruit"
+      ],
+      "wiki": "Prunus spinosa",
+      "confidence": "low"
+    },
+    {
+      "id": "plum",
+      "name": "European plum",
+      "scientific": "Prunus domestica",
+      "parent": "cherry-plum",
+      "hybridOf": [
+        "sloe"
+      ],
+      "rank": "hybrid",
+      "group": "plants",
+      "appeared": 0.004,
+      "emoji": "🫐",
+      "summary": "The plum of prunes and damsons, with six sets of chromosomes. It probably formed when cherry plums crossed with sloes.",
+      "facts": [
+        "Prunes are just dried plums.",
+        "Chinese plums are a different species, Prunus salicina."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Probably arose in the Caucasus region where cherry plum and sloe overlap; well established by Roman times.",
+      "wiki": "Prunus domestica",
+      "confidence": "low"
+    },
+    {
+      "id": "wild-cherry",
+      "name": "Wild cherry",
+      "scientific": "Prunus avium",
+      "parent": "prunus",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 3,
+      "emoji": "🍒",
+      "summary": "A tall forest tree of Europe and western Asia with small, dark, bittersweet cherries. Birds love them and spread the stones.",
+      "facts": [
+        "Its scientific name 'avium' means 'of the birds'."
+      ],
+      "tags": [
+        "fruit"
+      ],
+      "wiki": "Prunus avium",
+      "confidence": "low"
+    },
+    {
+      "id": "sweet-cherry",
+      "name": "Sweet cherry",
+      "scientific": "Prunus avium",
+      "parent": "wild-cherry",
+      "rank": "cultivar",
+      "group": "plants",
+      "appeared": 0.003,
+      "emoji": "🍒",
+      "summary": "Big, sweet, dark cherries selected from wild cherry trees. Sour cherries, used in pies, are a separate hybrid species.",
+      "facts": [
+        "Japan's famous cherry blossom trees are ornamental Prunus hybrids that make tiny, sour fruit."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Cultivated around the Black Sea and Asia Minor by ancient times; the Romans spread cherry growing across their empire.",
+      "wiki": "Cherry",
+      "confidence": "low"
+    },
+    {
+      "id": "apricot",
+      "name": "Apricot",
+      "scientific": "Prunus armeniaca",
+      "parent": "prunus",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 3,
+      "emoji": "🍑",
+      "summary": "A golden, velvety stone fruit. Its scientific name means 'Armenian', but it was actually domesticated in Central Asia and China.",
+      "facts": [
+        "Apricot kernels contain amygdalin, like bitter almonds.",
+        "Turkey grows more apricots than any other country, most of them dried."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Domesticated separately in Central Asia and in China, thousands of years ago; reached Europe via Armenia and Persia.",
+      "wiki": "Apricot",
+      "confidence": "low"
+    },
+    {
+      "id": "fragaria",
+      "name": "Strawberries",
+      "scientific": "Fragaria",
+      "parent": "rose-family",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 8,
+      "emoji": "🍓",
+      "summary": "Low plants that spread by runners. A strawberry's 'seeds' on the outside are actually its true fruits, called achenes.",
+      "facts": [
+        "An average strawberry carries about 200 of these tiny fruits on its surface.",
+        "Botanically, a strawberry isn't a berry at all, but a banana is."
+      ],
+      "wiki": "Fragaria",
+      "confidence": "low"
+    },
+    {
+      "id": "woodland-strawberry",
+      "name": "Woodland strawberry",
+      "scientific": "Fragaria vesca",
+      "parent": "fragaria",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 2,
+      "emoji": "🍓",
+      "summary": "The tiny, intensely flavoured wild strawberry of Europe's woods. It was the strawberry people picked and grew for centuries before the garden strawberry existed.",
+      "facts": [
+        "Garden strawberries have eight sets of chromosomes, and one of those sets came from an ancestor of this little species."
+      ],
+      "tags": [
+        "fruit"
+      ],
+      "wiki": "Fragaria vesca",
+      "confidence": "low"
+    },
+    {
+      "id": "virginia-strawberry",
+      "name": "Virginia strawberry",
+      "scientific": "Fragaria virginiana",
+      "parent": "fragaria",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 1,
+      "emoji": "🍓",
+      "summary": "A wild North American strawberry with small, bright red, very tasty fruit. Colonists sent it back to Europe in the 1600s.",
+      "tags": [
+        "fruit"
+      ],
+      "wiki": "Fragaria virginiana",
+      "confidence": "low"
+    },
+    {
+      "id": "chilean-strawberry",
+      "name": "Chilean strawberry",
+      "scientific": "Fragaria chiloensis",
+      "parent": "fragaria",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 1,
+      "emoji": "🍓",
+      "summary": "A strawberry from the Pacific coast of South America with big, pale, firm fruit. The Mapuche people grew it long before Europeans arrived.",
+      "facts": [
+        "In 1714 a French officer and spy, Amédée-François Frézier, carried five Chilean strawberry plants home; by chance, they were all female."
+      ],
+      "tags": [
+        "fruit"
+      ],
+      "wiki": "Fragaria chiloensis",
+      "confidence": "low"
+    },
+    {
+      "id": "garden-strawberry",
+      "name": "Garden strawberry",
+      "scientific": "Fragaria × ananassa",
+      "parent": "virginia-strawberry",
+      "hybridOf": [
+        "chilean-strawberry"
+      ],
+      "rank": "hybrid",
+      "group": "plants",
+      "appeared": 0.00026,
+      "emoji": "🍓",
+      "summary": "The modern strawberry: an accidental hybrid of a North American and a South American wild strawberry, born in French gardens.",
+      "facts": [
+        "Its name 'ananassa' means pineapple-like, after its fragrance.",
+        "The two wild parents grew 8,000 km apart and only met because humans carried them to Europe."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Arose around 1750 in Brittany, France, when female Chilean strawberries planted near Virginia strawberries were pollinated by them; botanist Antoine Duchesne worked out its parentage in 1766.",
+      "wiki": "Strawberry"
+    },
+    {
+      "id": "rubus",
+      "name": "Brambles",
+      "scientific": "Rubus",
+      "parent": "rose-family",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 30,
+      "emoji": "🫐",
+      "summary": "Raspberries, blackberries and their thorny cousins. Each berry is really a cluster of tiny juicy drupelets, each with its own seed.",
+      "wiki": "Rubus",
+      "confidence": "low"
+    },
+    {
+      "id": "raspberry",
+      "name": "Raspberry",
+      "scientific": "Rubus idaeus",
+      "parent": "rubus",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 2,
+      "emoji": "🍓",
+      "summary": "A red bramble fruit that comes off its core when picked, leaving a hollow cup.",
+      "facts": [
+        "An average raspberry is made of about 100 drupelets."
+      ],
+      "tags": [
+        "fruit"
+      ],
+      "origin": "Gathered from the wild for thousands of years; cultivated in European gardens from the Middle Ages onwards.",
+      "wiki": "Raspberry",
+      "confidence": "low"
+    },
+    {
+      "id": "blackberry",
+      "name": "Blackberry",
+      "scientific": "Rubus fruticosus (aggregate)",
+      "parent": "rubus",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 2,
+      "emoji": "🫐",
+      "summary": "The thorny bramble of hedges and wastelands. Unlike a raspberry, a blackberry keeps its core when picked.",
+      "facts": [
+        "Many blackberries make seeds without sex, so they form hundreds of near-identical 'microspecies'."
+      ],
+      "tags": [
+        "fruit"
+      ],
+      "wiki": "Blackberry",
+      "confidence": "low"
+    },
+    {
+      "id": "loganberry",
+      "name": "Loganberry",
+      "scientific": "Rubus × loganobaccus",
+      "parent": "blackberry",
+      "hybridOf": [
+        "raspberry"
+      ],
+      "rank": "hybrid",
+      "group": "plants",
+      "appeared": 0.000145,
+      "emoji": "🫐",
+      "summary": "A deep red blackberry–raspberry hybrid that appeared by accident in a Californian garden.",
+      "facts": [
+        "Loganberries were later crossed again to make boysenberries."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Arose in 1881 in the garden of Judge James Harvey Logan in Santa Cruz, California, from a cross between a blackberry and a raspberry.",
+      "wiki": "Loganberry"
+    },
+    {
+      "id": "roses",
+      "name": "Roses",
+      "scientific": "Rosa",
+      "parent": "rose-family",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 35,
+      "emoji": "🌹",
+      "summary": "Thorny shrubs with famously fragrant flowers. Thousands of garden varieties come from a handful of wild species from Asia, Europe and the Middle East.",
+      "facts": [
+        "Rose fossils from Colorado are about 35 million years old.",
+        "Strictly, rose 'thorns' are prickles: outgrowths of the skin, not modified branches.",
+        "In World War II, British volunteers collected rose hips to make vitamin C syrup."
+      ],
+      "tags": [
+        "domesticated"
+      ],
+      "origin": "Cultivated in China, Persia and around the Mediterranean for thousands of years; modern repeat-flowering roses come from crossing Chinese and European roses in the 1800s.",
+      "wiki": "Rose",
+      "confidence": "low"
+    },
+    {
+      "id": "ficus",
+      "name": "Figs",
+      "scientific": "Ficus",
+      "parent": "rosales",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 60,
+      "emoji": "🌳",
+      "summary": "About 850 species of fig trees and vines in the mulberry family, including banyans and strangler figs. Their 'fruit' is really a hollow bundle of tiny flowers turned inward.",
+      "facts": [
+        "Most fig species are pollinated by their own species of tiny fig wasp that crawls inside the fig.",
+        "Strangler figs start life on top of another tree and slowly wrap and replace it."
+      ],
+      "wiki": "Ficus",
+      "confidence": "low"
+    },
+    {
+      "id": "fig",
+      "name": "Common fig",
+      "scientific": "Ficus carica",
+      "parent": "ficus",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.0114,
+      "emoji": "🟣",
+      "summary": "A sweet Mediterranean fruit that may be the first plant ever domesticated, a thousand years before wheat.",
+      "facts": [
+        "Many fig varieties grown today don't need fig wasps at all; their fruits develop without pollination."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Charred figs from Gilgal, in the Jordan Valley, about 11,400 years old, came from seedless trees that can only be kept going by people planting cuttings.",
+      "wiki": "Common fig",
+      "confidence": "low"
+    },
+    {
+      "id": "cucurbits",
+      "name": "Gourd family",
+      "scientific": "Cucurbitaceae",
+      "parent": "rosids",
+      "rank": "family",
+      "group": "plants",
+      "appeared": 60,
+      "emoji": "🎃",
+      "summary": "Climbing and creeping vines with big fruits: pumpkins, squashes, melons, watermelons, cucumbers and gourds.",
+      "facts": [
+        "Bottle gourds were among the first plants people grew, used as containers before pottery."
+      ],
+      "wiki": "Cucurbitaceae",
+      "confidence": "low"
+    },
+    {
+      "id": "kordofan-melon",
+      "name": "Kordofan melon",
+      "scientific": "Citrullus lanatus subsp. cordophanus",
+      "parent": "cucurbits",
+      "rank": "subspecies",
+      "group": "plants",
+      "appeared": 1,
+      "emoji": "🍉",
+      "summary": "A wild melon from the Kordofan region of Sudan with pale, non-bitter flesh. DNA shows it is the closest wild relative of the watermelon.",
+      "tags": [
+        "fruit"
+      ],
+      "wiki": "Watermelon",
+      "confidence": "low"
+    },
+    {
+      "id": "watermelon",
+      "name": "Watermelon",
+      "scientific": "Citrullus lanatus",
+      "parent": "kordofan-melon",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.005,
+      "emoji": "🍉",
+      "summary": "A giant, juicy fruit that is about 92% water. Farmers turned a pale, hard melon into today's sweet, red-fleshed fruit.",
+      "facts": [
+        "Watermelon seeds were found in the tomb of Tutankhamun.",
+        "Seedless watermelons are made by crossing normal plants with plants that have doubled chromosomes, giving sterile offspring."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Domesticated in north-east Africa, probably Sudan, at least 4,000–5,000 years ago; a 4,300-year-old Egyptian tomb painting shows a striped watermelon.",
+      "wiki": "Watermelon",
+      "confidence": "low"
+    },
+    {
+      "id": "cucumis",
+      "name": "Melons and cucumbers",
+      "scientific": "Cucumis",
+      "parent": "cucurbits",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 10,
+      "emoji": "🍈",
+      "summary": "The genus of melons and cucumbers, with wild relatives in Africa, Asia and Australia.",
+      "wiki": "Cucumis",
+      "confidence": "low"
+    },
+    {
+      "id": "melon",
+      "name": "Melon",
+      "scientific": "Cucumis melo",
+      "parent": "cucumis",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.005,
+      "emoji": "🍈",
+      "summary": "Cantaloupe, honeydew and many other melons are all one species, domesticated more than once.",
+      "facts": [
+        "The cantaloupe is named after Cantalupo, a former papal estate near Rome."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Domesticated at least twice from wild melons: once in Africa and once in India, several thousand years ago.",
+      "wiki": "Melon",
+      "confidence": "low"
+    },
+    {
+      "id": "cucumber",
+      "name": "Cucumber",
+      "scientific": "Cucumis sativus",
+      "parent": "cucumis",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.004,
+      "emoji": "🥒",
+      "summary": "A crisp, watery fruit we eat as a vegetable. Its wild ancestors from the Himalayan foothills are bitter.",
+      "facts": [
+        "The Roman emperor Tiberius reportedly ate cucumbers every day, grown in movable beds wheeled into the sun."
+      ],
+      "tags": [
+        "vegetable",
+        "domesticated"
+      ],
+      "origin": "Domesticated in India, in the foothills of the Himalayas, at least 3,000 years ago.",
+      "wiki": "Cucumber",
+      "confidence": "low"
+    },
+    {
+      "id": "cucurbita",
+      "name": "Squashes",
+      "scientific": "Cucurbita",
+      "parent": "cucurbits",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 10,
+      "emoji": "🎃",
+      "summary": "Pumpkins and squashes of the Americas. Wild squashes are bitter and were spread by mammoths and mastodons, which didn't mind.",
+      "facts": [
+        "After the big mammals died out, wild squashes might have disappeared too if humans hadn't started growing them."
+      ],
+      "wiki": "Cucurbita",
+      "confidence": "low"
+    },
+    {
+      "id": "pumpkin",
+      "name": "Pumpkin",
+      "scientific": "Cucurbita pepo",
+      "parent": "cucurbita",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.01,
+      "emoji": "🎃",
+      "summary": "One of the first crops in the Americas. Pumpkins, zucchini, acorn squash and many ornamental gourds all belong to this one species.",
+      "facts": [
+        "The first jack-o'-lanterns in Ireland and Scotland were carved from turnips, not pumpkins.",
+        "Giant pumpkins can weigh over 1,000 kg."
+      ],
+      "tags": [
+        "vegetable",
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Seeds about 10,000 years old from Guilá Naquitz cave in Oaxaca, Mexico, are among the oldest evidence of farming in the Americas.",
+      "wiki": "Cucurbita pepo",
+      "confidence": "medium"
+    },
+    {
+      "id": "zucchini",
+      "name": "Zucchini (courgette)",
+      "scientific": "Cucurbita pepo",
+      "parent": "pumpkin",
+      "rank": "cultivar",
+      "group": "plants",
+      "appeared": 0.00015,
+      "emoji": "🥒",
+      "summary": "A squash eaten young and tender. It is a summer squash variety of the same species as pumpkins.",
+      "facts": [
+        "Its big yellow flowers are also eaten, often stuffed and fried."
+      ],
+      "tags": [
+        "vegetable",
+        "domesticated"
+      ],
+      "origin": "Developed in northern Italy, probably near Milan, in the late 1800s from squashes brought from the Americas.",
+      "wiki": "Zucchini",
+      "confidence": "low"
+    },
+    {
+      "id": "mallow-family",
+      "name": "Mallow family",
+      "scientific": "Malvaceae",
+      "parent": "rosids",
+      "rank": "family",
+      "group": "plants",
+      "appeared": 70,
+      "emoji": "🌺",
+      "summary": "Hibiscus and its relatives, including cacao, cotton, okra, durian, baobab and linden trees.",
+      "facts": [
+        "Marshmallows were originally made from the root of the marsh mallow plant."
+      ],
+      "wiki": "Malvaceae",
+      "confidence": "low"
+    },
+    {
+      "id": "cacao",
+      "name": "Cacao",
+      "scientific": "Theobroma cacao",
+      "parent": "mallow-family",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 2,
+      "emoji": "🍫",
+      "summary": "A small rainforest tree whose bitter seeds become chocolate. Its flowers and pods grow straight out of the trunk.",
+      "facts": [
+        "The Aztecs used cacao beans as money.",
+        "Its tiny flowers are pollinated by midges smaller than a pinhead.",
+        "Theobroma means 'food of the gods'."
+      ],
+      "tags": [
+        "crop",
+        "domesticated"
+      ],
+      "origin": "First used about 5,300 years ago by the Mayo-Chinchipe people of the upper Amazon in Ecuador; later cultivated in Mesoamerica, where the Maya and Aztecs made chocolate drinks.",
+      "wiki": "Theobroma cacao",
+      "confidence": "low"
+    },
+    {
+      "id": "cotton",
+      "name": "Cotton",
+      "scientific": "Gossypium",
+      "parent": "mallow-family",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 6,
+      "emoji": "☁️",
+      "summary": "Shrubs whose seeds are wrapped in fluffy fibres. Cotton was domesticated four separate times on different continents.",
+      "facts": [
+        "The cotton in most T-shirts comes from a species formed 1–2 million years ago, when seeds of an African-Asian cotton drifted across the ocean and crossed with an American one.",
+        "A cotton fibre is a single plant cell that can be over 3 cm long."
+      ],
+      "tags": [
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Domesticated independently in South Asia, Africa/Arabia, Mesoamerica and South America; cotton threads from Pakistan are over 7,000 years old.",
+      "wiki": "Gossypium",
+      "confidence": "low"
+    },
+    {
+      "id": "sapindales",
+      "name": "Sapindales",
+      "scientific": "Sapindales",
+      "parent": "rosids",
+      "rank": "order",
+      "group": "plants",
+      "appeared": 100,
+      "emoji": "🍋",
+      "summary": "An order rich in fruit and fragrance: citrus, mango, cashew, pistachio, lychee, maple, mahogany and frankincense.",
+      "facts": [
+        "Maple syrup and lemonade both come from plants of this order."
+      ],
+      "wiki": "Sapindales",
+      "confidence": "low"
+    },
+    {
+      "id": "rue-family",
+      "name": "Citrus family",
+      "scientific": "Rutaceae",
+      "parent": "sapindales",
+      "rank": "family",
+      "group": "plants",
+      "appeared": 70,
+      "emoji": "🍋",
+      "summary": "The rue family, aromatic trees and herbs with oil glands dotting their leaves and fruit peel. Includes all citrus fruits and curry leaf.",
+      "facts": [
+        "Hold a citrus leaf up to the light and you'll see tiny see-through dots: oil glands."
+      ],
+      "wiki": "Rutaceae",
+      "confidence": "low"
+    },
+    {
+      "id": "citrus",
+      "name": "Citrus",
+      "scientific": "Citrus",
+      "parent": "rue-family",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 8,
+      "emoji": "🍊",
+      "summary": "The genus of oranges, lemons, limes and grapefruits. Almost all supermarket citrus are hybrids of just a few wild ancestors.",
+      "facts": [
+        "Citrus originated about 8 million years ago in the south-east foothills of the Himalayas.",
+        "The 'pure' ancestral species are citron, pomelo, mandarin and a few papedas; nearly everything else is a mix of them."
+      ],
+      "wiki": "Citrus",
+      "confidence": "medium"
+    },
+    {
+      "id": "citron",
+      "name": "Citron",
+      "scientific": "Citrus medica",
+      "parent": "citrus",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 6,
+      "emoji": "🍋",
+      "summary": "A big, knobbly, thick-skinned citrus that is mostly peel. It was the first citrus to reach the Mediterranean, and it's a parent of lemons and limes.",
+      "facts": [
+        "Buddha's hand is a citron whose fruit splits into finger-like segments.",
+        "The etrog used in the Jewish festival of Sukkot is a citron."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Native to north-east India and nearby regions; carried west to Persia and the Mediterranean by around 300 BC.",
+      "wiki": "Citron",
+      "confidence": "low"
+    },
+    {
+      "id": "pomelo",
+      "name": "Pomelo",
+      "scientific": "Citrus maxima",
+      "parent": "citrus",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 6,
+      "emoji": "🍈",
+      "summary": "The largest citrus fruit, up to the size of a basketball. It's a mild, sweet ancestor of oranges and grapefruits.",
+      "facts": [
+        "Pomelo is the 'big' half of both the orange and the grapefruit family tree."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Native to Southeast Asia and southern China, where it has been grown for thousands of years.",
+      "wiki": "Pomelo",
+      "confidence": "low"
+    },
+    {
+      "id": "mandarin",
+      "name": "Mandarin",
+      "scientific": "Citrus reticulata",
+      "parent": "citrus",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 6,
+      "emoji": "🍊",
+      "summary": "Small, sweet, easy-to-peel citrus native to southern China. It's one of the founding ancestors of most citrus fruits we eat.",
+      "facts": [
+        "Tangerines and satsumas are types of mandarin.",
+        "Many 'mandarins' sold today carry a little pomelo DNA from ancient crosses."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Domesticated in southern China; wild mandarins still grow in the Mangshan mountains of Hunan.",
+      "wiki": "Mandarin orange",
+      "confidence": "low"
+    },
+    {
+      "id": "papeda",
+      "name": "Papeda (Micrantha)",
+      "scientific": "Citrus micrantha",
+      "parent": "citrus",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 6,
+      "emoji": "🍋",
+      "summary": "A small, sour wild citrus from the Philippines. Few people have heard of it, but it is a parent of the key lime.",
+      "tags": [
+        "fruit"
+      ],
+      "wiki": "Citrus micrantha",
+      "confidence": "low"
+    },
+    {
+      "id": "sweet-orange",
+      "name": "Sweet orange",
+      "scientific": "Citrus × sinensis",
+      "parent": "mandarin",
+      "hybridOf": [
+        "pomelo"
+      ],
+      "rank": "hybrid",
+      "group": "plants",
+      "appeared": 0.0025,
+      "emoji": "🍊",
+      "summary": "The world's most grown citrus. It is a mandarin–pomelo hybrid, then crossed back to mandarin, and all its varieties descend from one ancestral tree through bud mutations.",
+      "facts": [
+        "In Greek, Arabic, Turkish and several other languages the word for orange is based on 'Portugal'.",
+        "In English, the colour was named after the fruit, not the other way round."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Arose in southern China from crosses between mandarins and pomelos; Portuguese traders brought improved sweet oranges to Europe in the 1500s.",
+      "wiki": "Orange (fruit)",
+      "confidence": "low"
+    },
+    {
+      "id": "sour-orange",
+      "name": "Sour orange",
+      "scientific": "Citrus × aurantium",
+      "parent": "mandarin",
+      "hybridOf": [
+        "pomelo"
+      ],
+      "rank": "hybrid",
+      "group": "plants",
+      "appeared": 0.003,
+      "emoji": "🍊",
+      "summary": "A bitter, sour orange used for Seville marmalade and perfume. It's a direct pomelo × mandarin cross, and a parent of the lemon.",
+      "facts": [
+        "Neroli perfume oil is distilled from its flowers."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Formed in South-east Asia or southern China from pomelo and mandarin; Arab traders spread it to the Mediterranean around the 10th century.",
+      "wiki": "Bitter orange",
+      "confidence": "low"
+    },
+    {
+      "id": "lemon",
+      "name": "Lemon",
+      "scientific": "Citrus × limon",
+      "parent": "citron",
+      "hybridOf": [
+        "sour-orange"
+      ],
+      "rank": "hybrid",
+      "group": "plants",
+      "appeared": 0.002,
+      "emoji": "🍋",
+      "summary": "A sour, juicy hybrid of the citron and the sour orange. Its acid and vitamin C made it famous at sea.",
+      "facts": [
+        "In 1747 ship's surgeon James Lind showed that citrus cured scurvy, in one of the first controlled medical trials."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Arose in north-east India, Myanmar or southern China; reached the Mediterranean around the time of the Roman Empire and spread widely with Arab traders.",
+      "wiki": "Lemon",
+      "confidence": "low"
+    },
+    {
+      "id": "grapefruit",
+      "name": "Grapefruit",
+      "scientific": "Citrus × paradisi",
+      "parent": "pomelo",
+      "hybridOf": [
+        "sweet-orange"
+      ],
+      "rank": "hybrid",
+      "group": "plants",
+      "appeared": 0.0003,
+      "emoji": "🍊",
+      "summary": "An 18th-century accident in Barbados: a pomelo crossed with a sweet orange. It's named for growing in grape-like clusters.",
+      "facts": [
+        "Grapefruit can make some medicines dangerously strong, because its chemicals block a gut enzyme that breaks drugs down.",
+        "Barbados lists it among its 'Seven Wonders'."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Born in Barbados in the 1700s, where pomelos and sweet oranges brought from Asia grew side by side; first described in 1750 as the 'forbidden fruit'.",
+      "wiki": "Grapefruit"
+    },
+    {
+      "id": "key-lime",
+      "name": "Key lime",
+      "scientific": "Citrus × aurantiifolia",
+      "parent": "citron",
+      "hybridOf": [
+        "papeda"
+      ],
+      "rank": "hybrid",
+      "group": "plants",
+      "appeared": 0.003,
+      "emoji": "🍋",
+      "summary": "A small, fragrant, seedy lime. It's a citron crossed with a little-known wild papeda from the Philippines.",
+      "facts": [
+        "It's the star of the American dessert key lime pie."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Arose in South-east Asia; carried across the world by traders and grown in the Florida Keys from the 1800s, giving it its name.",
+      "wiki": "Key lime",
+      "confidence": "low"
+    },
+    {
+      "id": "persian-lime",
+      "name": "Persian lime",
+      "scientific": "Citrus × latifolia",
+      "parent": "key-lime",
+      "hybridOf": [
+        "lemon"
+      ],
+      "rank": "hybrid",
+      "group": "plants",
+      "appeared": 0.0005,
+      "emoji": "🍋",
+      "summary": "The large, seedless supermarket lime. It is a cross of the key lime and the lemon.",
+      "facts": [
+        "It has three sets of chromosomes, which is why it has no seeds."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Probably arose in Persia (Iran) or nearby; became the main commercial lime in the 20th century.",
+      "wiki": "Persian lime",
+      "confidence": "low"
+    },
+    {
+      "id": "clementine",
+      "name": "Clementine",
+      "scientific": "Citrus × clementina",
+      "parent": "mandarin",
+      "hybridOf": [
+        "sweet-orange"
+      ],
+      "rank": "hybrid",
+      "group": "plants",
+      "appeared": 0.000124,
+      "emoji": "🍊",
+      "summary": "A small, sweet, seedless mandarin-type fruit that is a cross of a mandarin and a sweet orange.",
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Found in 1902 by Brother Clément Rodier in the garden of an orphanage at Misserghin, Algeria.",
+      "wiki": "Clementine"
+    },
+    {
+      "id": "cashew-family",
+      "name": "Cashew family",
+      "scientific": "Anacardiaceae",
+      "parent": "sapindales",
+      "rank": "family",
+      "group": "plants",
+      "appeared": 70,
+      "emoji": "🥭",
+      "summary": "Mango, cashew and pistachio, and also poison ivy. Many members contain urushiol, an oil that causes itchy rashes.",
+      "facts": [
+        "Mango skin can give a poison-ivy-like rash to very sensitive people."
+      ],
+      "wiki": "Anacardiaceae",
+      "confidence": "low"
+    },
+    {
+      "id": "mango",
+      "name": "Mango",
+      "scientific": "Mangifera indica",
+      "parent": "cashew-family",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 5,
+      "emoji": "🥭",
+      "summary": "A juicy, fragrant tropical fruit and the national fruit of India, Pakistan and the Philippines.",
+      "facts": [
+        "The paisley pattern is called 'ambi' or 'kairi' in Hindi, meaning mango.",
+        "Mango trees can live and bear fruit for over 100 years."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Domesticated in South Asia (India and Myanmar region) about 4,000 years ago; Buddhist monks and later traders carried it across Asia, and the Portuguese took it to Africa and Brazil.",
+      "wiki": "Mango",
+      "confidence": "low"
+    },
+    {
+      "id": "cashew",
+      "name": "Cashew",
+      "scientific": "Anacardium occidentale",
+      "parent": "cashew-family",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 5,
+      "emoji": "🌰",
+      "summary": "A Brazilian tree whose nut hangs below a juicy 'cashew apple'. The shell contains a caustic oil, so the nuts are always heated before sale.",
+      "facts": [
+        "Each cashew apple has only one nut, growing on the outside.",
+        "The cashew apple is eaten and made into juice in Brazil and India."
+      ],
+      "tags": [
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Native to north-eastern Brazil; Portuguese colonists carried it to India and East Africa in the 1500s, which are now major producers.",
+      "wiki": "Cashew",
+      "confidence": "low"
+    },
+    {
+      "id": "brassicales",
+      "name": "Brassicales",
+      "scientific": "Brassicales",
+      "parent": "rosids",
+      "rank": "order",
+      "group": "plants",
+      "appeared": 90,
+      "emoji": "🥬",
+      "summary": "Plants armed with mustard oils: cabbages, mustards, capers, papaya and nasturtiums. Chewing their tissue sets off a sharp-tasting chemical defence.",
+      "facts": [
+        "The 'bite' of mustard, wasabi and horseradish comes from a defence called the 'mustard oil bomb'."
+      ],
+      "wiki": "Brassicales",
+      "confidence": "low"
+    },
+    {
+      "id": "papaya",
+      "name": "Papaya",
+      "scientific": "Carica papaya",
+      "parent": "brassicales",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 5,
+      "emoji": "🍈",
+      "summary": "A fast-growing, soft-stemmed tropical plant with sweet orange fruit. Surprisingly, it's a relative of cabbages and mustard.",
+      "facts": [
+        "Its enzyme papain is used to tenderise meat.",
+        "A genetically engineered 'Rainbow' papaya, released in 1998, saved Hawaii's papaya farms from ringspot virus."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Domesticated in southern Mexico and Central America; spread across the tropics by Spanish and Portuguese sailors in the 1500s.",
+      "wiki": "Papaya",
+      "confidence": "low"
+    },
+    {
+      "id": "cabbage-family",
+      "name": "Cabbage family",
+      "scientific": "Brassicaceae",
+      "parent": "brassicales",
+      "rank": "family",
+      "group": "plants",
+      "appeared": 35,
+      "emoji": "🥬",
+      "summary": "Mustards and crucifers: cabbages, turnips, radishes, mustard, rocket, wasabi and the lab plant Arabidopsis. Their four petals form a cross.",
+      "facts": [
+        "Thale cress (Arabidopsis), a tiny weed of this family, was the first plant to have its genome fully sequenced, in 2000."
+      ],
+      "wiki": "Brassicaceae",
+      "confidence": "low"
+    },
+    {
+      "id": "brassica",
+      "name": "Brassicas",
+      "scientific": "Brassica",
+      "parent": "cabbage-family",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 10,
+      "emoji": "🥦",
+      "summary": "A genus that people have sculpted into an amazing range of vegetables: cabbages, turnips, mustards, rapeseed and more.",
+      "facts": [
+        "The 'Triangle of U' (1935) showed how three Brassica species crossed to form three new ones, including rapeseed."
+      ],
+      "wiki": "Brassica",
+      "confidence": "low"
+    },
+    {
+      "id": "wild-cabbage",
+      "name": "Wild cabbage",
+      "scientific": "Brassica oleracea",
+      "parent": "brassica",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 2,
+      "emoji": "🥬",
+      "summary": "A tough, leafy plant of Atlantic and Mediterranean sea cliffs. Broccoli, cauliflower, cabbage, kale, kohlrabi and Brussels sprouts are all this one species.",
+      "facts": [
+        "Wild cabbage still grows on the chalk cliffs of southern England, including the White Cliffs of Dover.",
+        "Farmers made each vegetable by selecting a different part: leaves, buds, stems or flowers."
+      ],
+      "tags": [
+        "vegetable"
+      ],
+      "wiki": "Brassica oleracea",
+      "confidence": "low"
+    },
+    {
+      "id": "kale",
+      "name": "Kale",
+      "scientific": "Brassica oleracea var. sabellica",
+      "parent": "wild-cabbage",
+      "rank": "cultivar",
+      "group": "plants",
+      "appeared": 0.0025,
+      "emoji": "🥬",
+      "summary": "The cabbage selected for big, loose leaves, the closest of the cabbage vegetables to its wild ancestor.",
+      "facts": [
+        "Kale was one of the most common green vegetables in Europe until the Middle Ages."
+      ],
+      "tags": [
+        "vegetable",
+        "domesticated"
+      ],
+      "origin": "Grown by ancient Greeks and Romans in the Mediterranean more than 2,000 years ago.",
+      "wiki": "Kale",
+      "confidence": "low"
+    },
+    {
+      "id": "cabbage",
+      "name": "Cabbage",
+      "scientific": "Brassica oleracea var. capitata",
+      "parent": "wild-cabbage",
+      "rank": "cultivar",
+      "group": "plants",
+      "appeared": 0.001,
+      "emoji": "🥬",
+      "summary": "Leaves wrapped into a tight ball: a cabbage head is really one giant bud.",
+      "facts": [
+        "Captain Cook fed his sailors sauerkraut, fermented cabbage, to help prevent scurvy."
+      ],
+      "tags": [
+        "vegetable",
+        "domesticated"
+      ],
+      "origin": "Tight-headed cabbages were developed in Europe in the Middle Ages, around 1,000 years ago.",
+      "wiki": "Cabbage",
+      "confidence": "low"
+    },
+    {
+      "id": "broccoli",
+      "name": "Broccoli",
+      "scientific": "Brassica oleracea var. italica",
+      "parent": "wild-cabbage",
+      "rank": "cultivar",
+      "group": "plants",
+      "appeared": 0.002,
+      "emoji": "🥦",
+      "summary": "The cabbage selected for thick clusters of green flower buds. Each 'tree' is a bunch of unopened flowers.",
+      "facts": [
+        "'Broccoli' comes from the Italian 'brocco', meaning sprout or shoot.",
+        "If you don't harvest it, broccoli bursts into small yellow flowers."
+      ],
+      "tags": [
+        "vegetable",
+        "domesticated"
+      ],
+      "origin": "Developed in Italy, probably in Roman times, and spread through Europe from there.",
+      "wiki": "Broccoli",
+      "confidence": "low"
+    },
+    {
+      "id": "cauliflower",
+      "name": "Cauliflower",
+      "scientific": "Brassica oleracea var. botrytis",
+      "parent": "broccoli",
+      "rank": "cultivar",
+      "group": "plants",
+      "appeared": 0.0008,
+      "emoji": "🥦",
+      "summary": "A tight white 'curd' of stunted flower buds. Genetics shows cauliflower was bred from broccoli.",
+      "facts": [
+        "Mark Twain called cauliflower 'nothing but cabbage with a college education'.",
+        "Farmers tie leaves over the head to keep it white; orange and purple varieties exist too."
+      ],
+      "tags": [
+        "vegetable",
+        "domesticated"
+      ],
+      "origin": "Developed from broccoli-like plants in the eastern Mediterranean in the Middle Ages, then refined in Italy and northern Europe.",
+      "wiki": "Cauliflower",
+      "confidence": "low"
+    },
+    {
+      "id": "romanesco",
+      "name": "Romanesco",
+      "scientific": "Brassica oleracea var. botrytis",
+      "parent": "cauliflower",
+      "rank": "cultivar",
+      "group": "plants",
+      "appeared": 0.0005,
+      "emoji": "🥦",
+      "summary": "A lime-green cauliflower whose florets form spiralling fractals: every bump is made of smaller bumps of the same shape.",
+      "facts": [
+        "The number of spirals on a Romanesco head is usually a Fibonacci number."
+      ],
+      "tags": [
+        "vegetable",
+        "domesticated"
+      ],
+      "origin": "Grown near Rome, Italy, at least since the 16th century.",
+      "wiki": "Romanesco broccoli",
+      "confidence": "low"
+    },
+    {
+      "id": "brussels-sprouts",
+      "name": "Brussels sprouts",
+      "scientific": "Brassica oleracea var. gemmifera",
+      "parent": "wild-cabbage",
+      "rank": "cultivar",
+      "group": "plants",
+      "appeared": 0.0005,
+      "emoji": "🥬",
+      "summary": "Tiny cabbages that grow up a tall stalk: each sprout is a swollen side bud.",
+      "facts": [
+        "Some people taste sprouts as much more bitter because of their version of a bitter-taste gene, TAS2R38.",
+        "Since the 1990s, breeders have produced milder sprouts by reducing bitter compounds."
+      ],
+      "tags": [
+        "vegetable",
+        "domesticated"
+      ],
+      "origin": "Developed in what is now Belgium, near Brussels, probably by the 1500s.",
+      "wiki": "Brussels sprout",
+      "confidence": "low"
+    },
+    {
+      "id": "kohlrabi",
+      "name": "Kohlrabi",
+      "scientific": "Brassica oleracea var. gongylodes",
+      "parent": "wild-cabbage",
+      "rank": "cultivar",
+      "group": "plants",
+      "appeared": 0.0005,
+      "emoji": "🥬",
+      "summary": "A cabbage bred for its swollen, ball-shaped stem, which looks a bit like an alien turnip.",
+      "facts": [
+        "Its German name means 'cabbage turnip'."
+      ],
+      "tags": [
+        "vegetable",
+        "domesticated"
+      ],
+      "origin": "Developed in northern Europe, probably by the 1500s.",
+      "wiki": "Kohlrabi",
+      "confidence": "low"
+    },
+    {
+      "id": "spurge-family",
+      "name": "Spurge family",
+      "scientific": "Euphorbiaceae",
+      "parent": "rosids",
+      "rank": "family",
+      "group": "plants",
+      "appeared": 60,
+      "emoji": "🌿",
+      "summary": "A huge family, many with milky, often poisonous sap: rubber trees, castor beans, poinsettias, cactus-like spurges and cassava.",
+      "facts": [
+        "Natural rubber comes from the latex of the rubber tree, a member of this family."
+      ],
+      "wiki": "Euphorbiaceae",
+      "confidence": "low"
+    },
+    {
+      "id": "cassava",
+      "name": "Cassava",
+      "scientific": "Manihot esculenta",
+      "parent": "spurge-family",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.009,
+      "emoji": "🥔",
+      "summary": "A starchy root that feeds hundreds of millions of people in the tropics. Raw cassava contains compounds that release cyanide, so it must be properly processed.",
+      "facts": [
+        "Tapioca pearls are made from cassava starch.",
+        "Cassava survives drought and poor soils where few other crops can grow."
+      ],
+      "tags": [
+        "crop",
+        "vegetable",
+        "domesticated"
+      ],
+      "origin": "Domesticated in the south-western Amazon, in Brazil, roughly 8,000–10,000 years ago; Portuguese traders took it to Africa, now the biggest producer.",
+      "wiki": "Cassava",
+      "confidence": "low"
+    },
+    {
+      "id": "asterids",
+      "name": "Asterids",
+      "parent": "eudicots",
+      "rank": "clade",
+      "group": "plants",
+      "appeared": 115,
+      "emoji": "🌻",
+      "summary": "A huge branch of eudicots with tube-shaped flowers, including sunflowers, tomatoes, potatoes, coffee, olives, mint, carrots and blueberries.",
+      "wiki": "Asterids",
+      "confidence": "low"
+    },
+    {
+      "id": "ericales",
+      "name": "Ericales",
+      "scientific": "Ericales",
+      "parent": "asterids",
+      "rank": "order",
+      "group": "plants",
+      "appeared": 100,
+      "emoji": "🫐",
+      "summary": "A varied order that includes blueberries, cranberries, kiwifruit, tea, persimmons, Brazil nuts and rhododendrons.",
+      "wiki": "Ericales",
+      "confidence": "low"
+    },
+    {
+      "id": "vaccinium",
+      "name": "Blueberries and cranberries",
+      "scientific": "Vaccinium",
+      "parent": "ericales",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 10,
+      "emoji": "🫐",
+      "summary": "Shrubs of the heath family that love acidic soils: blueberries, cranberries, bilberries and lingonberries.",
+      "wiki": "Vaccinium",
+      "confidence": "low"
+    },
+    {
+      "id": "blueberry",
+      "name": "Highbush blueberry",
+      "scientific": "Vaccinium corymbosum",
+      "parent": "vaccinium",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 1,
+      "emoji": "🫐",
+      "summary": "A North American shrub that became a crop only about a century ago, making it one of the youngest domesticated fruits.",
+      "facts": [
+        "The blue colour isn't just pigment: a waxy coating of tiny crystals scatters blue light.",
+        "Inside, most blueberries are pale green, not blue."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Domesticated between 1908 and 1916 in New Jersey by USDA botanist Frederick Coville and farmer Elizabeth White, who sold the first commercial crop in 1916.",
+      "wiki": "Blueberry",
+      "confidence": "low"
+    },
+    {
+      "id": "cranberry",
+      "name": "Cranberry",
+      "scientific": "Vaccinium macrocarpon",
+      "parent": "vaccinium",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 1,
+      "emoji": "🍒",
+      "summary": "A low, creeping North American shrub with tart red berries that contain pockets of air.",
+      "facts": [
+        "Farmers flood the fields at harvest time and the cranberries float to the surface.",
+        "Good cranberries bounce! Growers once sorted them with 'bounce boards'."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Indigenous peoples of north-eastern North America used wild cranberries; cultivation began around 1816 when Henry Hall of Cape Cod, Massachusetts, planted them in bogs.",
+      "wiki": "Cranberry",
+      "confidence": "low"
+    },
+    {
+      "id": "chinese-gooseberry",
+      "name": "Chinese gooseberry",
+      "scientific": "Actinidia chinensis",
+      "parent": "ericales",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 2,
+      "emoji": "🥝",
+      "summary": "A wild climbing vine from the forests of central and southern China with small, fuzzy, green-fleshed fruits.",
+      "facts": [
+        "Chinese people gathered it from the wild for centuries but rarely farmed it."
+      ],
+      "tags": [
+        "fruit"
+      ],
+      "wiki": "Actinidia chinensis",
+      "confidence": "low"
+    },
+    {
+      "id": "kiwifruit",
+      "name": "Kiwifruit",
+      "scientific": "Actinidia chinensis var. deliciosa",
+      "parent": "chinese-gooseberry",
+      "rank": "cultivar",
+      "group": "plants",
+      "appeared": 0.00012,
+      "emoji": "🥝",
+      "summary": "The fuzzy brown fruit with bright green flesh, bred in New Zealand from Chinese gooseberry seeds and renamed for marketing.",
+      "facts": [
+        "Kiwifruit has more vitamin C than an orange, weight for weight.",
+        "Almost all green kiwifruit sold are the 'Hayward' variety, bred by New Zealander Hayward Wright in the 1920s."
+      ],
+      "tags": [
+        "fruit",
+        "domesticated"
+      ],
+      "origin": "Seeds were brought from Yichang, China, to New Zealand in 1904 by school principal Isabel Fraser; the first fruits ripened in 1910, and exporters renamed it 'kiwifruit' in 1959.",
+      "wiki": "Kiwifruit"
+    },
+    {
+      "id": "tea",
+      "name": "Tea",
+      "scientific": "Camellia sinensis",
+      "parent": "ericales",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 3,
+      "emoji": "🍵",
+      "summary": "An evergreen camellia shrub. Green, black, oolong and white tea all come from the leaves of this one plant, just processed differently.",
+      "facts": [
+        "Tea plants make caffeine as a natural insecticide.",
+        "After water, tea is the most consumed drink in the world."
+      ],
+      "tags": [
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Domesticated in south-western China (Yunnan region) thousands of years ago; tea leaves were found in a Chinese emperor's tomb about 2,100 years old.",
+      "wiki": "Camellia sinensis",
+      "confidence": "low"
+    },
+    {
+      "id": "coffee-family",
+      "name": "Coffee family",
+      "scientific": "Rubiaceae",
+      "parent": "asterids",
+      "rank": "family",
+      "group": "plants",
+      "appeared": 80,
+      "emoji": "☕",
+      "summary": "The madder family, one of the largest plant families, with coffee, gardenias and the quinine tree whose bark fought malaria.",
+      "wiki": "Rubiaceae",
+      "confidence": "low"
+    },
+    {
+      "id": "coffea",
+      "name": "Coffee plants",
+      "scientific": "Coffea",
+      "parent": "coffee-family",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 10,
+      "emoji": "☕",
+      "summary": "About 130 species of coffee shrubs from Africa, Madagascar and Asia. Only two are grown on a large scale.",
+      "facts": [
+        "Coffee 'beans' are seeds inside red fruits called coffee cherries."
+      ],
+      "wiki": "Coffea",
+      "confidence": "low"
+    },
+    {
+      "id": "robusta",
+      "name": "Robusta coffee",
+      "scientific": "Coffea canephora",
+      "parent": "coffea",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 2,
+      "emoji": "☕",
+      "summary": "A tough, high-yielding coffee from the lowland forests of central and western Africa. It has about twice as much caffeine as arabica.",
+      "tags": [
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Cultivated from the late 1800s, especially after coffee leaf rust devastated arabica farms in Asia; Vietnam is now its biggest grower.",
+      "wiki": "Coffea canephora",
+      "confidence": "low"
+    },
+    {
+      "id": "coffea-eugenioides",
+      "name": "Coffea eugenioides",
+      "scientific": "Coffea eugenioides",
+      "parent": "coffea",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 2,
+      "emoji": "☕",
+      "summary": "A wild, low-caffeine coffee from the highlands of East Africa. It is one of the two parents of arabica coffee.",
+      "wiki": "Coffea eugenioides",
+      "confidence": "low"
+    },
+    {
+      "id": "arabica",
+      "name": "Arabica coffee",
+      "scientific": "Coffea arabica",
+      "parent": "robusta",
+      "hybridOf": [
+        "coffea-eugenioides"
+      ],
+      "rank": "hybrid",
+      "group": "plants",
+      "appeared": 0.61,
+      "emoji": "☕",
+      "summary": "The world's favourite coffee. It formed naturally in Ethiopia's forests when robusta and Coffea eugenioides crossed and doubled their chromosomes.",
+      "facts": [
+        "A famous legend says an Ethiopian goatherd named Kaldi discovered coffee when his goats got frisky after eating the berries.",
+        "Arabica has very little genetic diversity, which makes it vulnerable to diseases like coffee leaf rust."
+      ],
+      "tags": [
+        "crop",
+        "domesticated"
+      ],
+      "origin": "The hybrid arose about 600,000 years ago in Ethiopia; coffee was first cultivated and brewed in Yemen by the 1400s, then spread through the Ottoman world and Europe.",
+      "wiki": "Coffea arabica",
+      "confidence": "medium"
+    },
+    {
+      "id": "olive-family",
+      "name": "Olive family",
+      "scientific": "Oleaceae",
+      "parent": "asterids",
+      "rank": "family",
+      "group": "plants",
+      "appeared": 60,
+      "emoji": "🫒",
+      "summary": "Olives, ash trees, lilacs, jasmine and forsythia.",
+      "wiki": "Oleaceae",
+      "confidence": "low"
+    },
+    {
+      "id": "oleaster",
+      "name": "Wild olive",
+      "scientific": "Olea europaea var. sylvestris",
+      "parent": "olive-family",
+      "rank": "subspecies",
+      "group": "plants",
+      "appeared": 1,
+      "emoji": "🫒",
+      "summary": "The spiny, small-fruited wild olive of Mediterranean scrub. Its little oily fruits are spread by birds.",
+      "tags": [
+        "fruit"
+      ],
+      "wiki": "Olive",
+      "confidence": "low"
+    },
+    {
+      "id": "olive",
+      "name": "Olive",
+      "scientific": "Olea europaea",
+      "parent": "oleaster",
+      "rank": "cultivar",
+      "group": "plants",
+      "appeared": 0.007,
+      "emoji": "🫒",
+      "summary": "An evergreen tree that can live for thousands of years, grown for olive oil and cured olives. Raw olives are far too bitter to eat.",
+      "facts": [
+        "Winners at the ancient Olympic Games were crowned with olive wreaths.",
+        "Some olive trees around the Mediterranean are thought to be over 2,000 years old."
+      ],
+      "tags": [
+        "fruit",
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Domesticated from wild olives in the Levant about 7,000 years ago; olive oil traces in 7,000-year-old pottery from Galilee are among the earliest evidence.",
+      "wiki": "Olive",
+      "confidence": "medium"
+    },
+    {
+      "id": "solanales",
+      "name": "Solanales",
+      "scientific": "Solanales",
+      "parent": "asterids",
+      "rank": "order",
+      "group": "plants",
+      "appeared": 80,
+      "emoji": "🍅",
+      "summary": "The nightshade order: tomatoes, potatoes, peppers, tobacco, plus morning glories and sweet potatoes.",
+      "wiki": "Solanales",
+      "confidence": "low"
+    },
+    {
+      "id": "nightshades",
+      "name": "Nightshade family",
+      "scientific": "Solanaceae",
+      "parent": "solanales",
+      "rank": "family",
+      "group": "plants",
+      "appeared": 52,
+      "emoji": "🍆",
+      "summary": "A family of food plants and poisons: tomatoes, potatoes, chili peppers and eggplants, but also deadly nightshade, mandrake and tobacco.",
+      "facts": [
+        "A 52-million-year-old fossil from Patagonia is a tomatillo-like fruit inside its papery husk.",
+        "Deadly nightshade is called belladonna, 'beautiful lady', because women once used its juice to widen their pupils."
+      ],
+      "wiki": "Solanaceae",
+      "confidence": "medium"
+    },
+    {
+      "id": "solanum",
+      "name": "Solanum",
+      "scientific": "Solanum",
+      "parent": "nightshades",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 15,
+      "emoji": "🍅",
+      "summary": "One of the biggest plant genera, with over 1,000 species, including tomato, potato and eggplant.",
+      "wiki": "Solanum",
+      "confidence": "low"
+    },
+    {
+      "id": "wild-tomato",
+      "name": "Currant tomato",
+      "scientific": "Solanum pimpinellifolium",
+      "parent": "solanum",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 1,
+      "emoji": "🍅",
+      "summary": "A wild tomato from the coasts of Ecuador and Peru with tasty red fruits the size of a pea. It is the wild ancestor of the tomato.",
+      "tags": [
+        "fruit"
+      ],
+      "wiki": "Solanum pimpinellifolium",
+      "confidence": "low"
+    },
+    {
+      "id": "tomato",
+      "name": "Tomato",
+      "scientific": "Solanum lycopersicum",
+      "parent": "wild-tomato",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.007,
+      "emoji": "🍅",
+      "summary": "Botanically a berry, legally a vegetable. Tomatoes went from pea-sized wild fruits to giant beefsteaks.",
+      "facts": [
+        "Many Europeans feared tomatoes were poisonous for about 200 years.",
+        "In 1893 the US Supreme Court ruled that the tomato is a vegetable, for tax purposes.",
+        "A tomato has more genes than a human: about 35,000 compared to our roughly 20,000."
+      ],
+      "tags": [
+        "fruit",
+        "vegetable",
+        "domesticated"
+      ],
+      "origin": "Partly domesticated as a cherry-like tomato in Ecuador and northern Peru, then fully domesticated in Mexico; the Aztecs called it tomatl. Spanish explorers brought it to Europe in the 1500s.",
+      "wiki": "Tomato",
+      "confidence": "low"
+    },
+    {
+      "id": "wild-potato",
+      "name": "Wild potato",
+      "scientific": "Solanum candolleanum",
+      "parent": "solanum",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 1,
+      "emoji": "🥔",
+      "summary": "Small, bitter wild potatoes of the high Andes. The closest wild relative of the cultivated potato is a Peruvian species, Solanum candolleanum.",
+      "facts": [
+        "The whole potato lineage began about 9 million years ago with a hybrid between an ancient tomato-like plant and a relative called Etuberosum, which is how it got tubers."
+      ],
+      "tags": [
+        "vegetable"
+      ],
+      "wiki": "Potato",
+      "confidence": "low"
+    },
+    {
+      "id": "potato",
+      "name": "Potato",
+      "scientific": "Solanum tuberosum",
+      "parent": "wild-potato",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.008,
+      "emoji": "🥔",
+      "summary": "The world's most important root-type crop. In the Andes there are thousands of varieties in every colour.",
+      "facts": [
+        "The Irish Potato Famine (1845–1852), caused by potato blight, killed about a million people.",
+        "Andean people invented chuño, freeze-dried potatoes that keep for years.",
+        "In 1995 the potato became the first food plant grown in space."
+      ],
+      "tags": [
+        "vegetable",
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Domesticated in the Andes of southern Peru and north-western Bolivia, near Lake Titicaca, about 7,000–10,000 years ago; reached Europe via Spain in the late 1500s.",
+      "wiki": "Potato",
+      "confidence": "low"
+    },
+    {
+      "id": "eggplant",
+      "name": "Eggplant (aubergine)",
+      "scientific": "Solanum melongena",
+      "parent": "solanum",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.003,
+      "emoji": "🍆",
+      "summary": "A glossy purple vegetable domesticated in Asia. Its English name comes from early European varieties that were small, white and egg-shaped.",
+      "facts": [
+        "The name 'aubergine' travelled from Sanskrit through Persian and Arabic to Catalan and French."
+      ],
+      "tags": [
+        "vegetable",
+        "domesticated"
+      ],
+      "origin": "Domesticated from wild Solanum insanum in South and South-east Asia, probably India and also China, more than 2,000 years ago.",
+      "wiki": "Eggplant",
+      "confidence": "low"
+    },
+    {
+      "id": "capsicum",
+      "name": "Peppers",
+      "scientific": "Capsicum",
+      "parent": "nightshades",
+      "rank": "genus",
+      "group": "plants",
+      "appeared": 15,
+      "emoji": "🌶️",
+      "summary": "Chili and bell peppers. Their spicy capsaicin keeps mammals from eating the fruits, but birds can't feel the burn and spread the seeds.",
+      "facts": [
+        "Capsaicin triggers the same nerve receptor that senses heat, which is why chili feels 'hot'."
+      ],
+      "wiki": "Capsicum",
+      "confidence": "low"
+    },
+    {
+      "id": "chiltepin",
+      "name": "Chiltepin",
+      "scientific": "Capsicum annuum var. glabriusculum",
+      "parent": "capsicum",
+      "rank": "subspecies",
+      "group": "plants",
+      "appeared": 1,
+      "emoji": "🌶️",
+      "summary": "A wild pepper with tiny, fiery, round red fruits eaten by birds. Called the 'mother of all peppers', it's the wild ancestor of most chili varieties.",
+      "facts": [
+        "It is the official native pepper of Texas."
+      ],
+      "tags": [
+        "fruit"
+      ],
+      "wiki": "Chiltepin",
+      "confidence": "low"
+    },
+    {
+      "id": "chili-pepper",
+      "name": "Chili pepper",
+      "scientific": "Capsicum annuum",
+      "parent": "chiltepin",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.0065,
+      "emoji": "🌶️",
+      "summary": "Jalapeño, cayenne, paprika and sweet bell peppers are all the same species, bred in Mexico from fiery wild chiltepins.",
+      "facts": [
+        "Before the 1500s, Indian, Thai and Sichuan cooking had no chili at all.",
+        "Columbus called them 'peppers' because their heat reminded him of black pepper, an unrelated plant."
+      ],
+      "tags": [
+        "vegetable",
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Domesticated in Mexico at least 6,000 years ago; after 1492 Portuguese and Spanish traders spread chili to Africa, India, Thailand and China within a few decades.",
+      "wiki": "Chili pepper",
+      "confidence": "low"
+    },
+    {
+      "id": "tobacco",
+      "name": "Tobacco",
+      "scientific": "Nicotiana tabacum",
+      "parent": "nightshades",
+      "rank": "hybrid",
+      "group": "plants",
+      "appeared": 0.2,
+      "emoji": "🍂",
+      "summary": "A nightshade from the Americas whose leaves are loaded with nicotine. It formed when two wild Nicotiana species crossed and doubled their chromosomes.",
+      "facts": [
+        "Nicotine is the plant's natural insecticide.",
+        "Tobacco mosaic virus, found in the 1890s, was the first virus ever discovered."
+      ],
+      "tags": [
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Cultivated by Indigenous peoples of the Americas for thousands of years for ceremony and medicine; spread worldwide after the 1500s.",
+      "wiki": "Nicotiana tabacum",
+      "confidence": "low"
+    },
+    {
+      "id": "sweet-potato",
+      "name": "Sweet potato",
+      "scientific": "Ipomoea batatas",
+      "parent": "solanales",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.8,
+      "emoji": "🍠",
+      "summary": "A sweet root from the morning glory family, only a distant cousin of the potato. It is a natural GMO: it carries genes picked up from soil bacteria long ago.",
+      "facts": [
+        "Its DNA contains genes from Agrobacterium bacteria, inserted naturally thousands of years ago.",
+        "How it got to Polynesia before Columbus, by human voyagers or floating seeds, is still debated."
+      ],
+      "tags": [
+        "vegetable",
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Domesticated in tropical Central or South America at least 5,000 years ago; it reached Polynesia centuries before European explorers.",
+      "wiki": "Sweet potato",
+      "confidence": "low"
+    },
+    {
+      "id": "carrot-family",
+      "name": "Carrot family",
+      "scientific": "Apiaceae",
+      "parent": "asterids",
+      "rank": "family",
+      "group": "plants",
+      "appeared": 70,
+      "emoji": "🥕",
+      "summary": "Umbrella-flowered plants: carrots, parsnips, celery, parsley, dill, fennel, cumin and coriander, but also deadly poison hemlock.",
+      "facts": [
+        "The philosopher Socrates was executed with a drink of poison hemlock, a member of the carrot family."
+      ],
+      "wiki": "Apiaceae",
+      "confidence": "low"
+    },
+    {
+      "id": "wild-carrot",
+      "name": "Wild carrot",
+      "scientific": "Daucus carota",
+      "parent": "carrot-family",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 2,
+      "emoji": "🌼",
+      "summary": "Queen Anne's lace: a roadside wildflower with lacy white flower umbrellas and a thin, pale, woody root.",
+      "facts": [
+        "Many flower heads have a single dark-red floret in the centre, which may attract insects."
+      ],
+      "tags": [
+        "vegetable"
+      ],
+      "wiki": "Daucus carota",
+      "confidence": "low"
+    },
+    {
+      "id": "carrot",
+      "name": "Carrot",
+      "scientific": "Daucus carota subsp. sativus",
+      "parent": "wild-carrot",
+      "rank": "subspecies",
+      "group": "plants",
+      "appeared": 0.0011,
+      "emoji": "🥕",
+      "summary": "The first cultivated carrots weren't orange: they were purple and yellow.",
+      "tags": [
+        "vegetable",
+        "domesticated"
+      ],
+      "origin": "Domesticated in Central Asia, around today's Afghanistan and Iran, roughly 1,100 years ago; purple and yellow carrots spread to Europe and China by the 1300s.",
+      "wiki": "Carrot",
+      "confidence": "low"
+    },
+    {
+      "id": "orange-carrot",
+      "name": "Orange carrot",
+      "scientific": "Daucus carota subsp. sativus",
+      "parent": "carrot",
+      "rank": "cultivar",
+      "group": "plants",
+      "appeared": 0.0004,
+      "emoji": "🥕",
+      "summary": "The orange carrot, rich in beta-carotene, was developed in Europe and became the world standard.",
+      "facts": [
+        "The story that Dutch growers bred orange carrots to honour the House of Orange is a popular legend without solid evidence.",
+        "In World War II, Britain spread the myth that carrots gave pilots night vision, to hide the fact that they were using radar."
+      ],
+      "tags": [
+        "vegetable",
+        "domesticated"
+      ],
+      "origin": "Developed in the Netherlands and nearby in the 1500s–1600s from yellow carrots.",
+      "wiki": "Carrot",
+      "confidence": "medium"
+    },
+    {
+      "id": "daisy-family",
+      "name": "Daisy family",
+      "scientific": "Asteraceae",
+      "parent": "asterids",
+      "rank": "family",
+      "group": "plants",
+      "appeared": 80,
+      "emoji": "🌼",
+      "summary": "One of the largest plant families, with about 32,000 species. Each 'flower' of a daisy or sunflower is actually hundreds of tiny florets.",
+      "facts": [
+        "Lettuce, artichokes, chamomile, dandelions and sunflowers are all in the daisy family."
+      ],
+      "wiki": "Asteraceae",
+      "confidence": "low"
+    },
+    {
+      "id": "sunflower",
+      "name": "Sunflower",
+      "scientific": "Helianthus annuus",
+      "parent": "daisy-family",
+      "rank": "species",
+      "group": "plants",
+      "appeared": 0.0045,
+      "emoji": "🌻",
+      "summary": "A giant daisy from North America, grown for seeds and oil. Its seeds are arranged in mathematical spirals.",
+      "facts": [
+        "Young sunflowers follow the sun from east to west each day, but mature heads face east, which warms them and attracts more bees.",
+        "The seed spirals usually come in Fibonacci numbers, like 34 and 55."
+      ],
+      "tags": [
+        "crop",
+        "domesticated"
+      ],
+      "origin": "Domesticated by Native Americans in eastern North America about 4,000–5,000 years ago; became a major oil crop in Russia in the 1800s.",
+      "wiki": "Common sunflower",
+      "confidence": "low"
+    }
+  ]
+}

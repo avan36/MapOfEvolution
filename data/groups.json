@@ -1,0 +1,19 @@
+{
+  "$schema": "../schema/groups.schema.json",
+  "groups": [
+    { "id": "origins", "label": "First Life", "emoji": "✨", "description": "The very first living things and the deepest branches of the tree." },
+    { "id": "bacteria", "label": "Bacteria", "emoji": "🦠", "description": "Single cells without a nucleus. The planet's oldest and most numerous life." },
+    { "id": "archaea", "label": "Archaea", "emoji": "🌋", "description": "Microbes that look like bacteria but are chemically closer to us. Many love extreme places." },
+    { "id": "protists", "label": "Protists", "emoji": "🔬", "description": "Mostly single-celled organisms with a nucleus — amoebas, algae, diatoms and more." },
+    { "id": "fungi", "label": "Fungi", "emoji": "🍄", "description": "Mushrooms, moulds and yeasts. Closer relatives of animals than of plants." },
+    { "id": "plants", "label": "Plants", "emoji": "🌿", "description": "From green algae to towering trees, flowers, fruits and the crops we eat." },
+    { "id": "invertebrates", "label": "Invertebrates", "emoji": "🐙", "description": "Animals without a backbone: sponges, jellyfish, insects, octopuses, worms." },
+    { "id": "fish", "label": "Fish", "emoji": "🐟", "description": "The first animals with backbones, and every fish swimming today." },
+    { "id": "amphibians", "label": "Amphibians", "emoji": "🐸", "description": "The first four-legged animals to walk onto land, and today's frogs and salamanders." },
+    { "id": "reptiles", "label": "Reptiles", "emoji": "🦎", "description": "Lizards, snakes, turtles, crocodiles and the sea and sky reptiles of the past." },
+    { "id": "dinosaurs", "label": "Dinosaurs", "emoji": "🦖", "description": "The rulers of the Mesozoic — from Triceratops to Tyrannosaurus." },
+    { "id": "birds", "label": "Birds", "emoji": "🐦", "description": "The dinosaurs that survived. Every bird alive is a living dinosaur." },
+    { "id": "mammals", "label": "Mammals", "emoji": "🐘", "description": "Furry, milk-making animals — from platypuses to whales." },
+    { "id": "humans", "label": "Primates & Humans", "emoji": "🧑", "description": "Monkeys, apes and the long road to us." }
+  ]
+}

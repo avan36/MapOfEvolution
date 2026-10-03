@@ -1,0 +1,47 @@
+{
+  "$schema": "../schema/time.schema.json",
+  "spans": [
+    { "id": "hadean", "name": "Hadean", "level": "eon", "start": 4567, "end": 4031, "color": "#AE027E", "summary": "A molten, meteor-battered young Earth. Oceans form and life may begin." },
+    { "id": "archean", "name": "Archean", "level": "eon", "start": 4031, "end": 2500, "color": "#F0047F", "summary": "Microbes rule an oxygen-free world and build the first reefs (stromatolites)." },
+    { "id": "proterozoic", "name": "Proterozoic", "level": "eon", "start": 2500, "end": 538.8, "color": "#F73563", "summary": "Oxygen floods the air, complex cells appear and the first animals emerge." },
+    { "id": "phanerozoic", "name": "Phanerozoic", "level": "eon", "start": 538.8, "end": 0, "color": "#9AD9DD", "summary": "The eon of visible life — shells, forests, dinosaurs, flowers and us." },
+
+    { "id": "paleoproterozoic", "name": "Paleoproterozoic", "level": "era", "start": 2500, "end": 1600, "color": "#F74370", "summary": "The Great Oxidation Event rusts the oceans; the first complex cells evolve." },
+    { "id": "mesoproterozoic", "name": "Mesoproterozoic", "level": "era", "start": 1600, "end": 1000, "color": "#FDB462", "summary": "The 'boring billion' — slow, steady evolution, including the first multicellular algae." },
+    { "id": "neoproterozoic", "name": "Neoproterozoic", "level": "era", "start": 1000, "end": 538.8, "color": "#FEB342", "summary": "Snowball Earth glaciations, then the first animals in the Ediacaran seas." },
+    { "id": "paleozoic", "name": "Paleozoic", "level": "era", "start": 538.8, "end": 251.902, "color": "#99C08D", "summary": "Life explodes in the sea, then conquers the land: forests, insects and four-legged animals." },
+    { "id": "mesozoic", "name": "Mesozoic", "level": "era", "start": 251.902, "end": 66, "color": "#67C5CA", "summary": "The Age of Reptiles: dinosaurs, pterosaurs, the first mammals, birds and flowers." },
+    { "id": "cenozoic", "name": "Cenozoic", "level": "era", "start": 66, "end": 0, "color": "#F2F91D", "summary": "The Age of Mammals, grasslands, ice ages and, finally, humans." },
+
+    { "id": "tonian", "name": "Tonian", "level": "period", "start": 1000, "end": 720, "color": "#FEBF4E", "summary": "The supercontinent Rodinia breaks apart; early algae and amoebae diversify." },
+    { "id": "cryogenian", "name": "Cryogenian", "level": "period", "start": 720, "end": 635, "color": "#FECC5C", "summary": "Snowball Earth: ice may have reached the equator." },
+    { "id": "ediacaran", "name": "Ediacaran", "level": "period", "start": 635, "end": 538.8, "color": "#FED96A", "summary": "Strange soft-bodied creatures, the first large animals, carpet the sea floor." },
+    { "id": "cambrian", "name": "Cambrian", "level": "period", "start": 538.8, "end": 485.4, "color": "#7FA056", "summary": "The Cambrian explosion: eyes, shells, trilobites and nearly every animal body plan." },
+    { "id": "ordovician", "name": "Ordovician", "level": "period", "start": 485.4, "end": 443.8, "color": "#009270", "summary": "Seas teem with life; the first plants creep onto land." },
+    { "id": "silurian", "name": "Silurian", "level": "period", "start": 443.8, "end": 419.2, "color": "#B3E1B6", "summary": "Jawed fish appear, coral reefs spread and plants grow stems." },
+    { "id": "devonian", "name": "Devonian", "level": "period", "start": 419.2, "end": 358.9, "color": "#CB8C37", "summary": "The Age of Fishes. The first forests rise and fish take their first steps on land." },
+    { "id": "carboniferous", "name": "Carboniferous", "level": "period", "start": 358.9, "end": 298.9, "color": "#67A599", "summary": "Giant swamp forests (our coal) and huge insects in oxygen-rich air." },
+    { "id": "permian", "name": "Permian", "level": "period", "start": 298.9, "end": 251.902, "color": "#F04028", "summary": "The supercontinent Pangaea. Ends with the worst extinction ever." },
+    { "id": "triassic", "name": "Triassic", "level": "period", "start": 251.902, "end": 201.4, "color": "#812B92", "summary": "Life recovers. The first dinosaurs, pterosaurs and mammals appear." },
+    { "id": "jurassic", "name": "Jurassic", "level": "period", "start": 201.4, "end": 145, "color": "#34B2C9", "summary": "Giant long-necked sauropods, Stegosaurus, Allosaurus and the first birds." },
+    { "id": "cretaceous", "name": "Cretaceous", "level": "period", "start": 145, "end": 66, "color": "#7FC64E", "summary": "Flowers bloom, T. rex and Triceratops roam — until an asteroid strikes." },
+    { "id": "paleogene", "name": "Paleogene", "level": "period", "start": 66, "end": 23.03, "color": "#FD9A52", "summary": "Mammals inherit the Earth: early whales, horses and primates." },
+    { "id": "neogene", "name": "Neogene", "level": "period", "start": 23.03, "end": 2.58, "color": "#FFE619", "summary": "Grasslands spread, apes thrive and our ancestors stand upright." },
+    { "id": "quaternary", "name": "Quaternary", "level": "period", "start": 2.58, "end": 0, "color": "#F9F97F", "summary": "Ice ages, mammoths, the rise of Homo sapiens and the invention of farming." }
+  ],
+  "events": [
+    { "id": "earth-forms", "name": "Earth forms", "time": 4540, "kind": "planet", "emoji": "🌍", "summary": "Dust and rock around the young Sun clump together into our planet." },
+    { "id": "first-life", "name": "Oldest signs of life", "time": 3700, "kind": "milestone", "emoji": "🧫", "summary": "Chemical traces and microbial mats in ancient rocks of Greenland and Australia." },
+    { "id": "great-oxidation", "name": "Great Oxidation Event", "time": 2400, "kind": "planet", "emoji": "🫧", "summary": "Cyanobacteria pump oxygen into the air for the first time — poison to many microbes, fuel for future life." },
+    { "id": "snowball-earth", "name": "Snowball Earth", "time": 700, "kind": "planet", "emoji": "❄️", "summary": "Glaciers may have covered the whole planet, perhaps twice." },
+    { "id": "cambrian-explosion", "name": "Cambrian explosion", "time": 538.8, "kind": "milestone", "emoji": "💥", "summary": "In a geological blink, most major animal groups appear in the fossil record." },
+    { "id": "plants-on-land", "name": "Plants reach land", "time": 470, "kind": "milestone", "emoji": "🌱", "summary": "Moss-like plants start greening the bare continents." },
+    { "id": "end-ordovician", "name": "End-Ordovician extinction", "time": 443.8, "kind": "extinction", "emoji": "🧊", "summary": "Ice ages and falling seas wipe out about 85% of marine species." },
+    { "id": "late-devonian", "name": "Late Devonian extinction", "time": 372, "kind": "extinction", "emoji": "🌊", "summary": "Oxygen-starved oceans kill most reef builders and armoured fish." },
+    { "id": "great-dying", "name": "The Great Dying", "time": 251.9, "kind": "extinction", "emoji": "🌋", "summary": "Massive Siberian volcanoes kill ~90% of all species — the worst extinction in Earth's history." },
+    { "id": "end-triassic", "name": "End-Triassic extinction", "time": 201.4, "kind": "extinction", "emoji": "🔥", "summary": "Volcanism clears the way for dinosaurs to dominate." },
+    { "id": "kpg-asteroid", "name": "Asteroid impact (K–Pg)", "time": 66, "kind": "extinction", "emoji": "☄️", "summary": "A 10 km asteroid hits Mexico. All non-bird dinosaurs vanish, opening the world to mammals." },
+    { "id": "homo-sapiens", "name": "Homo sapiens appears", "time": 0.3, "kind": "milestone", "emoji": "🧠", "summary": "Our species emerges in Africa." },
+    { "id": "farming", "name": "Farming begins", "time": 0.012, "kind": "milestone", "emoji": "🌾", "summary": "Humans start domesticating plants and animals — evolution by human choice." }
+  ]
+}

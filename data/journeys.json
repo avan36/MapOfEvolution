@@ -1,0 +1,646 @@
+{
+  "$schema": "../schema/journeys.schema.json",
+  "journeys": [
+    {
+      "id": "first-cell-to-you",
+      "title": "From the first cell to you",
+      "subtitle": "4 billion years of ancestors in 16 steps",
+      "emoji": "🧬",
+      "steps": [
+        {
+          "node": "luca",
+          "title": "The ancestor of everything",
+          "text": "Around 4.2 billion years ago, a population of single cells lived near hot vents on the sea floor. Every living thing today, including you, descends from them."
+        },
+        {
+          "node": "asgard-archaea",
+          "title": "An unlikely grandparent",
+          "text": "Your cells' deepest roots lie in a group of archaea, microbes named after the home of the Norse gods. Their genes include early versions of tools your own cells still use."
+        },
+        {
+          "node": "eukaryota",
+          "title": "A cell with a nucleus",
+          "text": "About 2 billion years ago, an archaeal cell teamed up with a bacterium that became the mitochondrion, the power station in every one of your cells. Complex life had begun."
+        },
+        {
+          "node": "animalia",
+          "title": "Animals",
+          "text": "Around 800 million years ago, cells began living together as one body and dividing up the work. Your closest relatives at this point were sponge-like creatures in the sea."
+        },
+        {
+          "node": "vertebrata",
+          "title": "A backbone",
+          "text": "Over 500 million years ago, small, jawless, fish-like animals evolved a skull and a backbone. You still carry their basic body plan."
+        },
+        {
+          "node": "gnathostomata",
+          "title": "Jaws",
+          "text": "Some fish turned the bony arches of their gills into jaws. Every time you bite into an apple, you are using a tool invented about 440 million years ago."
+        },
+        {
+          "node": "sarcopterygii",
+          "title": "Fleshy fins",
+          "text": "Lobe-finned fish had fins built around sturdy bones. The bones in your arms and legs started out as the bones in those fins."
+        },
+        {
+          "node": "tetrapoda",
+          "title": "Onto land",
+          "text": "About 375 million years ago, four-limbed animals began hauling themselves out of the water. The earliest had up to eight fingers; their descendants settled on five, the pattern you still have."
+        },
+        {
+          "node": "amniota",
+          "title": "The waterproof egg",
+          "text": "Amniotes laid eggs with a protective shell and membranes, so they no longer needed water to breed. That freed them to spread across dry land."
+        },
+        {
+          "node": "synapsida",
+          "title": "The fork in the road",
+          "text": "Around 318 million years ago, the amniotes split in two. One branch led to reptiles, dinosaurs and birds; the other, the synapsids, led to you."
+        },
+        {
+          "node": "cynodontia",
+          "title": "Surviving the Great Dying",
+          "text": "Cynodonts made it through the worst mass extinction ever, 252 million years ago. They were getting whiskers, warm bodies and teeth that chewed."
+        },
+        {
+          "node": "mammalia",
+          "title": "The first mammals",
+          "text": "Small, furry and active at night, early mammals fed their babies milk and kept out of the dinosaurs' way for more than 100 million years."
+        },
+        {
+          "node": "placentalia",
+          "title": "Babies in the womb",
+          "text": "Placental mammals carry their young for a long time before birth. When the asteroid wiped out the big dinosaurs 66 million years ago, they spread into the space left behind."
+        },
+        {
+          "node": "primates",
+          "title": "Life in the trees",
+          "text": "Early primates grew grasping hands, forward-facing eyes and bigger brains for leaping through branches. Your fingerprints and nails are a legacy of that life."
+        },
+        {
+          "node": "australopithecus-afarensis",
+          "title": "Standing up",
+          "text": "Lucy and her relatives walked upright across Ethiopia 3.2 million years ago, with brains no bigger than a chimp's. Walking came long before big brains."
+        },
+        {
+          "node": "homo-sapiens",
+          "title": "You",
+          "text": "Modern humans evolved in Africa about 300,000 years ago and met Neanderthals and Denisovans along the way. Each of your ancestors, all the way back to that first cell, survived long enough to pass life on."
+        }
+      ]
+    },
+    {
+      "id": "dinosaurs-to-birds",
+      "title": "How dinosaurs became birds",
+      "subtitle": "From Triassic sprinters to the chicken on your plate",
+      "emoji": "🐔",
+      "steps": [
+        {
+          "node": "archosauria",
+          "title": "The ruling reptiles",
+          "text": "After the great Permian extinction about 252 million years ago, a new group of reptiles took over: the archosaurs. One branch led to crocodiles. The other led to pterosaurs, dinosaurs and, one day, birds."
+        },
+        {
+          "node": "dinosauria",
+          "title": "Enter the dinosaurs",
+          "text": "The first dinosaurs were small, two-legged runners with legs tucked straight under the body. Nobody watching in the Triassic would have guessed they would rule the planet for 165 million years."
+        },
+        {
+          "node": "theropoda",
+          "title": "Hollow bones and wishbones",
+          "text": "Theropods were the hunters of the dinosaur world. They already had hollow bones, three main toes and a wishbone: the same wishbone you pull from a roast chicken."
+        },
+        {
+          "node": "sinosauropteryx",
+          "title": "The first feathers",
+          "text": "In 1996 a farmer in China found Sinosauropteryx, a small dinosaur covered in fuzzy filaments. It was the first proof that non-bird dinosaurs had feathers, long before any of them could fly."
+        },
+        {
+          "node": "velociraptor",
+          "title": "Raptors with wings",
+          "text": "Forget the movies: Velociraptor was turkey-sized, and bumps on its arm bones show where big wing feathers were anchored. It could not fly, but its arms already looked like wings."
+        },
+        {
+          "node": "microraptor",
+          "title": "Four wings",
+          "text": "Microraptor had long flight feathers on its arms and its legs, and glossy black plumage like a starling's. Dinosaurs were experimenting with gliding and flight in more than one way."
+        },
+        {
+          "node": "archaeopteryx",
+          "title": "The first bird",
+          "text": "Archaeopteryx, 150 million years old, had real flight feathers but also teeth, clawed fingers and a long bony tail. Found two years after Darwin published his theory, it is the textbook halfway point between dinosaur and bird."
+        },
+        {
+          "node": "neornithes",
+          "title": "The survivors",
+          "text": "When an asteroid hit 66 million years ago, every non-bird dinosaur died. A few small, beaked, seed-eating birds made it through, and their descendants became the 11,000 bird species alive today."
+        },
+        {
+          "node": "domestic-chicken",
+          "title": "A dinosaur in the backyard",
+          "text": "About 3,500 years ago, farmers in Southeast Asia tamed the red junglefowl. Today more than 20 billion chickens are alive at any moment, which makes this living theropod the most successful dinosaur of all time."
+        }
+      ]
+    },
+    {
+      "id": "fruit-bowl",
+      "title": "Where your fruit bowl came from",
+      "subtitle": "Wild forests, lucky mutants and accidental hybrids: the family history of the fruit you eat",
+      "emoji": "🍎",
+      "steps": [
+        {
+          "node": "wild-apple",
+          "title": "The apple forests of Kazakhstan",
+          "text": "Every apple you have ever eaten traces back to wild Malus sieversii trees in the Tian Shan mountains. Some of their fruits already taste a lot like the apples in shops."
+        },
+        {
+          "node": "apple",
+          "title": "Down the Silk Road",
+          "text": "Traders carried apples west, where they crossed with sour European crab apples. Apple seeds never grow true, so every named variety is kept alive by grafting."
+        },
+        {
+          "node": "almond",
+          "title": "The almond that stopped being poison",
+          "text": "Wild almonds are bitter and full of a chemical that releases cyanide. One lucky mutation switched the poison off, and early farmers planted those rare sweet trees."
+        },
+        {
+          "node": "citrus",
+          "title": "Four ancestors, endless hybrids",
+          "text": "Citrus began in the Himalayan foothills about 8 million years ago. Almost every lemon, lime and orange in the shop is a mix of just four wild fruits: citron, pomelo, mandarin and papeda."
+        },
+        {
+          "node": "sweet-orange",
+          "title": "Pomelo + mandarin = orange",
+          "text": "The sweet orange is a pomelo crossed with a mandarin, then crossed back to mandarin again. Add citron to a sour orange and you get a lemon."
+        },
+        {
+          "node": "grapefruit",
+          "title": "Born in Barbados",
+          "text": "In the 1700s, pomelos and sweet oranges brought from Asia grew side by side in Barbados and crossed by accident. The result was described in 1750 as the 'forbidden fruit': the grapefruit."
+        },
+        {
+          "node": "cavendish-banana",
+          "title": "A world of identical bananas",
+          "text": "Wild bananas are crammed with hard seeds. The seedless Cavendish has three sets of chromosomes and cannot breed, so every supermarket banana is a clone, which leaves them all open to the same disease."
+        },
+        {
+          "node": "garden-strawberry",
+          "title": "A strawberry made in France",
+          "text": "Around 1750, female Chilean strawberries in a French garden were pollinated by Virginia strawberries from North America. Their accidental baby is the strawberry we eat today."
+        },
+        {
+          "node": "kiwifruit",
+          "title": "The Chinese gooseberry gets a new name",
+          "text": "In 1904 a New Zealand teacher brought wild Chinese gooseberry seeds home from China. Growers improved the fruit and in 1959 renamed it after their national bird."
+        }
+      ]
+    },
+    {
+      "id": "one-plant-six-vegetables",
+      "title": "One plant, six vegetables",
+      "subtitle": "Kale, cabbage, broccoli, cauliflower, Brussels sprouts and kohlrabi are all the same species",
+      "emoji": "🥦",
+      "steps": [
+        {
+          "node": "wild-cabbage",
+          "text": "Meet the ancestor: a scrappy, salt-tolerant weed that grows on chalk cliffs along the coasts of western Europe. Every vegetable on this tour is still the same species, Brassica oleracea."
+        },
+        {
+          "node": "kale",
+          "text": "Early farmers simply picked the plants with the biggest leaves and saved their seeds. Repeat that for enough generations and you get kale, one of the oldest forms."
+        },
+        {
+          "node": "cabbage",
+          "text": "Select for a tight bundle of leaves at the top of the stem instead, and the plant curls into a dense head: cabbage."
+        },
+        {
+          "node": "broccoli",
+          "text": "Choose plants whose flower buds swell into fat, edible clusters and you get broccoli, a favourite of Roman gardeners."
+        },
+        {
+          "node": "cauliflower",
+          "text": "Cauliflower came from broccoli-like plants whose flower clusters stopped developing and stayed white. It is a bouquet of baby flowers that never opened."
+        },
+        {
+          "node": "romanesco",
+          "text": "Push the cauliflower path even further and the bud clusters grow in spirals inside spirals, a near-perfect natural fractal."
+        },
+        {
+          "node": "brussels-sprouts",
+          "text": "Breeders in what is now Belgium favoured the little side buds along the stem. Each sprout is a miniature cabbage."
+        },
+        {
+          "node": "kohlrabi",
+          "text": "And select for a swollen stem and you get kohlrabi. Six very different vegetables, one species: this is the power of artificial selection, the same process Darwin used to explain natural selection."
+        }
+      ]
+    },
+    {
+      "id": "fish-out-of-water",
+      "title": "Fish out of water",
+      "subtitle": "How a lineage of fish grew wrists, lungs and fingers and walked onto land",
+      "emoji": "🦶",
+      "steps": [
+        {
+          "node": "sarcopterygii",
+          "title": "Fleshy fins",
+          "text": "About 420 million years ago, one group of bony fish grew fleshy fins built around real bones. Inside those fins sat the first versions of the bones in your arms and legs."
+        },
+        {
+          "node": "coelacanths",
+          "title": "A cousin that never left",
+          "text": "Coelacanths are on the same branch and still swim today. Scientists thought they died out with the dinosaurs until a living one turned up in a South African fishing catch in 1938."
+        },
+        {
+          "node": "lungfish",
+          "title": "Breathing air",
+          "text": "Lungfish have real lungs and can gulp air, so they survive when ponds go stale or dry up. They are the closest living fish relatives of every four-legged animal."
+        },
+        {
+          "node": "eusthenopteron",
+          "title": "Arm bones in a fin",
+          "text": "Eusthenopteron had one upper bone and two lower bones in each front fin, the same pattern as your humerus, radius and ulna. It still lived fully as a fish."
+        },
+        {
+          "node": "panderichthys",
+          "title": "Eyes on top",
+          "text": "Panderichthys had a flat head with its eyes on top, a bit like a crocodile, for peering out of shallow water. The tip of its fin held tiny bones that look like early fingers."
+        },
+        {
+          "node": "tiktaalik",
+          "title": "The fishapod",
+          "text": "Tiktaalik had scales and gills, but it also had a neck, lungs and fins with wrist joints strong enough to prop itself up. It was found in the Canadian Arctic in 2004, in rocks scientists had picked out ahead of time as the right age to search."
+        },
+        {
+          "node": "acanthostega",
+          "title": "Legs before land",
+          "text": "Acanthostega had legs with eight fingers but still breathed with gills and spent most of its time in water. Legs probably evolved for pushing through weedy swamps, and walking came later."
+        },
+        {
+          "node": "ichthyostega",
+          "title": "Hauling out",
+          "text": "Ichthyostega had strong shoulders and could probably drag itself across mudflats a bit like a seal. Four-legged animals were starting to take land seriously."
+        },
+        {
+          "node": "lissamphibians",
+          "title": "Still tied to water",
+          "text": "Frogs, salamanders and caecilians carry on the old way of life: most lay eggs in water, and their young breathe with gills before growing up. Their thin skin can still take in oxygen."
+        }
+      ]
+    },
+    {
+      "id": "whales-walked",
+      "title": "Whales walked",
+      "subtitle": "How a deer-like wader became the biggest animal ever",
+      "emoji": "🐋",
+      "steps": [
+        {
+          "node": "cetartiodactyla",
+          "title": "A hoofed family secret",
+          "text": "Pigs, camels, cows, deer, hippos and whales all belong to one group of hoofed mammals. The clue is an ankle bone that early whales shared with deer."
+        },
+        {
+          "node": "hippos",
+          "title": "Meet the cousins",
+          "text": "Hippos are whales' closest living relatives. Both nurse their young underwater and have almost no hair."
+        },
+        {
+          "node": "indohyus",
+          "title": "A wading cousin",
+          "text": "About 48 million years ago in India, a cat-sized, deer-like animal dived into streams to escape predators. Its ear bones had the same thick wall that only whales have."
+        },
+        {
+          "node": "pakicetus",
+          "title": "A whale with legs",
+          "text": "Pakicetus looked like a wolf-sized land animal and lived along the shores of the Tethys Sea about 50 million years ago. Its skull and ears show it was one of the earliest whales."
+        },
+        {
+          "node": "ambulocetus",
+          "title": "The walking whale",
+          "text": "Ambulocetus lurked like a crocodile in coastal waters, with big webbed feet for swimming. It could still shuffle about on land."
+        },
+        {
+          "node": "rodhocetus",
+          "title": "More at home in water",
+          "text": "Rodhocetus had short legs and a powerful body for swimming. Its ankle bones prove that whales evolved from hoofed mammals."
+        },
+        {
+          "node": "basilosaurus",
+          "title": "Legs become leftovers",
+          "text": "By 40 million years ago, Basilosaurus was an 18-metre ocean predator. Its hind legs were tiny and useless for walking."
+        },
+        {
+          "node": "mysticeti",
+          "title": "Teeth turn into filters",
+          "text": "One branch of whales swapped teeth for baleen, sieving huge mouthfuls of seawater for krill. This let them grow to enormous sizes."
+        },
+        {
+          "node": "blue-whale",
+          "title": "The biggest animal ever",
+          "text": "The blue whale can reach about 30 metres long, bigger than any dinosaur. Its ancestors were wading in streams about 50 million years ago."
+        },
+        {
+          "node": "odontoceti",
+          "title": "Hunting with sound",
+          "text": "The other branch kept its teeth and learned to echolocate, sending out clicks and listening for echoes. Sperm whales, narwhals and dolphins all hunt this way."
+        },
+        {
+          "node": "orca",
+          "title": "Top of the ocean",
+          "text": "The orca, the biggest dolphin, hunts in family pods that each have their own hunting tricks and dialects. Its ancestors had four legs and hooves."
+        }
+      ]
+    },
+    {
+      "id": "cells-inside-cells",
+      "title": "Cells inside cells",
+      "subtitle": "How swallowed microbes became your batteries and the planet's solar panels",
+      "emoji": "🪆",
+      "steps": [
+        {
+          "node": "lokiarchaeota",
+          "title": "The host",
+          "text": "Our story starts in deep-sea mud with an archaeon like Lokiarchaeota. Its genes already held tools for shaping membranes and an inner skeleton, the beginnings of a complex cell."
+        },
+        {
+          "node": "alphaproteobacteria",
+          "title": "The guest",
+          "text": "About two billion years ago a free-living bacterium from this group ended up inside such an archaeon. Instead of being digested, it stayed."
+        },
+        {
+          "node": "eukaryota",
+          "title": "The merger",
+          "text": "The guest became the mitochondrion, a battery that gave the host far more energy. With that energy, cells could grow large, build a nucleus and eventually become you."
+        },
+        {
+          "node": "cyanobacteria",
+          "title": "Solar power",
+          "text": "Meanwhile cyanobacteria had been splitting water with sunlight for hundreds of millions of years, filling the air with oxygen."
+        },
+        {
+          "node": "red-algae",
+          "title": "Swallow number two",
+          "text": "A eukaryote swallowed a cyanobacterium and kept it as a chloroplast. Red algae, green algae and plants all descend from that one meal."
+        },
+        {
+          "node": "diatoms",
+          "title": "A stolen solar panel",
+          "text": "Then a stramenopile swallowed a whole red alga and kept its chloroplast. Diatoms and kelp still wrap that stolen panel in four membranes, a record of the two swallowings."
+        },
+        {
+          "node": "euglena",
+          "title": "It happened again",
+          "text": "Euglena did the same trick with a green alga instead. Grabbing ready-made solar panels happened over and over in evolution."
+        },
+        {
+          "node": "plasmodium-falciparum",
+          "title": "A ghost of sunlight",
+          "text": "The malaria parasite descends from photosynthetic algae and still carries a dead chloroplast it cannot live without. Some antimalarial drugs work by attacking this leftover."
+        }
+      ]
+    },
+    {
+      "id": "monsters-of-the-ancient-seas",
+      "title": "Monsters of the ancient seas",
+      "subtitle": "Giant claws, armoured jaws and teeth bigger than your hand",
+      "emoji": "🌊",
+      "steps": [
+        {
+          "node": "anomalocaris",
+          "title": "The first top predator",
+          "text": "Over 500 million years ago, Anomalocaris swam through Cambrian seas with spiny grasping arms and huge compound eyes. At about half a metre long it was a giant, since most animals then were smaller than your finger."
+        },
+        {
+          "node": "opabinia",
+          "title": "Five-eyed weirdo",
+          "text": "Opabinia had five eyes and a long nozzle with a claw on the end. When scientists first showed its reconstruction in 1972, the audience laughed."
+        },
+        {
+          "node": "trilobites",
+          "title": "Armoured crawlers",
+          "text": "Trilobites crawled over the sea floor for almost 270 million years and saw through eyes with lenses made of crystal. Many could roll up into a ball when danger came close."
+        },
+        {
+          "node": "sea-scorpions",
+          "title": "Giant claws",
+          "text": "Sea scorpions such as Jaekelopterus grew to about 2.5 metres long, making them the largest arthropods that ever lived. Their claws alone could be longer than your forearm."
+        },
+        {
+          "node": "ammonites",
+          "title": "Spiral shells everywhere",
+          "text": "Ammonites filled the seas with coiled, gas-chambered shells for over 340 million years, and some grew nearly 2 metres across. They died out with the dinosaurs 66 million years ago."
+        },
+        {
+          "node": "dunkleosteus",
+          "title": "Armour and blades",
+          "text": "Dunkleosteus was an armour-headed fish about 4 metres long with bony blades in place of teeth that sharpened themselves. Its jaws snapped open in a fiftieth of a second."
+        },
+        {
+          "node": "megalodon",
+          "title": "The biggest shark ever",
+          "text": "Megalodon was probably 15 metres long or more, it hunted whales, and its teeth grew bigger than a human hand. It disappeared about 3.6 million years ago."
+        },
+        {
+          "node": "giant-squid",
+          "title": "Monsters still out there",
+          "text": "Some sea monsters are still alive. The giant squid grows to about 12 metres long and has eyes as big as dinner plates, and no one photographed a live one in the wild until 2004."
+        }
+      ]
+    },
+    {
+      "id": "mesozoic-giants",
+      "title": "Giants of the Mesozoic",
+      "subtitle": "The biggest animals ever to walk, swim and fly",
+      "emoji": "🦕",
+      "steps": [
+        {
+          "node": "sauropoda",
+          "title": "Built to be big",
+          "text": "Sauropods had bones full of air sacs, like birds, and long necks that could sweep huge areas of plants without taking a step. Even the biggest hatched from eggs about the size of a grapefruit."
+        },
+        {
+          "node": "brachiosaurus",
+          "title": "The treetop browser",
+          "text": "With front legs longer than its back legs, Brachiosaurus stood like a giraffe and fed about 9 metres up, higher than a three-storey house."
+        },
+        {
+          "node": "argentinosaurus",
+          "title": "Heaviest of them all?",
+          "text": "Argentinosaurus may have weighed 65 to 80 tonnes, about ten elephants. A single one of its back vertebrae is as tall as a 12-year-old."
+        },
+        {
+          "node": "patagotitan",
+          "title": "Too long for the room",
+          "text": "Patagotitan stretched over 30 metres. Its cast at the American Museum of Natural History is so long that its head pokes out of the gallery door."
+        },
+        {
+          "node": "spinosaurus",
+          "title": "The sail-backed fisher",
+          "text": "Spinosaurus was perhaps the longest meat-eating dinosaur at about 14 metres, with a crocodile-like snout for catching giant fish. Its original bones were destroyed by bombing in 1944."
+        },
+        {
+          "node": "tyrannosaurus-rex",
+          "title": "The tyrant king",
+          "text": "Twelve metres long and around 8 tonnes, T. rex had one of the strongest bites of any land animal ever, enough to crunch through bone. It was still alive when the asteroid hit."
+        },
+        {
+          "node": "quetzalcoatlus",
+          "title": "A giraffe that could fly",
+          "text": "The pterosaur Quetzalcoatlus had a wingspan of about 10 to 11 metres and stood as tall as a giraffe. It probably stalked small prey on foot and vaulted into the air on its arms."
+        },
+        {
+          "node": "mosasaurus",
+          "title": "Sea monster",
+          "text": "While dinosaurs ruled the land, giant lizards ruled the sea. Mosasaurus grew to about 12 metres and had a second row of teeth on the roof of its mouth to stop prey escaping."
+        },
+        {
+          "node": "sarcosuchus",
+          "title": "SuperCroc",
+          "text": "In Cretaceous rivers of what is now the Sahara, Sarcosuchus reached about 9 metres and up to 8 tonnes. Many dinosaurs coming down to drink would have been fair game."
+        }
+      ]
+    },
+    {
+      "id": "shaped-by-humans",
+      "title": "Evolution by human hands",
+      "subtitle": "How a few thousand years of choosing turned wild things into corn, dogs, chickens and Cavendish bananas",
+      "emoji": "🧑‍🌾",
+      "steps": [
+        {
+          "node": "teosinte",
+          "text": "This wild Mexican grass has a stony 'ear' about as long as your thumb, holding only a dozen hard kernels. It doesn't look much like dinner."
+        },
+        {
+          "node": "maize",
+          "text": "About 9,000 years ago farmers in southern Mexico began saving seeds from the best plants. A handful of key gene changes later, teosinte had become corn, a plant that now can't even spread its seeds without us."
+        },
+        {
+          "node": "gray-wolf",
+          "text": "The first domestication was probably an animal, not a plant. Ice Age wolves that hung around human camps had a survival edge if they were less fearful."
+        },
+        {
+          "node": "domestic-dog",
+          "text": "Over many thousands of years those wolves became dogs. Every breed, from Chihuahua to Great Dane, is the same species as the wolf."
+        },
+        {
+          "node": "domestic-chicken",
+          "text": "Red junglefowl in Southeast Asian forests were tamed around 3,500 years ago, possibly first for cockfighting or ceremony rather than food. Today there are over 20 billion chickens on Earth."
+        },
+        {
+          "node": "cavendish-banana",
+          "text": "Wild bananas are packed with hard seeds. The Cavendish is seedless and sterile, so every one is a clone grown from a cutting. That makes the whole crop vulnerable to a single disease."
+        },
+        {
+          "node": "domestic-cattle",
+          "text": "All the world's cattle descend from the aurochs, a huge wild ox that people hunted, then herded, then bred. The last wild aurochs died in a Polish forest in 1627."
+        }
+      ]
+    },
+    {
+      "id": "pond-scum-to-flowers",
+      "title": "From pond scum to flowers",
+      "subtitle": "How green algae conquered the land and filled it with forests, seeds and blossoms",
+      "emoji": "🌸",
+      "steps": [
+        {
+          "node": "archaeplastida",
+          "title": "A stolen solar panel",
+          "text": "More than a billion years ago, a single cell swallowed a cyanobacterium and kept it instead of digesting it. That captive became the chloroplast in every leaf."
+        },
+        {
+          "node": "zygnematophytes",
+          "title": "Our pond-scum ancestors",
+          "text": "The closest living relatives of all land plants are simple green threads like Spirogyra. The ancestors of trees and roses looked a lot like pond scum."
+        },
+        {
+          "node": "land-plants",
+          "title": "Out of the water",
+          "text": "About 470 million years ago, small green plants crept onto bare rock, helped by fungus partners. They started turning a barren planet green."
+        },
+        {
+          "node": "mosses",
+          "title": "Life without pipes",
+          "text": "Mosses and liverworts have no internal plumbing, so they stay small and damp. Even so, some can dry out completely and spring back to life after rain."
+        },
+        {
+          "node": "vascular-plants",
+          "title": "Pipes and wood",
+          "text": "Plants evolved xylem and phloem to move water and sugar, and stiffened them with lignin. Now they could grow upward, toward the light."
+        },
+        {
+          "node": "lepidodendron",
+          "title": "The coal forests",
+          "text": "In the Carboniferous, giant scale trees 30 metres tall filled vast swamps. Their buried remains became much of the coal that later powered the Industrial Revolution."
+        },
+        {
+          "node": "seed-plants",
+          "title": "The invention of the seed",
+          "text": "A seed is a baby plant with a packed lunch and a coat. With seeds and pollen, plants no longer needed water to reproduce and could spread into dry lands."
+        },
+        {
+          "node": "ginkgo",
+          "title": "A living fossil",
+          "text": "Ginkgo is the last survivor of a group older than the dinosaurs. Six ginkgo trees even survived the atomic bomb at Hiroshima."
+        },
+        {
+          "node": "flowering-plants",
+          "title": "Flower power",
+          "text": "About 140 million years ago, flowers appeared and recruited insects as pollinators and animals as seed carriers. Today flowering plants make up about 90% of all plant species, and nearly all our food."
+        }
+      ]
+    },
+    {
+      "id": "horses-grew-up",
+      "title": "How horses grew up",
+      "subtitle": "From a fox-sized forest browser to the horse that changed history",
+      "emoji": "🐎",
+      "steps": [
+        {
+          "node": "perissodactyla",
+          "title": "Odd toes",
+          "text": "Horses, rhinos and tapirs carry their weight mainly on their middle toe. Fifty million years ago this group was far more varied than it is today."
+        },
+        {
+          "node": "eohippus",
+          "title": "The dawn horse",
+          "text": "About 55 million years ago, Eohippus was the size of a fox, with four toes on its front feet. It browsed soft leaves in warm forests."
+        },
+        {
+          "node": "mesohippus",
+          "title": "Longer legs",
+          "text": "As forests thinned out, Mesohippus grew taller and longer-legged, down to three toes. Its brain was bigger too."
+        },
+        {
+          "node": "merychippus",
+          "title": "Eating grass",
+          "text": "When grasslands spread in the Miocene, Merychippus grew tall-crowned teeth that could grind gritty grass. It ran on its middle toe, and the side toes barely touched the ground."
+        },
+        {
+          "node": "equus",
+          "title": "One toe",
+          "text": "Around 4 million years ago, Equus appeared in North America with a single hoofed toe on each foot. Every horse, zebra and donkey alive today belongs to it."
+        },
+        {
+          "node": "wild-horse",
+          "title": "Ice Age herds",
+          "text": "Huge herds of wild horses roamed the Ice Age steppes, and Stone Age artists painted them on cave walls. Horses then vanished from the Americas around 10,000 years ago."
+        },
+        {
+          "node": "przewalskis-horse",
+          "title": "A plot twist",
+          "text": "Przewalski's horse was long called the last truly wild horse. Ancient DNA shows it descends from horses herded at Botai in Kazakhstan about 5,500 years ago."
+        },
+        {
+          "node": "domestic-horse",
+          "title": "The horse that changed history",
+          "text": "About 4,200 years ago, people on the steppe north of the Black and Caspian Seas bred the ancestors of today's horses. Within a few centuries, horses and chariots had spread across Eurasia."
+        },
+        {
+          "node": "mule",
+          "title": "Best of both",
+          "text": "Cross a male donkey with a female horse and you get a mule: strong, tough and sure-footed, but almost always unable to have foals of its own."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2982 @@
+{
+  "$schema": "../../schema/tree.schema.json",
+  "description": "The mammal line: synapsids and therapsids, the first mammals, monotremes, marsupials and placentals — elephants to whales, cats and dogs, farm animals and their wild ancestors — and primates down to Homo sapiens.",
+  "nodes": [
+    {
+      "id": "edaphosaurus",
+      "name": "Edaphosaurus",
+      "parent": "synapsida",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 303,
+      "extinct": 272,
+      "emoji": "🌿",
+      "summary": "A sail-backed plant-eater of the Late Carboniferous and Early Permian. Its tall sail was studded with little crossbars, like a ship's mast with yardarms.",
+      "facts": [
+        "Edaphosaurus was one of the first large land animals to eat plants.",
+        "Its sail evolved separately from Dimetrodon's — two sailbacks on two different branches of the family tree."
+      ],
+      "wiki": "Edaphosaurus"
+    },
+    {
+      "id": "sphenacodontia",
+      "name": "Sphenacodonts",
+      "scientific": "Sphenacodontia",
+      "parent": "synapsida",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 307,
+      "emoji": "🦷",
+      "summary": "Early synapsids with teeth of different shapes for different jobs — a first step toward the incisors, canines and molars in your own mouth.",
+      "facts": [
+        "Therapsids, and therefore all mammals, evolved from within this group."
+      ],
+      "wiki": "Sphenacodonts",
+      "confidence": "medium"
+    },
+    {
+      "id": "dimetrodon",
+      "name": "Dimetrodon",
+      "parent": "sphenacodontia",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 295,
+      "extinct": 272,
+      "emoji": "⛵",
+      "summary": "A sail-backed top predator of the Early Permian that is often mistaken for a dinosaur. It is actually more closely related to you than to any dinosaur, and it died out tens of millions of years before the first dinosaurs appeared.",
+      "facts": [
+        "Its name means 'two measures of teeth', because it had teeth of different sizes — a very mammal-like trait.",
+        "Dimetrodon had one opening in the skull behind each eye, the 'synapsid' window that your own jaw muscles still pass through.",
+        "Scientists still debate what the sail was for: warming up, cooling down, or showing off."
+      ],
+      "wiki": "Dimetrodon"
+    },
+    {
+      "id": "therapsida",
+      "name": "Therapsids",
+      "scientific": "Therapsida",
+      "parent": "sphenacodontia",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 275,
+      "emoji": "🐾",
+      "summary": "Synapsids with legs tucked further under the body, once misleadingly called 'mammal-like reptiles'. They ruled Permian landscapes, and some later ones were probably warm-blooded and furry.",
+      "facts": [
+        "By the Late Permian, therapsids were the dominant large land animals on Earth.",
+        "The Great Dying, 252 million years ago, wiped out most therapsid lineages — but a few squeaked through."
+      ],
+      "wiki": "Therapsid"
+    },
+    {
+      "id": "gorgonopsia",
+      "name": "Gorgonopsians",
+      "scientific": "Gorgonopsia",
+      "parent": "therapsida",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 265,
+      "extinct": 252,
+      "emoji": "🗡️",
+      "summary": "The sabre-toothed top predators of the Late Permian — more than 200 million years before sabre-toothed cats evolved the same weapon.",
+      "facts": [
+        "They vanished in the Great Dying 252 million years ago, leaving no descendants.",
+        "Their name means 'Gorgon face', after the monsters of Greek myth."
+      ],
+      "wiki": "Gorgonopsia"
+    },
+    {
+      "id": "inostrancevia",
+      "name": "Inostrancevia",
+      "parent": "gorgonopsia",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 260,
+      "extinct": 252,
+      "emoji": "🐯",
+      "summary": "One of the largest gorgonopsians: a predator about 3.5 metres long with sabre-like canines around 12–15 cm long.",
+      "facts": [
+        "Its fossils were first found in Russia, but in 2023 scientists reported it from South Africa too — it seems to have moved in as other top predators died out."
+      ],
+      "wiki": "Inostrancevia",
+      "confidence": "medium"
+    },
+    {
+      "id": "dicynodontia",
+      "name": "Dicynodonts",
+      "scientific": "Dicynodontia",
+      "parent": "therapsida",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 265,
+      "extinct": 201,
+      "emoji": "🦛",
+      "summary": "Beaked, often tusked plant-eaters whose name means 'two dog-teeth'. They were among the most successful herbivores of the Permian and Triassic.",
+      "facts": [
+        "Most dicynodonts had a turtle-like beak and just two tusks.",
+        "One Triassic dicynodont, Lisowicia from Poland, grew about as big as an elephant."
+      ],
+      "wiki": "Dicynodont",
+      "confidence": "medium"
+    },
+    {
+      "id": "lystrosaurus",
+      "name": "Lystrosaurus",
+      "parent": "dicynodontia",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 255,
+      "extinct": 250,
+      "emoji": "🐗",
+      "summary": "A pig-sized, tusked plant-eater that survived the Great Dying 252 million years ago — the worst mass extinction ever — and then spread across the emptied world.",
+      "facts": [
+        "In some Early Triassic fossil beds, Lystrosaurus makes up the vast majority of all the backboned land animals found.",
+        "Its fossils turn up in South Africa, India, China, Russia and Antarctica — evidence that these lands were once joined.",
+        "Lystrosaurus was not a dinosaur: it is a distant cousin of mammals."
+      ],
+      "wiki": "Lystrosaurus",
+      "confidence": "medium"
+    },
+    {
+      "id": "cynodontia",
+      "name": "Cynodonts",
+      "scientific": "Cynodontia",
+      "parent": "therapsida",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 260,
+      "emoji": "🐕",
+      "summary": "The 'dog-toothed' therapsids: the branch that led to mammals. They gained a bony palate that let them breathe while chewing, and probably whiskers and fur.",
+      "facts": [
+        "Cynodonts survived the Great Dying, and one branch of them became the mammals.",
+        "Technically, you are a cynodont — a very successful one."
+      ],
+      "wiki": "Cynodont"
+    },
+    {
+      "id": "thrinaxodon",
+      "name": "Thrinaxodon",
+      "parent": "cynodontia",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 251,
+      "extinct": 247,
+      "emoji": "🕳️",
+      "summary": "A cat-sized cynodont from just after the Great Dying. It dug burrows, had a mammal-like skull and may have had whiskers.",
+      "facts": [
+        "One Thrinaxodon fossil was found curled up in its burrow beside an injured amphibian that had crawled in with it.",
+        "Its rib cage was divided into chest and belly regions, a hint that it may have breathed with a diaphragm like you."
+      ],
+      "wiki": "Thrinaxodon",
+      "confidence": "medium"
+    },
+    {
+      "id": "cynognathus",
+      "name": "Cynognathus",
+      "parent": "cynodontia",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 247,
+      "extinct": 237,
+      "emoji": "🐺",
+      "summary": "A metre-long, big-headed cynodont predator of the Triassic with a powerful bite and dog-like teeth.",
+      "facts": [
+        "Cynognathus fossils are found in South Africa, Argentina and Antarctica — a classic clue that these continents were once joined in the supercontinent Gondwana.",
+        "Its name means 'dog jaw'."
+      ],
+      "wiki": "Cynognathus",
+      "confidence": "medium"
+    },
+    {
+      "id": "mammaliaformes",
+      "name": "Mammaliaforms",
+      "scientific": "Mammaliaformes",
+      "parent": "cynodontia",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 225,
+      "emoji": "🐭",
+      "summary": "Mammals plus their closest extinct cousins. They had the new jaw joint you use every time you chew, between the dentary and squamosal bones.",
+      "facts": [
+        "As the new jaw joint took over, the old reptile jaw bones shrank and eventually moved into the ear — your ear's hammer and anvil were once jaw bones."
+      ],
+      "wiki": "Mammaliaforms",
+      "confidence": "medium"
+    },
+    {
+      "id": "morganucodon",
+      "name": "Morganucodon",
+      "parent": "mammaliaformes",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 205,
+      "extinct": 190,
+      "emoji": "🐁",
+      "summary": "A shrew-sized insect-eater from about 205 million years ago, one of the earliest mammal-like creatures. It probably hunted at night while early dinosaurs roamed.",
+      "facts": [
+        "Morganucodon had two jaw joints working side by side: the old reptilian one and the new mammalian one.",
+        "Thousands of its bones have been found in ancient cave fissures in Wales; its name comes from Glamorgan (Morgannwg in Welsh)."
+      ],
+      "wiki": "Morganucodon",
+      "confidence": "medium"
+    },
+    {
+      "id": "mammalia",
+      "name": "Mammals",
+      "scientific": "Mammalia",
+      "parent": "mammaliaformes",
+      "rank": "class",
+      "group": "mammals",
+      "appeared": 185,
+      "emoji": "🍼",
+      "summary": "Animals with hair that feed their babies milk. Every mammal alive — platypus, bat, whale and you — descends from small, furry ancestors that lived alongside the dinosaurs.",
+      "facts": [
+        "For their first 120 million years, almost all mammals were small, and many came out only at night while dinosaurs ruled the day.",
+        "Mammals have three tiny ear bones; two of them used to be part of the jaw.",
+        "All mammals make milk — even platypuses, which ooze it from patches of skin because they have no nipples."
+      ],
+      "tags": [
+        "landmark"
+      ],
+      "wiki": "Mammal",
+      "confidence": "medium"
+    },
+    {
+      "id": "repenomamus",
+      "name": "Repenomamus",
+      "parent": "mammalia",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 125,
+      "extinct": 123,
+      "emoji": "🦡",
+      "summary": "A badger-sized mammal from the Early Cretaceous of China — proof that some early mammals fought back: one fossil has a baby dinosaur in its stomach.",
+      "facts": [
+        "The stomach of one Repenomamus held the bones of a young Psittacosaurus, a parrot-beaked dinosaur.",
+        "A fossil described in 2023 shows a Repenomamus locked in a fight with a Psittacosaurus, apparently attacking it, when both were buried by a volcanic mudflow.",
+        "At up to about a metre long, it was one of the largest mammals of the dinosaur age."
+      ],
+      "wiki": "Repenomamus"
+    },
+    {
+      "id": "monotremata",
+      "name": "Monotremes",
+      "scientific": "Monotremata",
+      "parent": "mammalia",
+      "rank": "order",
+      "group": "mammals",
+      "appeared": 175,
+      "emoji": "🥚",
+      "summary": "The egg-laying mammals: the platypus and the echidnas. They branched off from all other mammals well over 150 million years ago.",
+      "facts": [
+        "Monotremes lay small, leathery eggs, then feed their hatchlings milk.",
+        "'Monotreme' means 'one hole': like birds and reptiles, they have a single opening for waste and for laying eggs."
+      ],
+      "wiki": "Monotreme",
+      "confidence": "medium"
+    },
+    {
+      "id": "platypus",
+      "name": "Platypus",
+      "scientific": "Ornithorhynchus anatinus",
+      "parent": "monotremata",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 40,
+      "emoji": "🦆",
+      "summary": "A duck-billed, otter-footed, egg-laying mammal from eastern Australia. It hunts underwater with its eyes, ears and nostrils shut, sensing the tiny electric fields of its prey through its bill.",
+      "facts": [
+        "Male platypuses have venomous spurs on their hind legs.",
+        "Platypus fur glows blue-green under ultraviolet light.",
+        "When the first specimen reached Britain in 1799, some scientists suspected it was a hoax stitched together from different animals."
+      ],
+      "wiki": "Platypus",
+      "confidence": "low"
+    },
+    {
+      "id": "echidnas",
+      "name": "Echidnas",
+      "scientific": "Tachyglossidae",
+      "parent": "monotremata",
+      "rank": "family",
+      "group": "mammals",
+      "appeared": 40,
+      "emoji": "🦔",
+      "summary": "Spiny, ant-eating monotremes of Australia and New Guinea. They look like hedgehogs but lay eggs.",
+      "facts": [
+        "A baby echidna is called a puggle; it hatches from its egg inside its mother's pouch.",
+        "Echidnas have no teeth: they slurp up ants and termites with a long, sticky tongue."
+      ],
+      "wiki": "Echidna",
+      "confidence": "low"
+    },
+    {
+      "id": "theria",
+      "name": "Live-bearing mammals",
+      "scientific": "Theria",
+      "parent": "mammalia",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 175,
+      "emoji": "🤱",
+      "summary": "Mammals that give birth to live young instead of laying eggs: the marsupials and the placentals.",
+      "facts": [
+        "Therian mammals have external ears; monotremes have none."
+      ],
+      "wiki": "Theria",
+      "confidence": "medium"
+    },
+    {
+      "id": "marsupials",
+      "name": "Marsupials",
+      "scientific": "Metatheria",
+      "parent": "theria",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 165,
+      "emoji": "👝",
+      "summary": "Mammals whose babies are born tiny after a very short pregnancy, then finish growing attached to a teat — usually in a pouch.",
+      "facts": [
+        "A newborn kangaroo is about the size of a jellybean.",
+        "Marsupials reached Australia by crossing Antarctica, which was then warm, forested and joined to both South America and Australia."
+      ],
+      "wiki": "Marsupial",
+      "confidence": "medium"
+    },
+    {
+      "id": "opossums",
+      "name": "Opossums",
+      "scientific": "Didelphimorphia",
+      "parent": "marsupials",
+      "rank": "order",
+      "group": "mammals",
+      "appeared": 55,
+      "emoji": "🐾",
+      "summary": "The marsupials of the Americas. The Virginia opossum is the only marsupial living north of Mexico.",
+      "facts": [
+        "When terrified, an opossum may 'play possum' — collapsing, drooling and giving off a foul smell for minutes or even hours. It can't help it.",
+        "Opossums have 50 teeth, more than any other North American land mammal."
+      ],
+      "wiki": "Opossum",
+      "confidence": "medium"
+    },
+    {
+      "id": "thylacine",
+      "name": "Thylacine",
+      "scientific": "Thylacinus cynocephalus",
+      "parent": "marsupials",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 4,
+      "extinct": 9e-05,
+      "emoji": "🐯",
+      "summary": "The 'Tasmanian tiger': a striped, wolf-like marsupial predator. The last known one died in Hobart Zoo, Tasmania, in 1936.",
+      "facts": [
+        "It looked so much like a dog that its skull is a textbook example of convergent evolution.",
+        "Both males and females had pouches.",
+        "Government bounties, habitat loss and disease drove it to extinction."
+      ],
+      "wiki": "Thylacine",
+      "confidence": "medium"
+    },
+    {
+      "id": "diprotodontia",
+      "name": "Kangaroos, koalas & wombats",
+      "scientific": "Diprotodontia",
+      "parent": "marsupials",
+      "rank": "order",
+      "group": "mammals",
+      "appeared": 50,
+      "emoji": "🌿",
+      "summary": "The biggest group of marsupials, named for their two large, forward-pointing lower front teeth.",
+      "facts": [
+        "Wombats produce cube-shaped poop.",
+        "Australia's possums, gliders, wombats, koalas and kangaroos all belong here."
+      ],
+      "wiki": "Diprotodontia",
+      "confidence": "medium"
+    },
+    {
+      "id": "kangaroos",
+      "name": "Kangaroos",
+      "scientific": "Macropodidae",
+      "parent": "diprotodontia",
+      "rank": "family",
+      "group": "mammals",
+      "appeared": 25,
+      "emoji": "🦘",
+      "summary": "Hopping marsupials of Australia and New Guinea. The red kangaroo is the largest living marsupial and can cover around 8 metres in a single bound.",
+      "facts": [
+        "Hopping is surprisingly energy-efficient: their leg tendons work like springs.",
+        "A mother kangaroo can have a joey at foot, a joey in the pouch and a paused embryo inside her, all at the same time."
+      ],
+      "wiki": "Kangaroo",
+      "confidence": "medium"
+    },
+    {
+      "id": "koala",
+      "name": "Koala",
+      "scientific": "Phascolarctos cinereus",
+      "parent": "diprotodontia",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 25,
+      "emoji": "🐨",
+      "summary": "A tree-dwelling marsupial that eats almost nothing but eucalyptus leaves — tough, low in nutrients and poisonous to most animals.",
+      "facts": [
+        "Koalas rest or sleep up to about 20 hours a day to save energy.",
+        "Koala fingerprints are so similar to human ones that they are hard to tell apart.",
+        "It is not a bear: 'koala bear' is a misnomer."
+      ],
+      "wiki": "Koala",
+      "confidence": "medium"
+    },
+    {
+      "id": "diprotodon",
+      "name": "Diprotodon",
+      "parent": "diprotodontia",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 1.8,
+      "extinct": 0.04,
+      "emoji": "🐻",
+      "summary": "The largest marsupial that ever lived: a rhino-sized relative of wombats that roamed Australia until about 40,000 years ago.",
+      "facts": [
+        "It weighed up to about 2.7 tonnes.",
+        "Diprotodon shared Australia with the first people for thousands of years before it vanished."
+      ],
+      "wiki": "Diprotodon",
+      "confidence": "medium"
+    },
+    {
+      "id": "eutheria",
+      "name": "Eutherians",
+      "scientific": "Eutheria",
+      "parent": "theria",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 165,
+      "emoji": "🐾",
+      "summary": "The branch of mammals that leads to the placentals — animals whose babies grow for a long time inside the mother, fed through a placenta.",
+      "facts": [
+        "For most of the age of dinosaurs, eutherians were small, scurrying insect-eaters."
+      ],
+      "wiki": "Eutheria",
+      "confidence": "medium"
+    },
+    {
+      "id": "juramaia",
+      "name": "Juramaia",
+      "parent": "eutheria",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 161,
+      "extinct": 160,
+      "emoji": "🐀",
+      "summary": "A tiny, shrew-like climber from Jurassic China, about 160 million years old, and one of the earliest known animals on the branch leading to placental mammals.",
+      "facts": [
+        "Its full name, Juramaia sinensis, means 'Jurassic mother from China'.",
+        "It probably weighed only 15–17 grams — less than a AA battery.",
+        "Juramaia suggests marsupials and placentals had already gone their separate ways by about 160 million years ago."
+      ],
+      "wiki": "Juramaia",
+      "confidence": "medium"
+    },
+    {
+      "id": "placentalia",
+      "name": "Placental mammals",
+      "scientific": "Placentalia",
+      "parent": "eutheria",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 95,
+      "emoji": "🤰",
+      "summary": "From bats to blue whales to you: over 90% of living mammal species are placentals, whose babies are nourished in the womb through a placenta.",
+      "facts": [
+        "Placentals split into four great branches as the continents drifted apart: Afrotheria in Africa, Xenarthra in South America, and two big northern branches.",
+        "Most placental orders appear in the fossil record only after the dinosaurs died out 66 million years ago."
+      ],
+      "tags": [
+        "landmark"
+      ],
+      "wiki": "Placentalia",
+      "confidence": "medium"
+    },
+    {
+      "id": "afrotheria",
+      "name": "Afrotheres",
+      "scientific": "Afrotheria",
+      "parent": "placentalia",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 90,
+      "emoji": "🌍",
+      "summary": "A surprising family of African origin: elephants, manatees, hyraxes, aardvarks, tenrecs and elephant shrews. DNA, not looks, revealed that they are each other's closest relatives.",
+      "facts": [
+        "Afrotheria was only recognised in 1998, from DNA evidence.",
+        "Africa was an island continent for tens of millions of years, so this group evolved in isolation."
+      ],
+      "wiki": "Afrotheria",
+      "confidence": "medium"
+    },
+    {
+      "id": "proboscidea",
+      "name": "Proboscideans",
+      "scientific": "Proboscidea",
+      "parent": "afrotheria",
+      "rank": "order",
+      "group": "mammals",
+      "appeared": 60,
+      "emoji": "🐘",
+      "summary": "The trunked mammals: elephants, mammoths, mastodons and many extinct relatives. Today only three species survive, all elephants.",
+      "facts": [
+        "The earliest proboscideans, like Eritherium, were about the size of a fox and had no trunk.",
+        "Proboscideans once lived on every continent except Australia and Antarctica."
+      ],
+      "wiki": "Proboscidea",
+      "confidence": "medium"
+    },
+    {
+      "id": "mastodons",
+      "name": "Mastodons",
+      "scientific": "Mammutidae",
+      "parent": "proboscidea",
+      "rank": "family",
+      "group": "mammals",
+      "appeared": 27,
+      "extinct": 0.011,
+      "emoji": "🦣",
+      "summary": "Shaggy elephant relatives with cone-cusped teeth for chewing twigs and leaves. The American mastodon lived in North American forests until about 11,000 years ago.",
+      "facts": [
+        "'Mastodon' means 'nipple tooth', after the cone-shaped cusps on their molars.",
+        "Mastodons were only distant cousins of mammoths: their lineages split more than 25 million years ago."
+      ],
+      "wiki": "Mammut",
+      "confidence": "medium"
+    },
+    {
+      "id": "elephantidae",
+      "name": "Elephants & mammoths",
+      "scientific": "Elephantidae",
+      "parent": "proboscidea",
+      "rank": "family",
+      "group": "mammals",
+      "appeared": 8,
+      "emoji": "🐘",
+      "summary": "The family of modern elephants and mammoths, which arose in Africa roughly 7–8 million years ago.",
+      "facts": [
+        "Mammoths are more closely related to Asian elephants than to African elephants."
+      ],
+      "wiki": "Elephantidae",
+      "confidence": "medium"
+    },
+    {
+      "id": "african-elephants",
+      "name": "African elephants",
+      "scientific": "Loxodonta",
+      "parent": "elephantidae",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 6,
+      "emoji": "🐘",
+      "summary": "The largest living land animals. There are two species: the savanna elephant and the smaller forest elephant.",
+      "facts": [
+        "An elephant's trunk has no bones but tens of thousands of muscle bundles.",
+        "Elephants can pick up low rumbles travelling through the ground with their sensitive feet."
+      ],
+      "wiki": "African elephant",
+      "confidence": "medium"
+    },
+    {
+      "id": "asian-elephant",
+      "name": "Asian elephant",
+      "scientific": "Elephas maximus",
+      "parent": "elephantidae",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 5,
+      "emoji": "🐘",
+      "summary": "A smaller-eared elephant of South and Southeast Asia. People have tamed and worked with it for over 4,000 years, yet it was never truly domesticated.",
+      "facts": [
+        "Most female Asian elephants have no tusks, or only tiny ones called tushes.",
+        "Asian elephants are the closest living relatives of the woolly mammoth."
+      ],
+      "wiki": "Asian elephant",
+      "confidence": "medium"
+    },
+    {
+      "id": "woolly-mammoth",
+      "name": "Woolly mammoth",
+      "scientific": "Mammuthus primigenius",
+      "parent": "elephantidae",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 0.7,
+      "extinct": 0.004,
+      "emoji": "🦣",
+      "summary": "An Ice Age elephant with a shaggy coat, small ears and huge curving tusks. Most died out about 10,000 years ago, but a last population survived on Wrangel Island in the Arctic until about 4,000 years ago.",
+      "facts": [
+        "The last mammoths were still alive when the Great Pyramid of Giza was built.",
+        "Frozen mammoths from Siberian permafrost still have hair, skin and even their last meals in their stomachs.",
+        "DNA from Siberian mammoth teeth more than a million years old is among the oldest DNA ever read."
+      ],
+      "wiki": "Woolly mammoth",
+      "confidence": "medium"
+    },
+    {
+      "id": "sirenia",
+      "name": "Manatees & dugongs",
+      "scientific": "Sirenia",
+      "parent": "afrotheria",
+      "rank": "order",
+      "group": "mammals",
+      "appeared": 50,
+      "emoji": "🌊",
+      "summary": "Slow, gentle 'sea cows' that graze on seagrass and water plants in warm coasts and rivers. Their closest living relatives are elephants.",
+      "facts": [
+        "The order is named after the Sirens of Greek myth, and sailors' mermaid tales may have been inspired by these animals.",
+        "Steller's sea cow, a giant relative up to about 8 metres long, was hunted to extinction by 1768, just 27 years after Europeans discovered it.",
+        "Manatees constantly replace their molars: new teeth form at the back of the jaw and march forward."
+      ],
+      "tags": [
+        "ocean"
+      ],
+      "wiki": "Sirenia",
+      "confidence": "medium"
+    },
+    {
+      "id": "hyraxes",
+      "name": "Hyraxes",
+      "scientific": "Hyracoidea",
+      "parent": "afrotheria",
+      "rank": "order",
+      "group": "mammals",
+      "appeared": 55,
+      "emoji": "🪨",
+      "summary": "Rabbit-sized, furry animals of African and Middle Eastern rocks and trees. Strange but true: they are close relatives of elephants and manatees.",
+      "facts": [
+        "Hyraxes have tusk-like front teeth and toes tipped with little hoof-like nails.",
+        "Tens of millions of years ago, some hyraxes grew as big as horses."
+      ],
+      "wiki": "Hyrax",
+      "confidence": "medium"
+    },
+    {
+      "id": "aardvark",
+      "name": "Aardvark",
+      "scientific": "Orycteropus afer",
+      "parent": "afrotheria",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 20,
+      "emoji": "🐜",
+      "summary": "A pig-snouted, rabbit-eared African burrower that eats ants and termites at night. It is the last surviving member of its entire order.",
+      "facts": [
+        "Its name is Afrikaans for 'earth pig'.",
+        "Aardvark teeth have no enamel and are made of tiny tubes, giving its order the name Tubulidentata, 'tube teeth'.",
+        "Its abandoned burrows become homes for warthogs, porcupines, hyenas and many other animals."
+      ],
+      "wiki": "Aardvark",
+      "confidence": "medium"
+    },
+    {
+      "id": "xenarthra",
+      "name": "Xenarthrans",
+      "scientific": "Xenarthra",
+      "parent": "placentalia",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 88,
+      "emoji": "🌎",
+      "summary": "South America's own branch of placentals: sloths, armadillos and anteaters. Their name means 'strange joints', after extra links between their backbones.",
+      "facts": [
+        "Xenarthrans have some of the slowest metabolisms of all mammals.",
+        "When North and South America joined about 3 million years ago, giant ground sloths and glyptodonts walked north as far as the USA."
+      ],
+      "wiki": "Xenarthra",
+      "confidence": "medium"
+    },
+    {
+      "id": "armadillos",
+      "name": "Armadillos",
+      "scientific": "Cingulata",
+      "parent": "xenarthra",
+      "rank": "order",
+      "group": "mammals",
+      "appeared": 58,
+      "emoji": "🛡️",
+      "summary": "Armoured xenarthrans whose shells are made of bony plates that grow in their skin.",
+      "facts": [
+        "The nine-banded armadillo almost always gives birth to four identical quadruplets, all from a single egg.",
+        "Some armadillos can hold their breath for about six minutes and walk along the bottom of streams."
+      ],
+      "wiki": "Armadillo",
+      "confidence": "medium"
+    },
+    {
+      "id": "glyptodon",
+      "name": "Glyptodon",
+      "parent": "armadillos",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 2.5,
+      "extinct": 0.011,
+      "emoji": "🐢",
+      "summary": "A car-sized armadillo relative of the Ice Age Americas, protected by a domed shell of more than a thousand bony plates.",
+      "facts": [
+        "Ancient DNA showed that glyptodonts were not a separate group at all: they were giant armadillos, nested inside the living armadillo family tree.",
+        "Some glyptodont bones bear cut marks, showing that early people in South America butchered them."
+      ],
+      "wiki": "Glyptodon",
+      "confidence": "medium"
+    },
+    {
+      "id": "sloths",
+      "name": "Sloths",
+      "scientific": "Folivora",
+      "parent": "xenarthra",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 35,
+      "emoji": "🦥",
+      "summary": "Slow-moving leaf-eaters that hang upside down in Central and South American forests — plus many extinct ground-dwelling giants.",
+      "facts": [
+        "The two living kinds, two-toed and three-toed sloths, are not closely related: they evolved their upside-down lifestyle separately.",
+        "Algae grow in sloth fur, giving them a greenish camouflage.",
+        "A sloth can take weeks to digest a single meal."
+      ],
+      "wiki": "Sloth",
+      "confidence": "medium"
+    },
+    {
+      "id": "megatherium",
+      "name": "Megatherium",
+      "parent": "sloths",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 5,
+      "extinct": 0.012,
+      "emoji": "🦥",
+      "summary": "A giant ground sloth as big as an elephant, weighing around 4 tonnes, that could rear up on its hind legs to pull down branches.",
+      "facts": [
+        "It was one of the first fossil animals ever studied scientifically, described by Georges Cuvier in 1796.",
+        "Charles Darwin collected giant ground sloth fossils during the voyage of the Beagle."
+      ],
+      "wiki": "Megatherium",
+      "confidence": "medium"
+    },
+    {
+      "id": "anteaters",
+      "name": "Anteaters",
+      "scientific": "Vermilingua",
+      "parent": "xenarthra",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 30,
+      "emoji": "🐜",
+      "summary": "Toothless insect-eaters with tube-shaped snouts. A giant anteater can flick its tongue in and out about 150 times a minute.",
+      "facts": [
+        "A giant anteater can eat around 30,000 ants and termites in a day.",
+        "Its tongue is about 60 cm long — longer than its head."
+      ],
+      "wiki": "Anteater",
+      "confidence": "low"
+    },
+    {
+      "id": "boreoeutheria",
+      "name": "Northern placentals",
+      "scientific": "Boreoeutheria",
+      "parent": "placentalia",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 90,
+      "emoji": "🧭",
+      "summary": "The placentals that arose on the northern continents. They split into two huge branches: one leading to rodents and primates, the other to bats, carnivores, horses and whales.",
+      "facts": [
+        "Every common pet and farm animal — dog, cat, rabbit, horse, cow, sheep, pig — belongs to this group."
+      ],
+      "wiki": "Boreoeutheria",
+      "confidence": "medium"
+    },
+    {
+      "id": "euarchontoglires",
+      "name": "Rodents, rabbits & primates",
+      "scientific": "Euarchontoglires",
+      "parent": "boreoeutheria",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 85,
+      "emoji": "🐭",
+      "summary": "A superorder that unites rodents and rabbits with tree shrews, colugos and primates — which means a mouse is a closer relative of yours than a dog is.",
+      "facts": [
+        "This kinship is one reason mice and rats are such useful stand-ins for humans in medical research."
+      ],
+      "wiki": "Euarchontoglires",
+      "confidence": "medium"
+    },
+    {
+      "id": "glires",
+      "name": "Gnawing mammals",
+      "scientific": "Glires",
+      "parent": "euarchontoglires",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 80,
+      "emoji": "🦷",
+      "summary": "Rodents plus rabbits, hares and pikas: mammals whose front teeth never stop growing.",
+      "facts": [
+        "Their ever-growing incisors stay chisel-sharp because the soft back of each tooth wears away faster than the hard enamel front."
+      ],
+      "wiki": "Glires",
+      "confidence": "medium"
+    },
+    {
+      "id": "rodentia",
+      "name": "Rodents",
+      "scientific": "Rodentia",
+      "parent": "glires",
+      "rank": "order",
+      "group": "mammals",
+      "appeared": 62,
+      "emoji": "🐭",
+      "summary": "The largest order of mammals: roughly 40% of all mammal species are rodents, from tiny mice to pig-sized capybaras.",
+      "facts": [
+        "Rodents live on every continent except Antarctica.",
+        "Squirrels, beavers, porcupines, hamsters and mice are all rodents."
+      ],
+      "wiki": "Rodent",
+      "confidence": "medium"
+    },
+    {
+      "id": "house-mouse",
+      "name": "House mouse",
+      "scientific": "Mus musculus",
+      "parent": "rodentia",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 0.5,
+      "emoji": "🐁",
+      "summary": "A tiny rodent that followed people around the world, raiding our food stores. Laboratory strains of it have helped scientists make countless medical discoveries.",
+      "facts": [
+        "House mice began living alongside people at least 15,000 years ago — before farming even began.",
+        "Most laboratory mice descend from 'fancy mice' bred as pets."
+      ],
+      "wiki": "House mouse",
+      "confidence": "medium"
+    },
+    {
+      "id": "brown-rat",
+      "name": "Brown rat",
+      "scientific": "Rattus norvegicus",
+      "parent": "rodentia",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 0.5,
+      "emoji": "🐀",
+      "summary": "Despite its scientific name ('Norway rat'), it originally came from northern China and Mongolia and spread worldwide aboard ships.",
+      "facts": [
+        "Lab rats and fancy pet rats are domesticated forms of the brown rat.",
+        "Rats 'laugh' with ultrasonic chirps when they are tickled."
+      ],
+      "wiki": "Brown rat",
+      "confidence": "low"
+    },
+    {
+      "id": "cavies",
+      "name": "Cavies & capybaras",
+      "scientific": "Caviidae",
+      "parent": "rodentia",
+      "rank": "family",
+      "group": "mammals",
+      "appeared": 15,
+      "emoji": "🐹",
+      "summary": "A South American rodent family including guinea pigs, maras and capybaras. Their ancestors crossed the Atlantic from Africa about 40 million years ago, probably on floating rafts of vegetation.",
+      "facts": [
+        "South America's rodents and New World monkeys both seem to have made that unlikely ocean crossing from Africa."
+      ],
+      "wiki": "Caviidae",
+      "confidence": "medium"
+    },
+    {
+      "id": "capybara",
+      "name": "Capybara",
+      "scientific": "Hydrochoerus hydrochaeris",
+      "parent": "cavies",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 2,
+      "emoji": "♨️",
+      "summary": "The world's largest rodent, weighing up to about 65 kg, living in herds along South American rivers and swamps.",
+      "facts": [
+        "Capybaras have partly webbed feet and can stay underwater for about five minutes.",
+        "Birds, monkeys and other animals often sit on capybaras, which hardly seem to mind."
+      ],
+      "wiki": "Capybara",
+      "confidence": "low"
+    },
+    {
+      "id": "guinea-pig",
+      "name": "Guinea pig",
+      "scientific": "Cavia porcellus",
+      "parent": "cavies",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 0.007,
+      "emoji": "🐹",
+      "summary": "Neither a pig nor from Guinea: a cavy domesticated in the Andes thousands of years ago, first for food and later as a much-loved pet.",
+      "facts": [
+        "Happy guinea pigs leap straight up and twist in the air, a move called 'popcorning'.",
+        "Like humans, guinea pigs cannot make their own vitamin C."
+      ],
+      "tags": [
+        "domesticated"
+      ],
+      "origin": "Domesticated in the Andes of South America from the wild montane guinea pig (Cavia tschudii), probably around 7,000 years ago, as a food animal; it is still eaten as 'cuy' in Peru. Europeans brought it home as a pet in the 1500s.",
+      "wiki": "Guinea pig",
+      "confidence": "medium"
+    },
+    {
+      "id": "lagomorpha",
+      "name": "Rabbits, hares & pikas",
+      "scientific": "Lagomorpha",
+      "parent": "glires",
+      "rank": "order",
+      "group": "mammals",
+      "appeared": 55,
+      "emoji": "🐇",
+      "summary": "Long-eared, fast-breeding plant-eaters. They look like rodents, but they have a second, tiny pair of upper front teeth behind the first.",
+      "facts": [
+        "Pikas, small round-eared lagomorphs of mountain slopes, make 'haypiles' of dried plants to survive the winter."
+      ],
+      "wiki": "Lagomorpha",
+      "confidence": "medium"
+    },
+    {
+      "id": "european-rabbit",
+      "name": "European rabbit",
+      "scientific": "Oryctolagus cuniculus",
+      "parent": "lagomorpha",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 2,
+      "emoji": "🐇",
+      "summary": "The wild rabbit of Spain and Portugal, ancestor of every pet and farm rabbit. People spread it around the world, sometimes disastrously.",
+      "facts": [
+        "About two dozen rabbits released in Australia in 1859 multiplied into a plague of hundreds of millions.",
+        "Rabbits eat some of their own droppings so they can digest their food twice."
+      ],
+      "wiki": "European rabbit",
+      "confidence": "low"
+    },
+    {
+      "id": "domestic-rabbit",
+      "name": "Domestic rabbit",
+      "scientific": "Oryctolagus cuniculus domesticus",
+      "parent": "european-rabbit",
+      "rank": "subspecies",
+      "group": "mammals",
+      "appeared": 0.0015,
+      "emoji": "🐰",
+      "summary": "Pet and farm rabbits, from tiny dwarfs to giants — one of the most recently domesticated mammals.",
+      "facts": [
+        "The popular story that French monks domesticated rabbits around AD 600 to eat as 'fish' during Lent turns out to be a myth based on a misread text.",
+        "Domestic rabbits are far calmer than their wild ancestors, a change linked to differences in their brains and genes."
+      ],
+      "tags": [
+        "domesticated"
+      ],
+      "origin": "Domesticated gradually from wild rabbits of southern France, mostly during medieval times; a 2018 genetic study found no single 'moment' of domestication.",
+      "wiki": "Domestic rabbit",
+      "confidence": "low"
+    },
+    {
+      "id": "tree-shrews",
+      "name": "Tree shrews",
+      "scientific": "Scandentia",
+      "parent": "euarchontoglires",
+      "rank": "order",
+      "group": "mammals",
+      "appeared": 60,
+      "emoji": "🐿️",
+      "summary": "Small, squirrel-like mammals of Southeast Asian forests. They are not shrews at all, but close relatives of primates.",
+      "facts": [
+        "The pen-tailed treeshrew sips naturally fermented palm nectar as strong as beer every night — and does not seem to get drunk."
+      ],
+      "wiki": "Treeshrew",
+      "confidence": "low"
+    },
+    {
+      "id": "colugos",
+      "name": "Colugos",
+      "scientific": "Dermoptera",
+      "parent": "euarchontoglires",
+      "rank": "order",
+      "group": "mammals",
+      "appeared": 60,
+      "emoji": "🪁",
+      "summary": "Gliding mammals of Southeast Asia, sometimes called 'flying lemurs' although they are not lemurs and cannot truly fly. DNA suggests they are the closest living relatives of primates.",
+      "facts": [
+        "A colugo can glide more than 100 metres between trees on a skin membrane stretching to the tips of its fingers, toes and tail."
+      ],
+      "wiki": "Colugo",
+      "confidence": "low"
+    },
+    {
+      "id": "primates",
+      "name": "Primates",
+      "scientific": "Primates",
+      "parent": "euarchontoglires",
+      "rank": "order",
+      "group": "humans",
+      "appeared": 70,
+      "emoji": "🐒",
+      "summary": "Lemurs, monkeys, apes and humans: mammals with grasping hands, forward-facing eyes and big brains for their size. They began as small tree-dwellers around the time the dinosaurs died out.",
+      "facts": [
+        "Most primates have flat nails instead of claws, and fingerprints for grip.",
+        "Many primates, including you, see in full colour — something rare among mammals."
+      ],
+      "tags": [
+        "landmark"
+      ],
+      "wiki": "Primate",
+      "confidence": "medium"
+    },
+    {
+      "id": "purgatorius",
+      "name": "Purgatorius",
+      "parent": "primates",
+      "rank": "genus",
+      "group": "humans",
+      "appeared": 66,
+      "extinct": 63,
+      "emoji": "🌳",
+      "summary": "A rat-sized tree climber that lived just after the asteroid impact, among the oldest known relatives of primates.",
+      "facts": [
+        "Its teeth turn up in rocks laid down only about 100,000 years after the dinosaurs died out.",
+        "Its ankle bones show that it was already a nimble climber of trees."
+      ],
+      "wiki": "Purgatorius",
+      "confidence": "medium"
+    },
+    {
+      "id": "plesiadapis",
+      "name": "Plesiadapis",
+      "parent": "primates",
+      "rank": "genus",
+      "group": "humans",
+      "appeared": 58,
+      "extinct": 55,
+      "emoji": "🐿️",
+      "summary": "A squirrel-like early primate relative from North America and Europe, with claws and big gnawing front teeth.",
+      "facts": [
+        "It lived on both sides of the North Atlantic, which were linked by land at the time.",
+        "Its name means 'near Adapis', after an early lemur-like primate."
+      ],
+      "wiki": "Plesiadapis",
+      "confidence": "medium"
+    },
+    {
+      "id": "strepsirrhini",
+      "name": "Lemurs & lorises",
+      "scientific": "Strepsirrhini",
+      "parent": "primates",
+      "rank": "clade",
+      "group": "humans",
+      "appeared": 63,
+      "emoji": "🌙",
+      "summary": "The 'wet-nosed' primates: the lemurs of Madagascar plus the lorises and bushbabies of Africa and Asia.",
+      "facts": [
+        "Wild lemurs live only on Madagascar, which their ancestors probably reached by floating across from Africa tens of millions of years ago.",
+        "Slow lorises are the only venomous primates: they mix a toxin from glands in their elbows with their saliva.",
+        "Ring-tailed lemur troops are led by females."
+      ],
+      "wiki": "Strepsirrhini",
+      "confidence": "medium"
+    },
+    {
+      "id": "haplorhini",
+      "name": "Dry-nosed primates",
+      "scientific": "Haplorhini",
+      "parent": "primates",
+      "rank": "clade",
+      "group": "humans",
+      "appeared": 63,
+      "emoji": "🐵",
+      "summary": "Tarsiers, monkeys and apes. Unlike lemurs they have dry noses, and most rely more on sight than on smell.",
+      "facts": [
+        "Haplorhine primates cannot make their own vitamin C — the gene broke in a common ancestor more than 60 million years ago, which is why sailors without fresh fruit got scurvy."
+      ],
+      "wiki": "Haplorhini",
+      "confidence": "medium"
+    },
+    {
+      "id": "tarsiers",
+      "name": "Tarsiers",
+      "scientific": "Tarsiidae",
+      "parent": "haplorhini",
+      "rank": "family",
+      "group": "humans",
+      "appeared": 55,
+      "emoji": "👁️",
+      "summary": "Tiny night hunters of Southeast Asian islands with enormous eyes — each eyeball is about as big as its brain.",
+      "facts": [
+        "Tarsiers can turn their heads almost 180 degrees in each direction, like owls.",
+        "They are the only entirely carnivorous primates, eating insects, lizards and even small birds."
+      ],
+      "wiki": "Tarsier",
+      "confidence": "medium"
+    },
+    {
+      "id": "simiiformes",
+      "name": "Monkeys & apes",
+      "scientific": "Simiiformes",
+      "parent": "haplorhini",
+      "rank": "clade",
+      "group": "humans",
+      "appeared": 50,
+      "emoji": "🐵",
+      "summary": "The anthropoids: monkeys and apes. Mostly active by day, they have bigger brains and more complex social lives than other primates.",
+      "facts": [
+        "Some early anthropoids, like Eosimias from China, weighed only about 100 grams."
+      ],
+      "wiki": "Simian",
+      "confidence": "medium"
+    },
+    {
+      "id": "new-world-monkeys",
+      "name": "New World monkeys",
+      "scientific": "Platyrrhini",
+      "parent": "simiiformes",
+      "rank": "clade",
+      "group": "humans",
+      "appeared": 40,
+      "emoji": "🐒",
+      "summary": "Monkeys of Central and South America: capuchins, howlers, spider monkeys, marmosets and more. Their ancestors crossed the Atlantic from Africa, probably on floating mats of vegetation.",
+      "facts": [
+        "Spider monkeys and howler monkeys have a grasping tail that works like a fifth hand.",
+        "Howler monkeys are among the loudest land animals; their calls carry for kilometres through the forest."
+      ],
+      "wiki": "New World monkey",
+      "confidence": "medium"
+    },
+    {
+      "id": "catarrhini",
+      "name": "Old World monkeys & apes",
+      "scientific": "Catarrhini",
+      "parent": "simiiformes",
+      "rank": "clade",
+      "group": "humans",
+      "appeared": 40,
+      "emoji": "🐵",
+      "summary": "The 'downward-nosed' primates of Africa and Asia: Old World monkeys, apes and humans. Their nostrils are close together and point down — like yours.",
+      "facts": [
+        "Catarrhines have the same number of teeth as an adult human: 32."
+      ],
+      "wiki": "Catarrhini",
+      "confidence": "medium"
+    },
+    {
+      "id": "old-world-monkeys",
+      "name": "Old World monkeys",
+      "scientific": "Cercopithecidae",
+      "parent": "catarrhini",
+      "rank": "family",
+      "group": "humans",
+      "appeared": 25,
+      "emoji": "🐒",
+      "summary": "Monkeys of Africa and Asia, from baboons and macaques to colobus and proboscis monkeys. None of them has a grasping tail.",
+      "facts": [
+        "Many have stretchy cheek pouches to stash food while foraging."
+      ],
+      "wiki": "Old World monkey",
+      "confidence": "medium"
+    },
+    {
+      "id": "baboons",
+      "name": "Baboons",
+      "scientific": "Papio",
+      "parent": "old-world-monkeys",
+      "rank": "genus",
+      "group": "humans",
+      "appeared": 2,
+      "emoji": "🐒",
+      "summary": "Big, dog-faced monkeys that live in large troops on African savannas and hills, with complicated social ranks and friendships.",
+      "facts": [
+        "Ancient Egyptians revered the hamadryas baboon as sacred to Thoth, god of wisdom.",
+        "Different baboon species interbreed where their ranges meet."
+      ],
+      "wiki": "Baboon",
+      "confidence": "medium"
+    },
+    {
+      "id": "macaques",
+      "name": "Macaques",
+      "scientific": "Macaca",
+      "parent": "old-world-monkeys",
+      "rank": "genus",
+      "group": "humans",
+      "appeared": 7,
+      "emoji": "🐵",
+      "summary": "The most widespread primates after humans, from Morocco to Japan. Japanese macaques, or 'snow monkeys', soak in hot springs in winter.",
+      "facts": [
+        "Rhesus macaques gave the 'Rh' to Rh-positive and Rh-negative blood types.",
+        "Macaques on the Japanese island of Koshima learned to wash sweet potatoes in the sea, and the habit spread through the troop."
+      ],
+      "wiki": "Macaque",
+      "confidence": "medium"
+    },
+    {
+      "id": "apes",
+      "name": "Apes",
+      "scientific": "Hominoidea",
+      "parent": "catarrhini",
+      "rank": "clade",
+      "group": "humans",
+      "appeared": 28,
+      "emoji": "🦍",
+      "summary": "Tailless primates with flexible shoulders for swinging and climbing: gibbons, orangutans, gorillas, chimpanzees, bonobos — and humans.",
+      "facts": [
+        "Apes were most diverse 20–10 million years ago, with dozens of species across Africa, Europe and Asia."
+      ],
+      "wiki": "Ape",
+      "confidence": "medium"
+    },
+    {
+      "id": "gibbons",
+      "name": "Gibbons",
+      "scientific": "Hylobatidae",
+      "parent": "apes",
+      "rank": "family",
+      "group": "humans",
+      "appeared": 17,
+      "emoji": "🐒",
+      "summary": "The 'lesser apes' of Southeast Asia: champion acrobats that swing arm over arm through the canopy at up to about 55 km/h.",
+      "facts": [
+        "Gibbon couples sing loud duets each morning to defend their territory."
+      ],
+      "wiki": "Gibbon",
+      "confidence": "medium"
+    },
+    {
+      "id": "hominidae",
+      "name": "Great apes",
+      "scientific": "Hominidae",
+      "parent": "apes",
+      "rank": "family",
+      "group": "humans",
+      "appeared": 17,
+      "emoji": "🦧",
+      "summary": "Orangutans, gorillas, chimpanzees, bonobos and humans: big-brained apes that use tools, and many of which can recognise themselves in a mirror.",
+      "facts": [
+        "Every great ape except humans builds a fresh sleeping nest almost every night."
+      ],
+      "wiki": "Hominidae",
+      "confidence": "medium"
+    },
+    {
+      "id": "orangutans",
+      "name": "Orangutans",
+      "scientific": "Pongo",
+      "parent": "hominidae",
+      "rank": "genus",
+      "group": "humans",
+      "appeared": 14,
+      "emoji": "🦧",
+      "summary": "Red-haired great apes of Borneo and Sumatra — the largest mainly tree-dwelling animals on Earth.",
+      "facts": [
+        "There are three species; the Tapanuli orangutan, described in 2017, is the rarest great ape of all.",
+        "In 2024 a wild orangutan was seen treating a wound on its face with a medicinal plant.",
+        "'Orangutan' comes from Malay words meaning 'person of the forest'."
+      ],
+      "wiki": "Orangutan",
+      "confidence": "medium"
+    },
+    {
+      "id": "gigantopithecus",
+      "name": "Gigantopithecus",
+      "parent": "hominidae",
+      "rank": "genus",
+      "group": "humans",
+      "appeared": 2.2,
+      "extinct": 0.25,
+      "emoji": "🦍",
+      "summary": "The largest ape that ever lived: perhaps 3 metres tall and 200–300 kg, eating fruit in the forests of southern China. We know it from thousands of teeth and just four jawbones.",
+      "facts": [
+        "Proteins from a 1.9-million-year-old tooth show it was a close relative of orangutans.",
+        "It probably died out between about 295,000 and 215,000 years ago, as its forests changed and its favourite foods became scarce.",
+        "The first teeth were found in 1935 in Hong Kong medicine shops, sold as 'dragon teeth'."
+      ],
+      "wiki": "Gigantopithecus",
+      "confidence": "medium"
+    },
+    {
+      "id": "homininae",
+      "name": "African apes",
+      "scientific": "Homininae",
+      "parent": "hominidae",
+      "rank": "clade",
+      "group": "humans",
+      "appeared": 10,
+      "emoji": "🦍",
+      "summary": "The African great apes — gorillas, chimpanzees and bonobos — and humans.",
+      "facts": [
+        "Humans are more closely related to chimpanzees than chimpanzees are to gorillas."
+      ],
+      "wiki": "Homininae",
+      "confidence": "medium"
+    },
+    {
+      "id": "gorillas",
+      "name": "Gorillas",
+      "scientific": "Gorilla",
+      "parent": "homininae",
+      "rank": "genus",
+      "group": "humans",
+      "appeared": 9,
+      "emoji": "🦍",
+      "summary": "The largest living primates: gentle, mostly plant-eating apes of central African forests. A big silverback male can weigh over 200 kg.",
+      "facts": [
+        "There are two species, the western and the eastern gorilla.",
+        "Every gorilla has a unique nose print, which researchers use to tell them apart."
+      ],
+      "wiki": "Gorilla",
+      "confidence": "medium"
+    },
+    {
+      "id": "hominini",
+      "name": "Chimps & humans",
+      "scientific": "Hominini",
+      "parent": "homininae",
+      "rank": "clade",
+      "group": "humans",
+      "appeared": 7.5,
+      "emoji": "🤝",
+      "summary": "The tribe that holds the chimpanzee genus Pan and our genus Homo, plus all their extinct relatives. Our two lineages split roughly 6–7 million years ago.",
+      "facts": [
+        "Where human and chimpanzee DNA can be lined up letter by letter, it differs by only about 1–2%."
+      ],
+      "wiki": "Hominini",
+      "confidence": "medium"
+    },
+    {
+      "id": "pan",
+      "name": "Chimpanzees & bonobos",
+      "scientific": "Pan",
+      "parent": "hominini",
+      "rank": "genus",
+      "group": "humans",
+      "appeared": 6.5,
+      "emoji": "🐒",
+      "summary": "Our closest living relatives. The ancestors of chimpanzees and bonobos were separated by the Congo River about 1–2 million years ago.",
+      "facts": [
+        "Fossil chimpanzees are almost unknown — just a few teeth about 500,000 years old from Kenya."
+      ],
+      "wiki": "Pan (genus)",
+      "confidence": "medium"
+    },
+    {
+      "id": "chimpanzee",
+      "name": "Chimpanzee",
+      "scientific": "Pan troglodytes",
+      "parent": "pan",
+      "rank": "species",
+      "group": "humans",
+      "appeared": 1.8,
+      "emoji": "🐒",
+      "summary": "Clever, tool-using apes of African forests and woodlands that live in communities, hunt monkeys and defend their territories.",
+      "facts": [
+        "Chimps use sticks to fish for termites and stones to crack nuts — skills passed down as culture.",
+        "Jane Goodall's 1960 discovery that chimps make tools forced scientists to rethink what makes humans unique."
+      ],
+      "wiki": "Chimpanzee",
+      "confidence": "medium"
+    },
+    {
+      "id": "bonobo",
+      "name": "Bonobo",
+      "scientific": "Pan paniscus",
+      "parent": "pan",
+      "rank": "species",
+      "group": "humans",
+      "appeared": 1.8,
+      "emoji": "🐒",
+      "summary": "Slender apes that live only south of the Congo River. Bonobo groups are led by alliances of females, and they often settle tension with play and affection instead of fighting.",
+      "facts": [
+        "Bonobos and chimpanzees are equally closely related to humans.",
+        "Kanzi, a bonobo, learned to communicate using hundreds of symbols on a keyboard."
+      ],
+      "wiki": "Bonobo",
+      "confidence": "medium"
+    },
+    {
+      "id": "hominina",
+      "name": "Hominins (the human line)",
+      "scientific": "Hominina",
+      "parent": "hominini",
+      "rank": "clade",
+      "group": "humans",
+      "appeared": 7.2,
+      "emoji": "🚶",
+      "summary": "Everything on our side of the split from chimpanzees: around two dozen known species of upright-walking apes, of which only one — us — survives.",
+      "facts": [
+        "Walking on two legs came millions of years before big brains or stone tools."
+      ],
+      "wiki": "Hominina",
+      "confidence": "medium"
+    },
+    {
+      "id": "sahelanthropus",
+      "name": "Sahelanthropus",
+      "scientific": "Sahelanthropus tchadensis",
+      "parent": "hominina",
+      "rank": "genus",
+      "group": "humans",
+      "appeared": 7.2,
+      "extinct": 6.8,
+      "emoji": "💀",
+      "summary": "A roughly 7-million-year-old skull from Chad nicknamed Toumaï, 'hope of life'. It may be one of the very first hominins — or a close cousin of them.",
+      "facts": [
+        "The hole where its spinal cord met the skull sits fairly far forward, a hint that it may have walked upright.",
+        "Toumaï was found in the Djurab Desert of Chad, far west of East Africa's famous fossil sites."
+      ],
+      "wiki": "Sahelanthropus",
+      "confidence": "low"
+    },
+    {
+      "id": "ardipithecus",
+      "name": "Ardipithecus",
+      "parent": "hominina",
+      "rank": "genus",
+      "group": "humans",
+      "appeared": 5.8,
+      "extinct": 4.4,
+      "emoji": "🦶",
+      "summary": "An early hominin from Ethiopia that walked upright on the ground but still had a grasping big toe for climbing trees.",
+      "facts": [
+        "'Ardi', a 4.4-million-year-old partial skeleton, is more than a million years older than Lucy."
+      ],
+      "wiki": "Ardipithecus",
+      "confidence": "medium"
+    },
+    {
+      "id": "australopithecus",
+      "name": "Australopithecus",
+      "parent": "hominina",
+      "rank": "genus",
+      "group": "humans",
+      "appeared": 4.2,
+      "extinct": 1.98,
+      "emoji": "👣",
+      "summary": "The 'southern apes': small-brained, upright-walking hominins of Africa. One species of Australopithecus probably gave rise to our own genus, Homo.",
+      "facts": [
+        "The Laetoli footprints, left in volcanic ash 3.66 million years ago, show these hominins walked much like us.",
+        "The first Australopithecus fossil, the Taung Child, was found in South Africa in 1924 — and was probably killed by an eagle."
+      ],
+      "wiki": "Australopithecus",
+      "confidence": "medium"
+    },
+    {
+      "id": "australopithecus-afarensis",
+      "name": "Australopithecus afarensis ('Lucy')",
+      "scientific": "Australopithecus afarensis",
+      "parent": "australopithecus",
+      "rank": "species",
+      "group": "humans",
+      "appeared": 3.9,
+      "extinct": 2.9,
+      "emoji": "💃",
+      "summary": "The species of the famous 'Lucy', who lived in Ethiopia 3.2 million years ago. About 1.1 metres tall, with a brain the size of a chimp's, she walked upright.",
+      "facts": [
+        "Lucy was named after the Beatles song 'Lucy in the Sky with Diamonds', played at the camp the night she was found in 1974.",
+        "About 40% of Lucy's skeleton was recovered.",
+        "A single site in Ethiopia, nicknamed the 'First Family', held bones of at least 13 individuals of her species."
+      ],
+      "wiki": "Australopithecus afarensis",
+      "confidence": "medium"
+    },
+    {
+      "id": "paranthropus",
+      "name": "Paranthropus",
+      "parent": "hominina",
+      "rank": "genus",
+      "group": "humans",
+      "appeared": 2.7,
+      "extinct": 1.0,
+      "emoji": "🥜",
+      "summary": "Robust hominins with massive jaws, huge flat molars and a bony crest on top of the skull to anchor enormous chewing muscles. They lived alongside early Homo for over a million years.",
+      "facts": [
+        "Paranthropus boisei was nicknamed 'Nutcracker Man', though wear on its teeth shows it mostly chewed grasses and sedges."
+      ],
+      "wiki": "Paranthropus",
+      "confidence": "medium"
+    },
+    {
+      "id": "homo",
+      "name": "Homo",
+      "parent": "hominina",
+      "rank": "genus",
+      "group": "humans",
+      "appeared": 2.8,
+      "emoji": "🧑",
+      "summary": "Our genus: hominins with larger brains, smaller teeth and a growing reliance on tools. It first appears about 2.8 million years ago in Ethiopia.",
+      "facts": [
+        "For most of its history, several Homo species lived on Earth at the same time.",
+        "Stone tools are older than Homo itself: the oldest known, from Lomekwi in Kenya, are about 3.3 million years old."
+      ],
+      "tags": [
+        "human"
+      ],
+      "wiki": "Homo",
+      "confidence": "medium"
+    },
+    {
+      "id": "homo-habilis",
+      "name": "Homo habilis",
+      "parent": "homo",
+      "rank": "species",
+      "group": "humans",
+      "appeared": 2.3,
+      "extinct": 1.65,
+      "emoji": "🪨",
+      "summary": "'Handy man': an early, fairly small-brained Homo from East Africa, long linked to some of the earliest Oldowan stone tools.",
+      "facts": [
+        "Some scientists think Homo habilis was so ape-like that it belongs in Australopithecus instead."
+      ],
+      "tags": [
+        "human"
+      ],
+      "wiki": "Homo habilis",
+      "confidence": "medium"
+    },
+    {
+      "id": "homo-erectus",
+      "name": "Homo erectus",
+      "parent": "homo",
+      "rank": "species",
+      "group": "humans",
+      "appeared": 2.0,
+      "extinct": 0.11,
+      "emoji": "🔥",
+      "summary": "The first hominin with human-like body proportions and the first to spread far beyond Africa, reaching Georgia, China and Java. Its kind survived for nearly 2 million years.",
+      "facts": [
+        "Turkana Boy, a 1.5-million-year-old skeleton from Kenya, was already tall and long-legged like modern people.",
+        "Homo erectus made teardrop-shaped hand axes, a design used for over a million years.",
+        "The last Homo erectus lived on Java around 110,000 years ago."
+      ],
+      "tags": [
+        "human"
+      ],
+      "wiki": "Homo erectus",
+      "confidence": "medium"
+    },
+    {
+      "id": "homo-floresiensis",
+      "name": "Homo floresiensis ('hobbit')",
+      "scientific": "Homo floresiensis",
+      "parent": "homo-erectus",
+      "rank": "species",
+      "group": "humans",
+      "appeared": 0.7,
+      "extinct": 0.05,
+      "emoji": "🏝️",
+      "summary": "The 'hobbit' of the island of Flores, Indonesia: a hominin just over a metre tall with a chimp-sized brain, which made stone tools and lived until about 50,000 years ago.",
+      "facts": [
+        "It may have shrunk from larger ancestors through 'island dwarfism', just like the dwarf elephants (Stegodon) that shared its island.",
+        "Fossils about 700,000 years old from Mata Menge show hobbit-sized hominins lived on Flores very early."
+      ],
+      "tags": [
+        "human"
+      ],
+      "wiki": "Homo floresiensis",
+      "confidence": "low"
+    },
+    {
+      "id": "homo-naledi",
+      "name": "Homo naledi",
+      "parent": "homo",
+      "rank": "species",
+      "group": "humans",
+      "appeared": 0.335,
+      "extinct": 0.236,
+      "emoji": "🔦",
+      "summary": "A small-brained Homo with a puzzling mix of ancient and modern features, known from over 1,500 bones in South Africa's Rising Star cave system, dated to about 335,000–236,000 years ago.",
+      "facts": [
+        "The bones lay deep in a chamber reachable only through a chute about 18 cm wide.",
+        "Some researchers argue it deliberately buried its dead and made engravings, but many scientists are not convinced."
+      ],
+      "tags": [
+        "human"
+      ],
+      "wiki": "Homo naledi",
+      "confidence": "low"
+    },
+    {
+      "id": "homo-heidelbergensis",
+      "name": "Homo heidelbergensis",
+      "parent": "homo-erectus",
+      "rank": "species",
+      "group": "humans",
+      "appeared": 0.7,
+      "extinct": 0.2,
+      "emoji": "🦴",
+      "summary": "A big-brained Middle Pleistocene human from Africa and Europe, often seen as a possible common ancestor of Neanderthals, Denisovans and us — though experts still argue over the details.",
+      "facts": [
+        "The species is named after a jaw found near Heidelberg, Germany, in 1907.",
+        "Wooden spears from Schöningen, Germany, show that Middle Pleistocene humans hunted horses with well-made throwing spears."
+      ],
+      "tags": [
+        "human"
+      ],
+      "wiki": "Homo heidelbergensis",
+      "confidence": "low"
+    },
+    {
+      "id": "neanderthals",
+      "name": "Neanderthals",
+      "scientific": "Homo neanderthalensis",
+      "parent": "homo-heidelbergensis",
+      "rank": "species",
+      "group": "humans",
+      "appeared": 0.43,
+      "extinct": 0.04,
+      "emoji": "🧔",
+      "summary": "Stocky, big-brained humans of Ice Age Europe and western Asia. They made fine tools, controlled fire, cared for their sick and probably made art, before disappearing about 40,000 years ago.",
+      "facts": [
+        "Most people whose ancestry is from outside Africa carry about 1–2% Neanderthal DNA, from interbreeding with our ancestors.",
+        "On average, Neanderthal brains were as large as ours, or slightly larger.",
+        "A bone from Denisova Cave belonged to 'Denny', a girl with a Neanderthal mother and a Denisovan father."
+      ],
+      "tags": [
+        "human"
+      ],
+      "wiki": "Neanderthal",
+      "confidence": "medium"
+    },
+    {
+      "id": "denisovans",
+      "name": "Denisovans",
+      "parent": "homo-heidelbergensis",
+      "rank": "species",
+      "group": "humans",
+      "appeared": 0.4,
+      "extinct": 0.03,
+      "emoji": "🏔️",
+      "summary": "A mysterious human group discovered in 2010 from the DNA in a finger bone from Denisova Cave, Siberia. Close cousins of the Neanderthals, they lived across much of Asia.",
+      "facts": [
+        "Many Tibetans carry a gene variant (EPAS1) that helps them live at high altitude, inherited from Denisovans.",
+        "People from Papua New Guinea and Aboriginal Australians carry roughly 3–5% Denisovan DNA.",
+        "In 2025, proteins and DNA from the Harbin skull from China showed it was Denisovan, giving the first good look at a Denisovan face; some scientists now call them Homo longi."
+      ],
+      "tags": [
+        "human"
+      ],
+      "wiki": "Denisovan",
+      "confidence": "low"
+    },
+    {
+      "id": "homo-sapiens",
+      "name": "Homo sapiens",
+      "parent": "homo-heidelbergensis",
+      "rank": "species",
+      "group": "humans",
+      "appeared": 0.3,
+      "emoji": "🧑",
+      "summary": "Us. Modern humans evolved in Africa about 300,000 years ago, spread to every continent, and are now the last surviving hominin.",
+      "facts": [
+        "The oldest known Homo sapiens fossils, from Jebel Irhoud in Morocco, are about 300,000 years old.",
+        "Everyone alive today descends from people who lived in Africa; most people outside Africa also carry a little Neanderthal DNA, and some carry Denisovan DNA too.",
+        "All 8 billion humans are genetically less diverse than a single population of wild chimpanzees."
+      ],
+      "tags": [
+        "landmark",
+        "human"
+      ],
+      "wiki": "Human",
+      "confidence": "medium"
+    },
+    {
+      "id": "laurasiatheria",
+      "name": "Laurasiatheres",
+      "scientific": "Laurasiatheria",
+      "parent": "boreoeutheria",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 85,
+      "emoji": "🌲",
+      "summary": "The other great northern branch of placentals: hedgehogs, bats, cats, dogs, pangolins, horses, cows and whales all descend from it.",
+      "facts": [
+        "It is named after Laurasia, the ancient northern supercontinent where it probably arose.",
+        "Nobody suspected from anatomy alone that bats, horses and whales were close cousins — DNA revealed the group."
+      ],
+      "wiki": "Laurasiatheria",
+      "confidence": "medium"
+    },
+    {
+      "id": "eulipotyphla",
+      "name": "Hedgehogs, shrews & moles",
+      "scientific": "Eulipotyphla",
+      "parent": "laurasiatheria",
+      "rank": "order",
+      "group": "mammals",
+      "appeared": 70,
+      "emoji": "🐾",
+      "summary": "Small, mostly insect-eating mammals with long, twitchy snouts and sharp little teeth.",
+      "facts": [
+        "Some shrews, and the rare solenodons of the Caribbean, are among the very few venomous mammals."
+      ],
+      "wiki": "Eulipotyphla",
+      "confidence": "medium"
+    },
+    {
+      "id": "hedgehogs",
+      "name": "Hedgehogs",
+      "scientific": "Erinaceidae",
+      "parent": "eulipotyphla",
+      "rank": "family",
+      "group": "mammals",
+      "appeared": 50,
+      "emoji": "🦔",
+      "summary": "Spiny insect-eaters of Europe, Asia and Africa, covered in around 5,000–7,000 hollow spines.",
+      "facts": [
+        "Hedgehogs can partly resist some snake venoms.",
+        "They sometimes 'self-anoint', chewing strange substances into a froth and spreading it on their spines — nobody is quite sure why."
+      ],
+      "wiki": "Hedgehog",
+      "confidence": "medium"
+    },
+    {
+      "id": "shrews",
+      "name": "Shrews",
+      "scientific": "Soricidae",
+      "parent": "eulipotyphla",
+      "rank": "family",
+      "group": "mammals",
+      "appeared": 45,
+      "emoji": "🐁",
+      "summary": "Tiny, fierce predators that must eat almost constantly to fuel their racing metabolism.",
+      "facts": [
+        "The Etruscan shrew, at about 1.8 grams, is the smallest mammal by weight.",
+        "Some shrews shrink their skull and brain for the winter, then regrow them in spring."
+      ],
+      "wiki": "Shrew",
+      "confidence": "medium"
+    },
+    {
+      "id": "bats",
+      "name": "Bats",
+      "scientific": "Chiroptera",
+      "parent": "laurasiatheria",
+      "rank": "order",
+      "group": "mammals",
+      "appeared": 58,
+      "emoji": "🦇",
+      "summary": "The only mammals that can truly fly. With more than 1,400 species, bats make up about a fifth of all mammal species.",
+      "facts": [
+        "Most bats 'see' with sound, using echolocation to catch insects in the dark.",
+        "Onychonycteris, a 52-million-year-old fossil bat, could already fly but may not yet have echolocated.",
+        "Vampire bats share blood meals with hungry roost-mates — and remember who has helped them before."
+      ],
+      "tags": [
+        "flight"
+      ],
+      "wiki": "Bat",
+      "confidence": "medium"
+    },
+    {
+      "id": "ferae",
+      "name": "Carnivorans & pangolins",
+      "scientific": "Ferae",
+      "parent": "laurasiatheria",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 75,
+      "emoji": "🐾",
+      "summary": "A surprising pairing confirmed by DNA: the scaly, ant-eating pangolins are the closest living relatives of the carnivorans.",
+      "wiki": "Ferae",
+      "confidence": "medium"
+    },
+    {
+      "id": "pangolins",
+      "name": "Pangolins",
+      "scientific": "Pholidota",
+      "parent": "ferae",
+      "rank": "order",
+      "group": "mammals",
+      "appeared": 50,
+      "emoji": "🌰",
+      "summary": "The only mammals covered in scales — made of keratin, like your fingernails. Pangolins roll into an armoured ball when threatened.",
+      "facts": [
+        "Pangolins are thought to be the most trafficked wild mammals in the world.",
+        "A pangolin's tongue can be longer than its body when fully extended, and is anchored deep in its chest."
+      ],
+      "wiki": "Pangolin",
+      "confidence": "medium"
+    },
+    {
+      "id": "carnivora",
+      "name": "Carnivorans",
+      "scientific": "Carnivora",
+      "parent": "ferae",
+      "rank": "order",
+      "group": "mammals",
+      "appeared": 55,
+      "emoji": "🍖",
+      "summary": "Cats, dogs, bears, seals, weasels, hyenas and their kin, named for their meat-slicing 'carnassial' teeth — although some, like the giant panda, eat almost only plants.",
+      "facts": [
+        "Carnivorans split early into two branches: the cat-like feliforms and the dog-like caniforms.",
+        "Seals and sea lions are dog-like carnivorans that returned to the sea."
+      ],
+      "wiki": "Carnivora",
+      "confidence": "medium"
+    },
+    {
+      "id": "felidae",
+      "name": "Cat family",
+      "scientific": "Felidae",
+      "parent": "carnivora",
+      "rank": "family",
+      "group": "mammals",
+      "appeared": 25,
+      "emoji": "🐆",
+      "summary": "About 40 species of stealthy hunters with retractable claws, from the palm-sized rusty-spotted cat to the tiger.",
+      "facts": [
+        "Cats can't taste sweetness: the gene for the sweet-taste receptor is broken in the whole family.",
+        "Cats belong to the cat-like branch of carnivorans along with hyenas, mongooses and civets — hyenas are closer to cats than to dogs."
+      ],
+      "wiki": "Felidae",
+      "confidence": "medium"
+    },
+    {
+      "id": "lion",
+      "name": "Lion",
+      "scientific": "Panthera leo",
+      "parent": "felidae",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 2,
+      "emoji": "🦁",
+      "summary": "The only truly social big cat, living in prides on African savannas — plus a small population in India's Gir Forest.",
+      "facts": [
+        "During the Ice Age, lions ranged from Africa across Eurasia into the Americas, making them one of the most widespread large land mammals.",
+        "A lion's roar can be heard up to about 8 km away."
+      ],
+      "wiki": "Lion",
+      "confidence": "medium"
+    },
+    {
+      "id": "tiger",
+      "name": "Tiger",
+      "scientific": "Panthera tigris",
+      "parent": "felidae",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 2,
+      "emoji": "🐅",
+      "summary": "The largest living cat: a solitary, striped hunter of Asian forests, grasslands and mangrove swamps.",
+      "facts": [
+        "A tiger's skin is striped too, not just its fur.",
+        "Unlike most cats, tigers love water and are strong swimmers."
+      ],
+      "wiki": "Tiger",
+      "confidence": "medium"
+    },
+    {
+      "id": "smilodon",
+      "name": "Smilodon",
+      "parent": "felidae",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 2.5,
+      "extinct": 0.01,
+      "emoji": "🦷",
+      "summary": "The famous sabre-toothed cat of the Ice Age Americas, with upper canines up to about 28 cm long, probably used for fast, deep bites into pinned prey.",
+      "facts": [
+        "Smilodon could open its jaws to more than 110 degrees.",
+        "The remains of thousands of Smilodon have been pulled from the La Brea Tar Pits in Los Angeles.",
+        "Despite the nickname 'sabre-toothed tiger', it was not closely related to tigers."
+      ],
+      "wiki": "Smilodon",
+      "confidence": "medium"
+    },
+    {
+      "id": "african-wildcat",
+      "name": "African wildcat",
+      "scientific": "Felis lybica",
+      "parent": "felidae",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 0.2,
+      "emoji": "🐾",
+      "summary": "A small, sandy-coloured wildcat of Africa and the Near East — the wild ancestor of every pet cat on Earth.",
+      "facts": [
+        "It looks so much like a tabby cat that the two are hard to tell apart, and they readily interbreed."
+      ],
+      "wiki": "African wildcat",
+      "confidence": "low"
+    },
+    {
+      "id": "domestic-cat",
+      "name": "Domestic cat",
+      "scientific": "Felis catus",
+      "parent": "african-wildcat",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 0.0095,
+      "emoji": "🐈",
+      "summary": "Our pet cats, which largely domesticated themselves by hunting the mice and rats that raided early farmers' grain stores.",
+      "facts": [
+        "A cat was buried alongside a person on Cyprus about 9,500 years ago — and cats aren't native to Cyprus, so it must have come by boat.",
+        "Cats have changed less than almost any other domestic animal; their bodies and genes remain very close to the wildcat's.",
+        "Ancient Egyptians mummified millions of cats as offerings to the cat goddess Bastet."
+      ],
+      "tags": [
+        "domesticated"
+      ],
+      "origin": "Wildcats began living with people in the Near East's Fertile Crescent at least 9,500 years ago, drawn by rodents in the first farming villages. Cats from Egypt later spread around the Mediterranean, and domestic cats reached much of Europe only around 2,000 years ago.",
+      "wiki": "Cat",
+      "confidence": "medium"
+    },
+    {
+      "id": "caniformia",
+      "name": "Dog-like carnivorans",
+      "scientific": "Caniformia",
+      "parent": "carnivora",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 48,
+      "emoji": "🐾",
+      "summary": "The dog-like branch of carnivorans: dogs, bears, seals, sea lions, walruses, weasels, raccoons and red pandas.",
+      "facts": [
+        "Seals and sea lions evolved from land-living caniforms; their closest land relatives are the bears and the weasel family."
+      ],
+      "wiki": "Caniformia",
+      "confidence": "medium"
+    },
+    {
+      "id": "canidae",
+      "name": "Dog family",
+      "scientific": "Canidae",
+      "parent": "caniformia",
+      "rank": "family",
+      "group": "mammals",
+      "appeared": 40,
+      "emoji": "🦊",
+      "summary": "Wolves, dogs, foxes, jackals and coyotes. The dog family began in North America about 40 million years ago.",
+      "facts": [
+        "The fennec fox's huge ears give off heat and can hear prey moving under the sand."
+      ],
+      "wiki": "Canidae",
+      "confidence": "medium"
+    },
+    {
+      "id": "gray-wolf",
+      "name": "Gray wolf",
+      "scientific": "Canis lupus",
+      "parent": "canidae",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 0.4,
+      "emoji": "🐺",
+      "summary": "The largest wild member of the dog family, living in family packs across the Northern Hemisphere.",
+      "facts": [
+        "A wolf pack is usually just a family: a breeding pair and their offspring.",
+        "Wolves returned to Yellowstone in 1995 changed how elk behaved and affected the whole ecosystem."
+      ],
+      "wiki": "Wolf",
+      "confidence": "medium"
+    },
+    {
+      "id": "domestic-dog",
+      "name": "Domestic dog",
+      "scientific": "Canis familiaris",
+      "parent": "gray-wolf",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 0.023,
+      "emoji": "🐕",
+      "summary": "The first animal humans ever domesticated, now hundreds of breeds from tiny Chihuahuas to giant wolfhounds.",
+      "facts": [
+        "Dogs were domesticated before any crop or any other animal — while mammoths still roamed.",
+        "Today's wolves are not dogs' direct ancestors: dogs and modern wolves are cousins descended from an extinct Ice Age wolf population.",
+        "Dogs are better than chimpanzees at understanding a pointing human finger."
+      ],
+      "tags": [
+        "domesticated"
+      ],
+      "origin": "Tamed by Ice Age hunter-gatherers from a now-extinct wolf population, probably in northern Eurasia (perhaps Siberia), at least 15,000 and possibly over 20,000 years ago — long before farming.",
+      "wiki": "Dog",
+      "confidence": "medium"
+    },
+    {
+      "id": "chihuahua",
+      "name": "Chihuahua",
+      "parent": "domestic-dog",
+      "rank": "breed",
+      "group": "mammals",
+      "appeared": 0.00015,
+      "emoji": "🐶",
+      "summary": "The world's smallest dog breed, named after the Mexican state of Chihuahua, where it was found in the mid-1800s.",
+      "facts": [
+        "DNA studies suggest Chihuahuas still carry some ancestry from ancient American dogs, which were otherwise largely replaced by European breeds.",
+        "A Chihuahua and an Irish Wolfhound are the same species and could, in principle, interbreed."
+      ],
+      "tags": [
+        "domesticated"
+      ],
+      "origin": "Developed in Mexico; it reached the United States in the late 1800s and was first registered by the American Kennel Club in 1904.",
+      "wiki": "Chihuahua (dog)",
+      "confidence": "medium"
+    },
+    {
+      "id": "greyhound",
+      "name": "Greyhound",
+      "parent": "domestic-dog",
+      "rank": "breed",
+      "group": "mammals",
+      "appeared": 0.0002,
+      "emoji": "🏁",
+      "summary": "A slender sighthound bred for chasing game and racing — the fastest dog breed, reaching around 70 km/h.",
+      "facts": [
+        "Despite their speed, greyhounds sleep a lot and are nicknamed '45-mile-per-hour couch potatoes'.",
+        "Slim, greyhound-like dogs appear in ancient art, but DNA shows the modern breed was shaped much more recently."
+      ],
+      "tags": [
+        "domesticated"
+      ],
+      "origin": "Shaped in Britain from older sighthound types; the modern breed was standardised in the 1800s for coursing and racing.",
+      "wiki": "Greyhound",
+      "confidence": "medium"
+    },
+    {
+      "id": "bears",
+      "name": "Bears",
+      "scientific": "Ursidae",
+      "parent": "caniformia",
+      "rank": "family",
+      "group": "mammals",
+      "appeared": 20,
+      "emoji": "🐻",
+      "summary": "Big, mostly omnivorous carnivorans of the Americas, Europe and Asia — eight living species, from sun bears to polar bears.",
+      "facts": [
+        "Many bears spend months in winter dens without eating, drinking or going to the toilet."
+      ],
+      "wiki": "Bear",
+      "confidence": "medium"
+    },
+    {
+      "id": "giant-panda",
+      "name": "Giant panda",
+      "scientific": "Ailuropoda melanoleuca",
+      "parent": "bears",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 12,
+      "emoji": "🐼",
+      "summary": "A black-and-white bear of Chinese mountain forests that eats almost nothing but bamboo, munching for over 12 hours a day.",
+      "facts": [
+        "Pandas have a 'false thumb' — an enlarged wrist bone that helps them grip bamboo.",
+        "A panda still has the short gut of a meat-eater, so it digests only a small part of what it eats.",
+        "The red panda is not a close relative; it belongs to a family of its own."
+      ],
+      "wiki": "Giant panda",
+      "confidence": "medium"
+    },
+    {
+      "id": "polar-bear",
+      "name": "Polar bear",
+      "scientific": "Ursus maritimus",
+      "parent": "bears",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 0.5,
+      "emoji": "🐻‍❄️",
+      "summary": "The largest land carnivore, a sea-ice hunter of the Arctic that evolved from brown bears within roughly the last half-million years.",
+      "facts": [
+        "Under its fur, a polar bear's skin is black.",
+        "Its fur isn't really white: each hair is see-through and scatters light.",
+        "Polar bears and brown bears can interbreed, and 'pizzly' hybrids have been found in the wild."
+      ],
+      "tags": [
+        "ocean"
+      ],
+      "wiki": "Polar bear",
+      "confidence": "medium"
+    },
+    {
+      "id": "pinnipeds",
+      "name": "Seals, sea lions & walruses",
+      "scientific": "Pinnipedia",
+      "parent": "caniformia",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 27,
+      "emoji": "🦭",
+      "summary": "Flipper-footed carnivorans that hunt at sea but come ashore to rest and breed. Their ancestors were land-living, otter-like caniforms.",
+      "facts": [
+        "Puijila, a fossil from the Canadian Arctic over 20 million years old, was a 'walking seal' with webbed feet instead of flippers.",
+        "Elephant seals can dive more than 2,000 metres deep and stay down for nearly two hours."
+      ],
+      "tags": [
+        "ocean"
+      ],
+      "wiki": "Pinniped",
+      "confidence": "medium"
+    },
+    {
+      "id": "weasels",
+      "name": "Weasels, otters & badgers",
+      "scientific": "Mustelidae",
+      "parent": "caniformia",
+      "rank": "family",
+      "group": "mammals",
+      "appeared": 20,
+      "emoji": "🦦",
+      "summary": "The largest carnivoran family: long-bodied hunters including weasels, otters, badgers, wolverines, minks and ferrets.",
+      "facts": [
+        "The least weasel is the smallest carnivoran in the world.",
+        "Sea otters have the densest fur of any animal and often hold paws while sleeping so they don't drift apart."
+      ],
+      "wiki": "Mustelidae",
+      "confidence": "medium"
+    },
+    {
+      "id": "euungulata",
+      "name": "Hoofed mammals",
+      "scientific": "Euungulata",
+      "parent": "laurasiatheria",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 75,
+      "emoji": "🦶",
+      "summary": "The ungulates: odd-toed horses, rhinos and tapirs plus even-toed pigs, camels, deer and cattle — and, astonishingly, whales.",
+      "facts": [
+        "Hooves are giant toenails that wrap around the tip of the toe."
+      ],
+      "wiki": "Euungulata",
+      "confidence": "medium"
+    },
+    {
+      "id": "perissodactyla",
+      "name": "Odd-toed ungulates",
+      "scientific": "Perissodactyla",
+      "parent": "euungulata",
+      "rank": "order",
+      "group": "mammals",
+      "appeared": 56,
+      "emoji": "🐴",
+      "summary": "Horses, rhinos and tapirs, which carry their weight mainly on the middle toe of each foot. Fifty million years ago they were far more diverse than today.",
+      "facts": [
+        "Fewer than 20 wild species survive today."
+      ],
+      "wiki": "Odd-toed ungulate",
+      "confidence": "medium"
+    },
+    {
+      "id": "equidae",
+      "name": "Horse family",
+      "scientific": "Equidae",
+      "parent": "perissodactyla",
+      "rank": "family",
+      "group": "mammals",
+      "appeared": 56,
+      "emoji": "🐎",
+      "summary": "The horse family, whose 55-million-year fossil record is a textbook story of evolution: from small forest browsers to big, single-toed grassland runners.",
+      "facts": [
+        "Horse evolution was not a straight ladder but a bushy tree with many side branches that died out.",
+        "Horses evolved mostly in North America, died out there around 10,000 years ago, and were brought back by Europeans in the 1500s."
+      ],
+      "wiki": "Equidae",
+      "confidence": "medium"
+    },
+    {
+      "id": "eohippus",
+      "name": "Eohippus",
+      "parent": "equidae",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 55,
+      "extinct": 47,
+      "emoji": "🌅",
+      "summary": "The 'dawn horse': a fox-sized browser of early Eocene forests, with four toes on each front foot and three on each back foot.",
+      "facts": [
+        "It was long called Hyracotherium, but that name turned out to belong to an animal closer to other extinct relatives, so the old name Eohippus was revived.",
+        "It nibbled soft leaves and fruit, not grass — open grasslands hadn't spread yet."
+      ],
+      "wiki": "Eohippus",
+      "confidence": "medium"
+    },
+    {
+      "id": "mesohippus",
+      "name": "Mesohippus",
+      "parent": "equidae",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 37,
+      "extinct": 32,
+      "emoji": "🐴",
+      "summary": "A three-toed horse about 60 cm tall at the shoulder from the Oligocene of North America, with longer legs and a bigger brain than Eohippus.",
+      "facts": [
+        "As forests thinned into open woodland, horses like Mesohippus became faster, longer-legged runners."
+      ],
+      "wiki": "Mesohippus",
+      "confidence": "medium"
+    },
+    {
+      "id": "merychippus",
+      "name": "Merychippus",
+      "parent": "equidae",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 17,
+      "extinct": 10,
+      "emoji": "🌾",
+      "summary": "A pony-sized, three-toed horse of the Miocene grasslands of North America, with tall-crowned teeth for grinding tough, gritty grass.",
+      "facts": [
+        "Merychippus ran on its big middle toe; its two side toes barely touched the ground.",
+        "It was one of the first horses to live mainly by grazing."
+      ],
+      "wiki": "Merychippus",
+      "confidence": "medium"
+    },
+    {
+      "id": "equus",
+      "name": "Equus",
+      "parent": "equidae",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 4.5,
+      "emoji": "🦓",
+      "summary": "The single-toed genus of all living horses, zebras and asses. It arose in North America about 4–4.5 million years ago.",
+      "facts": [
+        "Each hoof is a single giant toe; the side toes survive only as thin 'splint bones'.",
+        "Zebras, donkeys and horses are all species of Equus — and they can interbreed."
+      ],
+      "wiki": "Equus (genus)",
+      "confidence": "medium"
+    },
+    {
+      "id": "wild-horse",
+      "name": "Wild horse",
+      "scientific": "Equus ferus",
+      "parent": "equus",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 0.7,
+      "emoji": "🐎",
+      "summary": "The wild ancestor of the domestic horse, which roamed Ice Age steppes in huge herds — and was painted on the walls of caves like Lascaux and Chauvet.",
+      "facts": [
+        "'Wild' horses today, such as American mustangs and Australian brumbies, are really feral descendants of domestic horses."
+      ],
+      "wiki": "Wild horse",
+      "confidence": "low"
+    },
+    {
+      "id": "domestic-horse",
+      "name": "Domestic horse",
+      "scientific": "Equus ferus caballus",
+      "parent": "wild-horse",
+      "rank": "subspecies",
+      "group": "mammals",
+      "appeared": 0.0042,
+      "emoji": "🐎",
+      "summary": "The horse that changed history: once people could ride and drive horses, travellers, traders and armies could go farther and faster than ever before.",
+      "facts": [
+        "Ancient DNA revealed that the earliest herded horses, at Botai in Kazakhstan, are not the ancestors of today's horses.",
+        "Horses can doze standing up thanks to a 'stay apparatus' that locks their legs."
+      ],
+      "tags": [
+        "domesticated"
+      ],
+      "origin": "Modern domestic horses trace back to the lower Volga–Don region of the western Eurasian steppe (today's southwest Russia) about 4,200 years ago. Within a few centuries they spread across Eurasia, together with spoked-wheel chariots.",
+      "wiki": "Horse",
+      "confidence": "medium"
+    },
+    {
+      "id": "przewalskis-horse",
+      "name": "Przewalski's horse",
+      "scientific": "Equus ferus przewalskii",
+      "parent": "wild-horse",
+      "rank": "subspecies",
+      "group": "mammals",
+      "appeared": 0.0055,
+      "emoji": "🐴",
+      "summary": "A stocky, dun-coloured horse of the Mongolian steppe with a stiff, upright mane, long hailed as the last truly wild horse.",
+      "facts": [
+        "Ancient DNA showed in 2018 that it descends from horses herded by the Botai people of Kazakhstan about 5,500 years ago, which later went feral.",
+        "It vanished from the wild in the 1960s; every Przewalski's horse alive today comes from just over a dozen zoo animals, and herds have been returned to Mongolia."
+      ],
+      "wiki": "Przewalski's horse",
+      "confidence": "medium"
+    },
+    {
+      "id": "donkey",
+      "name": "Donkey",
+      "scientific": "Equus asinus",
+      "parent": "equus",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 0.007,
+      "emoji": "🫏",
+      "summary": "A tough, sure-footed pack animal domesticated from the African wild ass — the original beast of burden of desert peoples.",
+      "facts": [
+        "Donkeys were domesticated earlier than horses.",
+        "Donkeys have 62 chromosomes and horses 64, so their mule offspring, with 63, are almost always sterile."
+      ],
+      "tags": [
+        "domesticated"
+      ],
+      "origin": "Domesticated from the African wild ass in East Africa (around the Horn of Africa) about 7,000 years ago, then spread through Africa and Eurasia as a pack animal.",
+      "wiki": "Donkey",
+      "confidence": "medium"
+    },
+    {
+      "id": "mule",
+      "name": "Mule",
+      "scientific": "Equus asinus × Equus caballus",
+      "parent": "domestic-horse",
+      "hybridOf": [
+        "donkey"
+      ],
+      "rank": "hybrid",
+      "group": "mammals",
+      "appeared": 0.003,
+      "emoji": "🐴",
+      "summary": "The offspring of a male donkey and a female horse: stronger than a donkey, hardier than a horse — but almost always unable to have foals of its own.",
+      "facts": [
+        "Over 4,500 years ago in Syria, people bred 'kungas', hybrids of donkeys and wild asses — the oldest known human-made hybrid animals.",
+        "The reverse cross, a horse father and a donkey mother, is called a hinny."
+      ],
+      "tags": [
+        "domesticated"
+      ],
+      "origin": "Bred deliberately in the ancient Near East by crossing donkeys with horses, for at least 3,000 years; prized as pack and draught animals ever since.",
+      "wiki": "Mule",
+      "confidence": "low"
+    },
+    {
+      "id": "rhinos",
+      "name": "Rhinos & kin",
+      "scientific": "Rhinocerotoidea",
+      "parent": "perissodactyla",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 50,
+      "emoji": "🦏",
+      "summary": "Rhinoceroses and their extinct relatives — once a huge group that included running rhinos, hippo-like rhinos and the largest land mammal ever.",
+      "facts": [
+        "Rhino horns are made of keratin, like your hair and nails — not bone.",
+        "Only five rhino species survive today, all threatened by poaching."
+      ],
+      "wiki": "Rhinocerotoidea",
+      "confidence": "medium"
+    },
+    {
+      "id": "woolly-rhino",
+      "name": "Woolly rhinoceros",
+      "scientific": "Coelodonta antiquitatis",
+      "parent": "rhinos",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 0.5,
+      "extinct": 0.014,
+      "emoji": "🦏",
+      "summary": "A shaggy Ice Age rhino of the Eurasian steppes, with a flattened front horn up to about a metre long.",
+      "facts": [
+        "Its ancestors lived on the cold, high Tibetan Plateau, ready for the Ice Age long before it began.",
+        "Stone Age artists painted woolly rhinos on the walls of Chauvet Cave in France."
+      ],
+      "wiki": "Woolly rhinoceros",
+      "confidence": "medium"
+    },
+    {
+      "id": "paraceratherium",
+      "name": "Paraceratherium",
+      "parent": "rhinos",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 34,
+      "extinct": 23,
+      "emoji": "🗼",
+      "summary": "The largest land mammal ever known: a hornless, long-necked rhino relative nearly 5 metres tall at the shoulder that browsed treetops in Asia.",
+      "facts": [
+        "It may have weighed 15–20 tonnes, about as much as three African elephants.",
+        "Despite its giraffe-like lifestyle, it was a rhino relative."
+      ],
+      "wiki": "Paraceratherium",
+      "confidence": "medium"
+    },
+    {
+      "id": "tapirs",
+      "name": "Tapirs",
+      "scientific": "Tapiridae",
+      "parent": "perissodactyla",
+      "rank": "family",
+      "group": "mammals",
+      "appeared": 35,
+      "emoji": "🐽",
+      "summary": "Pig-shaped forest browsers of Central and South America and Southeast Asia, with a short, bendy, trunk-like snout.",
+      "facts": [
+        "Baby tapirs are striped and spotted like watermelons, for camouflage.",
+        "Tapirs are much closer relatives of horses and rhinos than of pigs."
+      ],
+      "wiki": "Tapir",
+      "confidence": "medium"
+    },
+    {
+      "id": "cetartiodactyla",
+      "name": "Even-toed ungulates (incl. whales)",
+      "scientific": "Artiodactyla (Cetartiodactyla)",
+      "parent": "euungulata",
+      "rank": "order",
+      "group": "mammals",
+      "appeared": 62,
+      "emoji": "🦌",
+      "summary": "Pigs, camels, deer, giraffes, cattle, hippos — and whales and dolphins, which DNA and fossils show evolved from within this hoofed group.",
+      "facts": [
+        "The giveaway is an ankle bone: early whales had the same double-pulley ankle bone as deer and pigs.",
+        "Most even-toed ungulates walk on two toes, the 'cloven hoof'."
+      ],
+      "wiki": "Even-toed ungulate",
+      "confidence": "medium"
+    },
+    {
+      "id": "camelids",
+      "name": "Camel family",
+      "scientific": "Camelidae",
+      "parent": "cetartiodactyla",
+      "rank": "family",
+      "group": "mammals",
+      "appeared": 45,
+      "emoji": "🐪",
+      "summary": "Camels, llamas and alpacas. Surprisingly, the camel family evolved in North America and only later spread to Asia, Africa and South America.",
+      "facts": [
+        "A camel's hump stores fat, not water.",
+        "Giant camels once lived in the Canadian High Arctic, about 3.5 million years ago."
+      ],
+      "wiki": "Camelid",
+      "confidence": "medium"
+    },
+    {
+      "id": "dromedary",
+      "name": "Dromedary camel",
+      "scientific": "Camelus dromedarius",
+      "parent": "camelids",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 4.4,
+      "emoji": "🐪",
+      "summary": "The one-humped 'ship of the desert', which can go a week or more without drinking, then gulp over 100 litres of water in minutes.",
+      "facts": [
+        "Wild dromedaries are extinct: every dromedary alive is domestic or feral.",
+        "Australia has the world's largest herds of feral dromedaries, descended from camels imported in the 1800s."
+      ],
+      "tags": [
+        "domesticated"
+      ],
+      "origin": "Domesticated on the Arabian Peninsula roughly 3,000 years ago, for transport, milk and meat; it made long-distance caravan trade across deserts possible.",
+      "wiki": "Dromedary",
+      "confidence": "medium"
+    },
+    {
+      "id": "llama",
+      "name": "Llama",
+      "scientific": "Lama glama",
+      "parent": "camelids",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 0.006,
+      "emoji": "🦙",
+      "summary": "The pack animal of the Andes, domesticated from the wild guanaco. Llamas carried goods across the Inca Empire, which had no horses or wheeled carts.",
+      "facts": [
+        "Annoyed llamas spit — mostly at each other.",
+        "Llamas are used as guard animals for sheep, chasing off coyotes and foxes."
+      ],
+      "tags": [
+        "domesticated"
+      ],
+      "origin": "Domesticated from the guanaco in the Andes of Peru roughly 6,000–7,000 years ago, as a pack animal and for meat and wool.",
+      "wiki": "Llama",
+      "confidence": "medium"
+    },
+    {
+      "id": "alpaca",
+      "name": "Alpaca",
+      "scientific": "Vicugna pacos",
+      "parent": "camelids",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 0.006,
+      "emoji": "🦙",
+      "summary": "A smaller Andean camelid bred for its soft, warm fleece rather than for carrying loads.",
+      "facts": [
+        "Alpaca fleece contains no lanolin, the greasy wax in sheep's wool.",
+        "Alpaca herds use shared dung piles, which makes them easy to keep clean."
+      ],
+      "tags": [
+        "domesticated"
+      ],
+      "origin": "Domesticated from the wild vicuña in the Peruvian Andes about 6,000–7,000 years ago; DNA confirmed in 2001 that alpacas come from vicuñas, not guanacos.",
+      "wiki": "Alpaca",
+      "confidence": "medium"
+    },
+    {
+      "id": "wild-boar",
+      "name": "Wild boar",
+      "scientific": "Sus scrofa",
+      "parent": "cetartiodactyla",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 1,
+      "emoji": "🐗",
+      "summary": "A tough, clever wild pig native from Europe and North Africa to East Asia — the ancestor of all domestic pigs.",
+      "facts": [
+        "Thanks partly to people releasing them, wild boar now live on every continent except Antarctica.",
+        "Piglets are striped for camouflage but lose their stripes as they grow."
+      ],
+      "wiki": "Wild boar",
+      "confidence": "low"
+    },
+    {
+      "id": "domestic-pig",
+      "name": "Domestic pig",
+      "scientific": "Sus domesticus",
+      "parent": "wild-boar",
+      "rank": "subspecies",
+      "group": "mammals",
+      "appeared": 0.0105,
+      "emoji": "🐖",
+      "summary": "Pigs, raised for meat and now among the most numerous large mammals on Earth.",
+      "facts": [
+        "Pigs are among the smartest domestic animals; they have even learned to play simple video games with a joystick.",
+        "Pigs can barely sweat, so they wallow in mud to keep cool."
+      ],
+      "tags": [
+        "domesticated"
+      ],
+      "origin": "Domesticated from wild boar at least twice: in Anatolia and the Near East about 10,500 years ago, and in China around 9,000 years ago. European pigs later lost almost all their Near Eastern ancestry by mixing with local wild boar.",
+      "wiki": "Domestic pig",
+      "confidence": "medium"
+    },
+    {
+      "id": "ruminantia",
+      "name": "Ruminants",
+      "scientific": "Ruminantia",
+      "parent": "cetartiodactyla",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 50,
+      "emoji": "🌾",
+      "summary": "Cud-chewing hoofed mammals with stomachs divided into chambers full of microbes that break down tough plants.",
+      "facts": [
+        "Ruminants bring their food back up and chew it again — 'chewing the cud'.",
+        "A cow has one stomach with four compartments, not four stomachs."
+      ],
+      "wiki": "Ruminant",
+      "confidence": "medium"
+    },
+    {
+      "id": "giraffe",
+      "name": "Giraffe",
+      "scientific": "Giraffa",
+      "parent": "ruminantia",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 7,
+      "emoji": "🦒",
+      "summary": "The tallest living animal, up to about 5.5 metres, browsing treetops on African savannas with a tongue around 45 cm long.",
+      "facts": [
+        "Giraffes have the same number of neck bones as you: seven.",
+        "Their closest living relative is the okapi, a shy forest animal with stripy legs.",
+        "A giraffe's heart weighs around 11 kg, to pump blood all the way up that neck."
+      ],
+      "wiki": "Giraffe",
+      "confidence": "medium"
+    },
+    {
+      "id": "deer",
+      "name": "Deer",
+      "scientific": "Cervidae",
+      "parent": "ruminantia",
+      "rank": "family",
+      "group": "mammals",
+      "appeared": 20,
+      "emoji": "🦌",
+      "summary": "Hoofed browsers and grazers whose males (and, in reindeer, females too) grow bony antlers that fall off and regrow every year.",
+      "facts": [
+        "Growing antlers are among the fastest-growing tissues of any animal — over 2 cm a day.",
+        "Reindeer are the only deer widely herded as domestic animals."
+      ],
+      "wiki": "Deer",
+      "confidence": "medium"
+    },
+    {
+      "id": "bovidae",
+      "name": "Cattle, sheep, goats & antelopes",
+      "scientific": "Bovidae",
+      "parent": "ruminantia",
+      "rank": "family",
+      "group": "mammals",
+      "appeared": 20,
+      "emoji": "🐂",
+      "summary": "The biggest family of hoofed mammals, with around 140 species of antelopes, gazelles, buffalo, cattle, sheep and goats, all with permanent horns.",
+      "facts": [
+        "Unlike antlers, bovid horns are never shed — each one keeps growing throughout the animal's life."
+      ],
+      "wiki": "Bovidae",
+      "confidence": "medium"
+    },
+    {
+      "id": "aurochs",
+      "name": "Aurochs",
+      "scientific": "Bos primigenius",
+      "parent": "bovidae",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 2,
+      "extinct": 0.0004,
+      "emoji": "🐂",
+      "summary": "A huge wild ox that once roamed Europe, Asia and North Africa, standing up to about 1.8 metres at the shoulder — the wild ancestor of all cattle.",
+      "facts": [
+        "The last known aurochs, a female, died in 1627 in Jaktorów Forest, Poland.",
+        "Aurochs were painted on the walls of Lascaux Cave more than 17,000 years ago."
+      ],
+      "wiki": "Aurochs",
+      "confidence": "medium"
+    },
+    {
+      "id": "domestic-cattle",
+      "name": "Domestic cattle",
+      "scientific": "Bos taurus",
+      "parent": "aurochs",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 0.0105,
+      "emoji": "🐄",
+      "summary": "Cows: the world's most important farm animals for milk, meat, leather and muscle power. There are roughly 1.5 billion of them.",
+      "facts": [
+        "Taurine cattle may descend from as few as about 80 female aurochs tamed in the Near East.",
+        "Humped zebu cattle come from a separate domestication of Indian aurochs."
+      ],
+      "tags": [
+        "domesticated"
+      ],
+      "origin": "Taurine cattle were domesticated from aurochs about 10,500 years ago in the upper Tigris–Euphrates region (southeast Turkey and northern Syria); humped zebu cattle were domesticated separately in the Indus Valley about 8,000 years ago.",
+      "wiki": "Cattle",
+      "confidence": "medium"
+    },
+    {
+      "id": "mouflon",
+      "name": "Mouflon",
+      "scientific": "Ovis gmelini",
+      "parent": "bovidae",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 1,
+      "emoji": "🐏",
+      "summary": "A wild sheep with curling horns from the mountains of Anatolia, the Caucasus and Iran — the wild ancestor of domestic sheep.",
+      "facts": [
+        "The mouflon of Corsica and Sardinia are actually feral descendants of early domestic sheep.",
+        "Wild sheep have a hairy coat that moults; the never-ending wool of many domestic sheep is a human creation."
+      ],
+      "wiki": "Mouflon",
+      "confidence": "low"
+    },
+    {
+      "id": "domestic-sheep",
+      "name": "Domestic sheep",
+      "scientific": "Ovis aries",
+      "parent": "mouflon",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 0.0105,
+      "emoji": "🐑",
+      "summary": "Sheep: among the very first farm animals, now kept for meat, milk and wool on every inhabited continent.",
+      "facts": [
+        "Dolly the sheep, born in 1996, was the first mammal cloned from an adult cell.",
+        "Sheep can recognise at least 50 individual sheep faces and remember them for years."
+      ],
+      "tags": [
+        "domesticated"
+      ],
+      "origin": "Domesticated from the Asiatic mouflon about 11,000–10,500 years ago in the Fertile Crescent (southeast Anatolia and the Zagros Mountains), first for meat and later for milk and wool.",
+      "wiki": "Sheep",
+      "confidence": "medium"
+    },
+    {
+      "id": "bezoar-ibex",
+      "name": "Wild goat (bezoar ibex)",
+      "scientific": "Capra aegagrus",
+      "parent": "bovidae",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 1,
+      "emoji": "🐐",
+      "summary": "A wild mountain goat ranging from Turkey to Pakistan, with long, scimitar-shaped horns — the ancestor of every domestic goat.",
+      "facts": [
+        "A 'bezoar' is a stony lump sometimes found in goat stomachs, once believed to cure poisoning."
+      ],
+      "wiki": "Wild goat",
+      "confidence": "low"
+    },
+    {
+      "id": "domestic-goat",
+      "name": "Domestic goat",
+      "scientific": "Capra hircus",
+      "parent": "bezoar-ibex",
+      "rank": "subspecies",
+      "group": "mammals",
+      "appeared": 0.0105,
+      "emoji": "🐐",
+      "summary": "Hardy, curious browsers that can live almost anywhere, kept for milk, meat, leather and hair such as cashmere and mohair.",
+      "facts": [
+        "Goats have rectangular pupils that give them a wide, panoramic view for spotting predators.",
+        "A legend says goats discovered coffee: an Ethiopian goatherd noticed his goats dancing after eating coffee berries."
+      ],
+      "tags": [
+        "domesticated"
+      ],
+      "origin": "Domesticated from the bezoar ibex about 10,500 years ago in the Zagros Mountains of Iran and in southeast Anatolia; ancient DNA shows several different wild populations were tamed.",
+      "wiki": "Goat",
+      "confidence": "medium"
+    },
+    {
+      "id": "whippomorpha",
+      "name": "Hippos & whales",
+      "scientific": "Whippomorpha",
+      "parent": "cetartiodactyla",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 58,
+      "emoji": "🌊",
+      "summary": "The branch that unites hippos and whales. DNA shows they are each other's closest living relatives, sharing an ancestor roughly 55 million years ago.",
+      "facts": [
+        "Both hippos and whales nurse their babies underwater and have nearly hairless skin."
+      ],
+      "wiki": "Whippomorpha",
+      "confidence": "medium"
+    },
+    {
+      "id": "hippos",
+      "name": "Hippopotamuses",
+      "scientific": "Hippopotamidae",
+      "parent": "whippomorpha",
+      "rank": "family",
+      "group": "mammals",
+      "appeared": 16,
+      "emoji": "🦛",
+      "summary": "Huge semi-aquatic grazers of African rivers and the closest living relatives of whales. They may look lazy, but they are among Africa's most dangerous animals.",
+      "facts": [
+        "Hippos ooze a reddish 'blood sweat' that works as sunscreen and may fight germs.",
+        "Hippos can't really swim: they walk or bounce along the river bottom."
+      ],
+      "wiki": "Hippopotamidae",
+      "confidence": "medium"
+    },
+    {
+      "id": "indohyus",
+      "name": "Indohyus",
+      "parent": "whippomorpha",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 48,
+      "extinct": 47,
+      "emoji": "🦌",
+      "summary": "A cat-sized, deer-like animal from India about 48 million years ago that waded in streams — a close cousin of the first whales.",
+      "facts": [
+        "Its ear bones have a thick wall found otherwise only in whales — the clue that linked it to them.",
+        "Its heavy leg bones helped it stay underwater, like a hippo's, perhaps to hide from predators."
+      ],
+      "wiki": "Indohyus",
+      "confidence": "medium"
+    },
+    {
+      "id": "cetacea",
+      "name": "Whales & dolphins",
+      "scientific": "Cetacea",
+      "parent": "whippomorpha",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 53,
+      "emoji": "🐋",
+      "summary": "Mammals that returned to the sea. In about 10 million years, early whales went from four-legged land animals to fully ocean-going swimmers.",
+      "facts": [
+        "Many whales still have tiny leftover hip bones inside their bodies.",
+        "Whales swim by beating their tails up and down — the way a running mammal's spine bends — while fish sweep their tails side to side."
+      ],
+      "tags": [
+        "ocean"
+      ],
+      "wiki": "Cetacea",
+      "confidence": "medium"
+    },
+    {
+      "id": "pakicetus",
+      "name": "Pakicetus",
+      "parent": "cetacea",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 50,
+      "extinct": 48,
+      "emoji": "🐕",
+      "summary": "A wolf-sized, four-legged land animal from about 50 million years ago in Pakistan, whose skull and ears mark it as one of the earliest whales.",
+      "facts": [
+        "Pakicetus lived on land and probably waded into shallow streams to hunt.",
+        "Its fossils come from the old shores of the Tethys Sea, which has since closed up."
+      ],
+      "wiki": "Pakicetus",
+      "confidence": "medium"
+    },
+    {
+      "id": "ambulocetus",
+      "name": "Ambulocetus",
+      "parent": "cetacea",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 49,
+      "extinct": 48,
+      "emoji": "🐊",
+      "summary": "The 'walking whale': a crocodile-like ambush predator about 3 metres long, with big webbed feet, that lurked in the coastal waters of Pakistan 49 million years ago.",
+      "facts": [
+        "It could both walk on land and swim, probably paddling with its back feet like an otter.",
+        "Chemicals in its teeth show it lived in estuaries, where rivers meet the sea."
+      ],
+      "wiki": "Ambulocetus",
+      "confidence": "medium"
+    },
+    {
+      "id": "rodhocetus",
+      "name": "Rodhocetus",
+      "parent": "cetacea",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 47,
+      "extinct": 46,
+      "emoji": "🦦",
+      "summary": "An early whale from Pakistan, about 47 million years ago, with short legs, big feet and a strong tail — more at home in water than on land.",
+      "facts": [
+        "Its ankle bones are shaped exactly like those of hippos, pigs and deer, proof that whales are even-toed ungulates."
+      ],
+      "wiki": "Rodhocetus",
+      "confidence": "medium"
+    },
+    {
+      "id": "basilosaurus",
+      "name": "Basilosaurus",
+      "parent": "cetacea",
+      "rank": "genus",
+      "group": "mammals",
+      "appeared": 41,
+      "extinct": 34,
+      "emoji": "🐍",
+      "summary": "A serpent-like whale up to about 18 metres long, from 41–34 million years ago, with tiny hind legs that were useless on land.",
+      "facts": [
+        "Its name means 'king lizard': the scientist who described it in 1834 thought it was a giant sea reptile.",
+        "Hundreds of its skeletons lie in Egypt's Wadi Al-Hitan, 'Whale Valley', which is now desert."
+      ],
+      "tags": [
+        "ocean"
+      ],
+      "wiki": "Basilosaurus",
+      "confidence": "medium"
+    },
+    {
+      "id": "mysticeti",
+      "name": "Baleen whales",
+      "scientific": "Mysticeti",
+      "parent": "cetacea",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 36,
+      "emoji": "🐋",
+      "summary": "Giant filter-feeders that strain krill and small fish through bristly plates of baleen instead of teeth.",
+      "facts": [
+        "The first baleen whales still had teeth.",
+        "Bowhead whales can live more than 200 years."
+      ],
+      "tags": [
+        "ocean"
+      ],
+      "wiki": "Baleen whale",
+      "confidence": "medium"
+    },
+    {
+      "id": "blue-whale",
+      "name": "Blue whale",
+      "scientific": "Balaenoptera musculus",
+      "parent": "mysticeti",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 3,
+      "emoji": "🐳",
+      "summary": "The largest animal known to have ever lived, up to about 30 metres long and 150 tonnes or more — bigger than any dinosaur.",
+      "facts": [
+        "In feeding season a blue whale can eat around 16 tonnes of krill a day.",
+        "Its deep calls can travel hundreds of kilometres underwater."
+      ],
+      "tags": [
+        "ocean"
+      ],
+      "wiki": "Blue whale",
+      "confidence": "low"
+    },
+    {
+      "id": "odontoceti",
+      "name": "Toothed whales",
+      "scientific": "Odontoceti",
+      "parent": "cetacea",
+      "rank": "clade",
+      "group": "mammals",
+      "appeared": 36,
+      "emoji": "🐬",
+      "summary": "Whales with teeth — sperm whales, beaked whales, narwhals, dolphins and porpoises — that hunt using echolocation.",
+      "facts": [
+        "The narwhal's 'horn' is actually a tooth that can grow up to about 3 metres long.",
+        "Bottlenose dolphins call each other by unique 'signature whistles', like names."
+      ],
+      "tags": [
+        "ocean"
+      ],
+      "wiki": "Toothed whale",
+      "confidence": "medium"
+    },
+    {
+      "id": "sperm-whale",
+      "name": "Sperm whale",
+      "scientific": "Physeter macrocephalus",
+      "parent": "odontoceti",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 20,
+      "emoji": "🐋",
+      "summary": "The largest toothed predator alive, diving 1,000–2,000 metres or more to hunt squid in the dark.",
+      "facts": [
+        "It has the biggest brain of any animal, around 8 kg.",
+        "Its clicks, up to about 230 decibels, are the loudest sounds made by any animal."
+      ],
+      "tags": [
+        "ocean"
+      ],
+      "wiki": "Sperm whale",
+      "confidence": "medium"
+    },
+    {
+      "id": "orca",
+      "name": "Orca",
+      "scientific": "Orcinus orca",
+      "parent": "odontoceti",
+      "rank": "species",
+      "group": "mammals",
+      "appeared": 5,
+      "emoji": "🐬",
+      "summary": "The killer whale is really the largest dolphin: an apex predator that hunts fish, seals, sharks and even other whales in family pods.",
+      "facts": [
+        "Different orca populations have their own diets, hunting tricks and 'dialects' — a form of culture.",
+        "Female orcas go through menopause and can lead their families for decades afterward."
+      ],
+      "tags": [
+        "ocean"
+      ],
+      "wiki": "Orca",
+      "confidence": "low"
+    }
+  ]
+}

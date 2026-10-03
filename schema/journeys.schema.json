@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Map of Evolution — guided journeys",
+  "type": "object",
+  "required": ["journeys"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "journeys": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "subtitle", "emoji", "steps"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "subtitle": { "type": "string" },
+          "emoji": { "type": "string" },
+          "steps": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["node", "text"],
+              "additionalProperties": false,
+              "properties": {
+                "node": { "type": "string", "description": "Node id to fly to." },
+                "title": { "type": "string" },
+                "text": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

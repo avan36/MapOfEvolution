@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://map-of-evolution/schema/tree.schema.json",
+  "title": "Map of Evolution — tree file",
+  "description": "A list of lineages (nodes). Every file in data/tree/ is merged into one tree.",
+  "type": "object",
+  "required": ["nodes"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "description": { "type": "string" },
+    "nodes": { "type": "array", "items": { "$ref": "#/definitions/node" } }
+  },
+  "definitions": {
+    "node": {
+      "type": "object",
+      "required": ["id", "name", "parent", "rank", "group", "appeared", "summary"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "Unique kebab-case id." },
+        "name": { "type": "string", "description": "Friendly display name." },
+        "scientific": { "type": "string", "description": "Scientific name, if different from name." },
+        "parent": { "type": ["string", "null"], "description": "Id of the lineage this one branched from. null only for the root." },
+        "hybridOf": { "type": "array", "items": { "type": "string" }, "description": "Extra ancestors: hybrids or endosymbiosis. Drawn as dashed gold links." },
+        "rank": {
+          "enum": ["root", "domain", "supergroup", "kingdom", "clade", "phylum", "class", "order", "family", "genus", "species", "subspecies", "cultivar", "breed", "hybrid"]
+        },
+        "group": { "type": "string", "description": "A group id from data/groups.json." },
+        "appeared": { "type": "number", "minimum": 0, "description": "Origin, in millions of years ago. 0.01 = 10,000 years ago." },
+        "extinct": { "type": "number", "minimum": 0, "description": "Extinction, in millions of years ago. Omit if still alive." },
+        "emoji": { "type": "string" },
+        "summary": { "type": "string", "description": "1–3 sentences." },
+        "facts": { "type": "array", "items": { "type": "string" } },
+        "tags": { "type": "array", "items": { "type": "string" }, "description": "e.g. landmark, fruit, vegetable, crop, dinosaur, domesticated, ocean, flight, living-fossil" },
+        "origin": { "type": "string", "description": "How humans shaped a domesticated lineage." },
+        "wiki": { "type": "string", "description": "English Wikipedia article title." },
+        "confidence": { "enum": ["high", "medium", "low"] }
+      }
+    }
+  }
+}

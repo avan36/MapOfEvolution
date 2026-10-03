@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Map of Evolution — geological time",
+  "type": "object",
+  "required": ["spans", "events"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "spans": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "level", "start", "end", "color", "summary"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "level": { "enum": ["eon", "era", "period"] },
+          "start": { "type": "number", "description": "Older bound, Ma." },
+          "end": { "type": "number", "description": "Younger bound, Ma." },
+          "color": { "type": "string", "description": "ICS chart colour." },
+          "summary": { "type": "string" }
+        }
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "time", "kind", "emoji", "summary"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string" },
+          "name": { "type": "string" },
+          "time": { "type": "number", "description": "Ma" },
+          "kind": { "enum": ["extinction", "milestone", "planet"] },
+          "emoji": { "type": "string" },
+          "summary": { "type": "string" }
+        }
+      }
+    }
+  }
+}
