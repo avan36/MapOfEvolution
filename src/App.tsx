@@ -61,7 +61,7 @@ export default function App() {
   const filterSet = useMemo(() => {
     if (!groupFilter.size && !spotlight) return null;
     const sp = SPOTLIGHTS.find((s) => s.id === spotlight);
-    return new Set(model.nodes.filter((n) => (!groupFilter.size || groupFilter.has(n.data.group)) && (!sp || sp.test(n))));
+    return new Set(model.nodes.filter((n) => (!groupFilter.size || groupFilter.has(n.data.group)) && (!sp || sp.test(n, model))));
   }, [model, groupFilter, spotlight]);
 
   // Frame whatever a filter highlights.

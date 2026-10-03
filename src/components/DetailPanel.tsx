@@ -4,6 +4,7 @@ import type { TNode, TreeModel } from '../model/tree';
 import { formatAgo } from '../lib/format';
 import { usePhoto, useGallery, wikiUrl, type Photo } from '../lib/wiki';
 import { Lightbox } from './Lightbox';
+import { DrugSources, MedicineCallout } from './MedicineSection';
 
 interface Props {
   model: TreeModel;
@@ -143,6 +144,10 @@ function PanelBody({ model, node, onSelect, onCompare }: Omit<Props, 'onClose'>)
           <p>{d.origin}</p>
         </motion.div>
       )}
+
+      {d.medicine && <MedicineCallout model={model} medicine={d.medicine} onSelect={onSelect} />}
+
+      <DrugSources model={model} node={node} onSelect={onSelect} />
 
       {d.facts?.length ? (
         <motion.section className="panel__section" variants={item}>

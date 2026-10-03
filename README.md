@@ -9,6 +9,7 @@
 - **🧭 Guided journeys.** Story tours such as *From the first cell to you*, *How dinosaurs became birds* and *Where your fruit bowl came from*.
 - **🍊 Hybrids and mergers.** Reticulate evolution is drawn as flowing gold links: the orange is a pomelo × mandarin cross, and mitochondria were once free-living bacteria.
 - **🍎 Spotlights** for fruits & crops, dinosaurs, extinct life, domesticated species and more.
+- **🩺 Germs & medicine.** Germ cards show the diseases they cause, the antibiotics that treat them (each linked to the microbe the drug comes from) and a map of where they turn up in the US.
 - **📦 Portable data.** All content is plain JSON. You can export it, edit it, or drag in your own dataset.
 
 ## Quick start

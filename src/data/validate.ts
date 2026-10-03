@@ -1,4 +1,5 @@
 import type { Dataset, Rank } from './types';
+import { US_CODES } from '../lib/usStates';
 
 const RANKS: Rank[] = [
   'root', 'domain', 'supergroup', 'kingdom', 'clade', 'phylum', 'class', 'order',
@@ -57,6 +58,20 @@ export function validateDataset(ds: Dataset): ValidationReport {
     for (const h of n.hybridOf ?? []) {
       if (!byId.has(h)) errors.push(`${where}: hybridOf "${h}" does not exist`);
       if (h === n.parent) warnings.push(`${where}: hybridOf repeats the parent "${h}"`);
+    }
+    if (n.medicine) {
+      const m = n.medicine;
+      if (!m.diseases?.length) errors.push(`${where}: medicine needs at least one disease`);
+      if (!m.treatments?.length) errors.push(`${where}: medicine needs at least one treatment`);
+      for (const t of m.treatments ?? []) {
+        if (!t.drug) errors.push(`${where}: a medicine treatment is missing "drug"`);
+        if (t.from !== undefined && !byId.has(t.from)) errors.push(`${where}: treatment "${t.drug}" comes from unknown node "${t.from}"`);
+      }
+      if (m.us) {
+        if (!m.us.note) errors.push(`${where}: medicine.us needs a "note"`);
+        for (const st of m.us.states ?? []) if (!US_CODES.has(st)) errors.push(`${where}: unknown US state code "${st}"`);
+        if (!m.us.nationwide && !m.us.states?.length) warnings.push(`${where}: medicine.us has neither states nor nationwide`);
+      }
     }
   }
 

@@ -36,6 +36,8 @@ export class TreeModel {
   readonly scale: TimeScale;
   readonly groups = new Map<string, Group>();
   readonly maxLeafCount: number;
+  /** Drugs each lineage gives us (from `medicine.treatments[].from`), with the germs they treat. */
+  private readonly drugSources = new Map<TNode, Map<string, TNode[]>>();
 
   constructor(dataset: Dataset) {
     this.dataset = dataset;
@@ -55,7 +57,10 @@ export class TreeModel {
       sEnd: 1,
       color: groupColor(data.group),
       extinct: data.extinct !== undefined,
-      haystack: norm([data.name, data.scientific ?? '', data.id.replace(/-/g, ' '), ...(data.tags ?? [])].join(' | ')),
+      haystack: norm([
+        data.name, data.scientific ?? '', data.id.replace(/-/g, ' '), ...(data.tags ?? []),
+        ...(data.medicine?.diseases ?? []), ...(data.medicine?.treatments.map((t) => t.drug) ?? []),
+      ].join(' | ')),
     }));
     for (const n of this.nodes) this.byId.set(n.id, n);
 
@@ -99,6 +104,28 @@ export class TreeModel {
     visit(root, 0);
     this.uTotal = Math.max(u, 1);
     this.maxLeafCount = root.leafCount;
+
+    for (const n of this.nodes) {
+      for (const t of n.data.medicine?.treatments ?? []) {
+        const src = t.from ? this.byId.get(t.from) : undefined;
+        if (!src) continue;
+        const drugs = this.drugSources.get(src) ?? new Map<string, TNode[]>();
+        this.drugSources.set(src, drugs);
+        const treats = drugs.get(t.drug) ?? [];
+        if (!treats.includes(n)) treats.push(n);
+        drugs.set(t.drug, treats);
+      }
+    }
+  }
+
+  /** Medicines that come from this lineage, each with the germs it is used against. */
+  drugsFrom(n: TNode): { drug: string; treats: TNode[] }[] {
+    return [...(this.drugSources.get(n) ?? [])].map(([drug, treats]) => ({ drug, treats }));
+  }
+
+  /** A germ with medical notes, or a lineage that medicines come from. */
+  isMedical(n: TNode): boolean {
+    return !!n.data.medicine || this.drugSources.has(n);
   }
 
   /** Root → node (inclusive). */

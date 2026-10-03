@@ -34,7 +34,44 @@
         "origin": { "type": "string", "description": "How humans shaped a domesticated lineage." },
         "wiki": { "type": "string", "description": "English Wikipedia article title." },
         "image": { "type": "string", "description": "What to show as the picture: an English Wikipedia article title whose lead photo best shows what this looks like (e.g. a famous member of a clade), or a full https:// image URL. Defaults to the wiki article's own photo." },
-        "confidence": { "enum": ["high", "medium", "low"] }
+        "confidence": { "enum": ["high", "medium", "low"] },
+        "medicine": { "$ref": "#/definitions/medicine" }
+      }
+    },
+    "medicine": {
+      "type": "object",
+      "description": "For germs that make people sick. Shown as the \"In medicine\" section of the card. Educational, not clinical guidance.",
+      "required": ["diseases", "treatments"],
+      "additionalProperties": false,
+      "properties": {
+        "diseases": { "type": "array", "minItems": 1, "items": { "type": "string" }, "description": "Diseases it causes, e.g. \"Lyme disease\"." },
+        "treatments": {
+          "type": "array",
+          "minItems": 1,
+          "description": "Usual treatments, first choice first.",
+          "items": {
+            "type": "object",
+            "required": ["drug"],
+            "additionalProperties": false,
+            "properties": {
+              "drug": { "type": "string", "description": "Drug name, e.g. \"doxycycline\"." },
+              "note": { "type": "string", "description": "Short qualifier, e.g. \"first choice\"." },
+              "from": { "type": "string", "description": "Id of the organism the drug (or the natural compound it is made from) comes from, e.g. \"streptomyces\"." }
+            }
+          }
+        },
+        "us": {
+          "type": "object",
+          "required": ["note"],
+          "additionalProperties": false,
+          "description": "Where it turns up in the United States.",
+          "properties": {
+            "states": { "type": "array", "items": { "type": "string", "pattern": "^[A-Z]{2}$" }, "description": "Two-letter postal codes of the states where it is most common (DC allowed)." },
+            "nationwide": { "type": "boolean", "description": "True when it occurs across the whole country; states then marks the hot spots." },
+            "note": { "type": "string", "description": "One sentence describing the pattern." }
+          }
+        },
+        "resistance": { "type": "string", "description": "One or two sentences on drug resistance." }
       }
     }
   }

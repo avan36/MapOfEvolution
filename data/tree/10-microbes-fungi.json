@@ -9,11 +9,59 @@
     { "id": "e-coli", "name": "E. coli", "scientific": "Escherichia coli", "parent": "pseudomonadota", "rank": "species", "group": "bacteria", "appeared": 50, "emoji": "🧫",
       "summary": "A rod-shaped bacterium that lives in the guts of warm-blooded animals, including you. Most strains are harmless, and some help by making vitamin K2. It is also the best-studied living thing on Earth.",
       "facts": ["In good conditions E. coli can divide every 20 minutes.", "Since 1988 one lab has followed the same E. coli populations for more than 75,000 generations. Along the way, one population evolved the ability to eat citrate.", "Genetically modified E. coli has made human insulin for people with diabetes since the early 1980s."],
+      "medicine": {
+        "diseases": ["Bladder infections (UTIs)", "Food poisoning", "Kidney failure (HUS) from toxin-making strains"],
+        "treatments": [
+          { "drug": "nitrofurantoin", "note": "common first choice for bladder infections" },
+          { "drug": "fosfomycin", "note": "one-dose option for bladder infections", "from": "streptomyces" },
+          { "drug": "trimethoprim-sulfamethoxazole", "note": "if local strains are not resistant" },
+          { "drug": "fluids, no antibiotics", "note": "for O157:H7 food poisoning, where antibiotics can raise the risk of kidney damage" }
+        ],
+        "us": { "nationwide": true, "note": "Found everywhere: it lives in nearly everyone’s gut. Harmful strains spread through undercooked beef, raw produce and unwashed hands." },
+        "resistance": "More and more E. coli carry ESBL genes that break down penicillins and most cephalosporins, so doctors often test which drugs still work before choosing one."
+      },
       "tags": ["landmark"], "wiki": "Escherichia coli", "confidence": "low" },
     { "id": "yersinia-pestis", "name": "Plague bacterium", "scientific": "Yersinia pestis", "parent": "pseudomonadota", "rank": "species", "group": "bacteria", "appeared": 0.006, "emoji": "🐀",
       "summary": "The cause of plague, spread mainly by fleas that live on rats and other rodents. It evolved only a few thousand years ago from a much milder gut bacterium.",
       "facts": ["The Black Death (1346–1353) killed perhaps a third to half of everyone in Europe.", "Its DNA has been recovered from Stone Age and Bronze Age skeletons around 5,000 years old.", "A few genetic changes let it survive inside fleas and block their guts, so starving fleas bite again and again."],
+      "medicine": {
+        "diseases": ["Bubonic plague", "Pneumonic plague", "Septicemic plague"],
+        "treatments": [
+          { "drug": "gentamicin", "note": "first-line", "from": "actinomycetota" },
+          { "drug": "streptomycin", "note": "first-line, and the original plague cure", "from": "streptomyces" },
+          { "drug": "ciprofloxacin", "note": "first-line, can be taken by mouth" },
+          { "drug": "doxycycline", "note": "also used to prevent plague after exposure", "from": "streptomyces" }
+        ],
+        "us": { "states": ["NM", "AZ", "CO", "CA", "OR", "NV"], "note": "About 7 human cases a year, mostly in northern New Mexico, northern Arizona and southern Colorado, then California, southern Oregon and far western Nevada. Prairie dogs, ground squirrels and their fleas carry it." }
+      },
       "wiki": "Yersinia pestis", "confidence": "medium" },
+    { "id": "salmonella", "name": "Salmonella", "scientific": "Salmonella enterica", "parent": "pseudomonadota", "rank": "species", "group": "bacteria", "appeared": 50, "emoji": "🥚",
+      "summary": "A gut bacterium that causes food poisoning, often from undercooked chicken, eggs or contaminated produce. One type, Salmonella Typhi, causes typhoid fever.",
+      "facts": ["It is named after Daniel Salmon, a US veterinary scientist, although his assistant Theobald Smith did much of the work.", "“Typhoid Mary” Mallon, a cook in New York in the early 1900s, carried typhoid without ever feeling sick and infected dozens of people."],
+      "medicine": {
+        "diseases": ["Salmonellosis (food poisoning)", "Typhoid fever"],
+        "treatments": [
+          { "drug": "fluids and rest", "note": "most food poisoning clears up without antibiotics" },
+          { "drug": "ceftriaxone", "note": "for severe cases or typhoid", "from": "ascomycota" },
+          { "drug": "azithromycin", "note": "for severe cases or typhoid", "from": "actinomycetota" },
+          { "drug": "ciprofloxacin", "note": "for severe cases, if the strain is not resistant" }
+        ],
+        "us": { "nationwide": true, "note": "Found everywhere, causing about 1.35 million US infections a year, with a peak in summer." },
+        "resistance": "Drug-resistant strains are rising, including typhoid strains that resist nearly everything except a few drugs such as azithromycin and carbapenems."
+      },
+      "wiki": "Salmonella enterica", "confidence": "low" },
+    { "id": "rickettsia-rickettsii", "name": "Spotted fever bacterium", "scientific": "Rickettsia rickettsii", "parent": "pseudomonadota", "rank": "species", "group": "bacteria", "appeared": 10, "emoji": "🐕",
+      "summary": "A tiny bacterium that can only live inside cells and spreads through tick bites. It causes Rocky Mountain spotted fever, which can be deadly if not treated quickly.",
+      "facts": ["Despite the name, most cases today come from the Southeast and South-Central states, not the Rocky Mountains.", "It was identified by Howard Ricketts in Montana in the early 1900s. He later died of typhus, a related disease he was studying."],
+      "medicine": {
+        "diseases": ["Rocky Mountain spotted fever"],
+        "treatments": [
+          { "drug": "doxycycline", "note": "first choice for all ages, including young children", "from": "streptomyces" },
+          { "drug": "chloramphenicol", "note": "rarely used backup", "from": "streptomyces" }
+        ],
+        "us": { "states": ["NC", "OK", "AR", "TN", "MO", "AZ"], "note": "More than half of cases come from North Carolina, Oklahoma, Arkansas, Tennessee and Missouri. Brown dog ticks have also caused outbreaks on tribal lands in Arizona." }
+      },
+      "wiki": "Rickettsia rickettsii", "confidence": "low" },
     { "id": "bacillota", "name": "Firmicutes", "scientific": "Bacillota", "parent": "bacteria", "rank": "phylum", "group": "bacteria", "appeared": 3200, "emoji": "🧀",
       "summary": "Mostly thick-walled bacteria, many of which can survive as tough spores. The phylum covers yogurt and cheese makers, important gut residents and dangerous toxin producers.",
       "facts": ["Spores of one member of this group were revived from lake mud about 7,000 years old.", "Bacillota and Bacteroidota are the two biggest groups of bacteria in the human gut."],
@@ -27,7 +75,61 @@
     { "id": "clostridium", "name": "Clostridium", "parent": "bacillota", "rank": "genus", "group": "bacteria", "appeared": 1000, "emoji": "☠️",
       "summary": "Spore-forming bacteria that cannot stand oxygen. Most of them quietly break down dead material in soil and guts, but a few make the deadliest toxins known.",
       "facts": ["Botulinum toxin from C. botulinum is among the most poisonous substances known. Tiny doses of it are sold as Botox.", "Tetanus is caused by C. tetani spores getting into deep wounds.", "In World War I, Chaim Weizmann used C. acetobutylicum to make acetone for British explosives."],
+      "medicine": {
+        "diseases": ["Tetanus", "Botulism", "Gas gangrene"],
+        "treatments": [
+          { "drug": "antitoxin", "note": "neutralises the toxin; the main treatment for botulism and tetanus" },
+          { "drug": "metronidazole", "note": "for tetanus" },
+          { "drug": "penicillin", "note": "with surgery, for gas gangrene", "from": "penicillium" },
+          { "drug": "clindamycin", "note": "added for gas gangrene to shut down toxin production", "from": "streptomyces" }
+        ],
+        "us": { "nationwide": true, "note": "The spores are in soil everywhere. Vaccines have made tetanus rare (about 30 US cases a year). Most US botulism is in babies, which is why infants under one should not eat honey." }
+      },
       "wiki": "Clostridium", "confidence": "low" },
+    { "id": "c-diff", "name": "C. diff", "scientific": "Clostridioides difficile", "parent": "bacillota", "rank": "species", "group": "bacteria", "appeared": 10, "emoji": "🏥",
+      "summary": "A spore-forming gut bacterium that strikes when antibiotics wipe out a person’s normal gut microbes. Its toxins cause severe diarrhoea and an inflamed colon, mostly in hospitals and nursing homes.",
+      "facts": ["It used to be called Clostridium difficile, but in 2016 it was moved to a genus of its own.", "For infections that keep coming back, one of the best treatments is a transplant of healthy gut microbes from a donor’s stool.", "Its spores survive alcohol hand gel, so hospitals rely on soap and water to wash it away."],
+      "medicine": {
+        "diseases": ["C. diff colitis (severe diarrhoea)"],
+        "treatments": [
+          { "drug": "fidaxomicin", "note": "first choice, by mouth", "from": "actinomycetota" },
+          { "drug": "vancomycin", "note": "by mouth; the main alternative", "from": "actinomycetota" },
+          { "drug": "fecal microbiota transplant", "note": "for infections that keep coming back" }
+        ],
+        "us": { "nationwide": true, "note": "Found in every state, causing roughly half a million infections a year, mostly linked to hospitals, nursing homes and recent antibiotic use." },
+        "resistance": "C. diff naturally shrugs off many common antibiotics. Those drugs kill its gut competitors, which is how it gets its chance."
+      },
+      "wiki": "Clostridioides difficile", "confidence": "low" },
+    { "id": "staph-aureus", "name": "Staph", "scientific": "Staphylococcus aureus", "parent": "bacillota", "rank": "species", "group": "bacteria", "appeared": 10, "emoji": "🍇",
+      "summary": "A round bacterium carried harmlessly in the nose of about 1 in 3 people. When it gets into a cut or the blood it can cause boils, pneumonia and deadly bloodstream infections.",
+      "facts": ["Its name means “golden bunch of grapes”: the cells cluster like grapes and its colonies look golden.", "Penicillin-resistant staph turned up within a few years of penicillin coming into use in the 1940s.", "MRSA, the methicillin-resistant kind, was first reported in 1961, just two years after methicillin went on sale."],
+      "medicine": {
+        "diseases": ["Skin infections (boils, abscesses)", "Pneumonia", "Bloodstream infections (sepsis)", "MRSA"],
+        "treatments": [
+          { "drug": "cefazolin", "note": "for staph that is not resistant (MSSA)", "from": "ascomycota" },
+          { "drug": "vancomycin", "note": "for serious MRSA infections, by IV", "from": "actinomycetota" },
+          { "drug": "trimethoprim-sulfamethoxazole", "note": "for MRSA skin infections" },
+          { "drug": "daptomycin", "note": "for MRSA bloodstream infections", "from": "streptomyces" }
+        ],
+        "us": { "nationwide": true, "note": "Found everywhere: in hospitals, and in everyday places like gyms, locker rooms and schools." },
+        "resistance": "MRSA resists methicillin and nearly all penicillin-like drugs, so doctors switch to others such as vancomycin. A few strains are now partly resistant to vancomycin too."
+      },
+      "wiki": "Staphylococcus aureus", "confidence": "low" },
+    { "id": "strep-a", "name": "Strep A", "scientific": "Streptococcus pyogenes", "parent": "bacillota", "rank": "species", "group": "bacteria", "appeared": 10, "emoji": "🤒",
+      "summary": "The bacterium behind strep throat, impetigo and scarlet fever. Rarely, it invades deep tissue and causes so-called flesh-eating disease.",
+      "facts": ["More than 80 years after penicillin arrived, Strep A still has not become resistant to it.", "Treating strep throat with antibiotics helps prevent rheumatic fever, which can damage the heart."],
+      "medicine": {
+        "diseases": ["Strep throat", "Scarlet fever", "Impetigo", "Necrotizing fasciitis (flesh-eating disease)"],
+        "treatments": [
+          { "drug": "penicillin V", "note": "first choice", "from": "penicillium" },
+          { "drug": "amoxicillin", "note": "first choice, and easier for kids to take", "from": "penicillium" },
+          { "drug": "cephalexin", "note": "for a mild penicillin allergy", "from": "ascomycota" },
+          { "drug": "azithromycin", "note": "for a serious penicillin allergy", "from": "actinomycetota" }
+        ],
+        "us": { "nationwide": true, "note": "Found everywhere. Strep throat is most common in school-age children during the colder months." },
+        "resistance": "Penicillin still works, but resistance to azithromycin and its relatives is growing, so they are kept as backups."
+      },
+      "wiki": "Streptococcus pyogenes", "confidence": "low" },
     { "id": "actinomycetota", "name": "Actinobacteria", "scientific": "Actinomycetota", "parent": "bacteria", "rank": "phylum", "group": "bacteria", "appeared": 3000, "emoji": "🌱",
       "summary": "Bacteria that often grow as branching threads, a bit like miniature fungi. They are master chemists of the soil and the source of most of our antibiotics.",
       "facts": ["The bacteria that cause tuberculosis and leprosy belong to this phylum.", "The bacteria on your skin that help cause acne are actinobacteria too."],
@@ -36,14 +138,67 @@
       "summary": "Soil bacteria that grow like tiny moulds and make chemical weapons against their rivals. Doctors have turned those weapons into hundreds of medicines.",
       "facts": ["About two thirds of natural antibiotics used in medicine come from actinobacteria, most of them from Streptomyces.", "The earthy smell after rain is mostly geosmin, made by Streptomyces. Your nose can detect a few parts per trillion.", "Streptomycin, isolated from a Streptomyces in 1943, was the first drug that could cure tuberculosis."],
       "wiki": "Streptomyces", "confidence": "low" },
+    { "id": "tuberculosis-bacterium", "name": "TB bacterium", "scientific": "Mycobacterium tuberculosis", "parent": "actinomycetota", "rank": "species", "group": "bacteria", "appeared": 0.07, "emoji": "🫁",
+      "summary": "The bacterium that causes tuberculosis (TB). It spreads through the air, mainly attacks the lungs, and kills more people worldwide than almost any other single germ.",
+      "facts": ["It is a cousin of Streptomyces, the soil bacteria that gave us streptomycin, the first drug that could cure TB.", "Its thick, waxy coat makes it slow-growing and hard for drugs to get into, so treatment takes months.", "About a quarter of the world’s people carry TB in a sleeping (latent) form that is not contagious."],
+      "medicine": {
+        "diseases": ["Tuberculosis (TB)", "Latent TB infection"],
+        "treatments": [
+          { "drug": "rifampin", "note": "part of the 4-drug “RIPE” combo, taken for about 6 months", "from": "actinomycetota" },
+          { "drug": "isoniazid", "note": "part of RIPE" },
+          { "drug": "pyrazinamide", "note": "part of RIPE, first 2 months" },
+          { "drug": "ethambutol", "note": "part of RIPE, first 2 months" }
+        ],
+        "us": { "nationwide": true, "states": ["CA", "TX", "NY", "FL", "AK", "HI"], "note": "Found in every state. California, Texas, New York and Florida report the most cases, and Alaska and Hawaii have the highest rates per person." },
+        "resistance": "Multidrug-resistant TB (MDR-TB) shrugs off the two strongest drugs, isoniazid and rifampin, and needs newer treatments. Taking every dose matters, because skipped doses let resistant bacteria take over."
+      },
+      "wiki": "Mycobacterium tuberculosis", "confidence": "low" },
     { "id": "spirochaetota", "name": "Spirochaetes", "scientific": "Spirochaetota", "parent": "bacteria", "rank": "phylum", "group": "bacteria", "appeared": 3000, "emoji": "🌀",
       "summary": "Corkscrew-shaped bacteria that drill through thick liquids by twisting their whole body. Their tails (flagella) run inside the cell instead of sticking out.",
       "facts": ["Lyme disease and syphilis are both caused by spirochaetes.", "Spirochaetes living in termite guts help their hosts digest wood."],
       "wiki": "Spirochaete", "confidence": "low" },
+    { "id": "lyme-bacterium", "name": "Lyme disease bacterium", "scientific": "Borrelia burgdorferi", "parent": "spirochaetota", "rank": "species", "group": "bacteria", "appeared": 1, "emoji": "🦌",
+      "summary": "The corkscrew bacterium behind Lyme disease, the most common tick-borne disease in the US. Blacklegged (deer) ticks pick it up from mice and other small animals and pass it to people.",
+      "facts": ["It is named after Lyme, Connecticut, where a puzzling cluster of childhood arthritis cases was investigated in the 1970s.", "Ötzi the Iceman, who died in the Alps about 5,300 years ago, carried its DNA, so the disease is far older than its name.", "It barely needs iron, which almost every other living thing depends on. That lets it dodge one of the body’s tricks for starving germs."],
+      "medicine": {
+        "diseases": ["Lyme disease"],
+        "treatments": [
+          { "drug": "doxycycline", "note": "first choice", "from": "streptomyces" },
+          { "drug": "amoxicillin", "note": "during pregnancy, or if doxycycline is not an option", "from": "penicillium" },
+          { "drug": "cefuroxime", "note": "another option", "from": "ascomycota" }
+        ],
+        "us": { "states": ["ME", "NH", "VT", "MA", "RI", "CT", "NY", "NJ", "PA", "DE", "MD", "DC", "VA", "WV", "WI", "MN"], "note": "Most cases come from the Northeast, the mid-Atlantic and the upper Midwest, where blacklegged ticks live, with a few on the Pacific coast. Its range keeps spreading." }
+      },
+      "wiki": "Borrelia burgdorferi", "confidence": "low" },
+    { "id": "syphilis-bacterium", "name": "Syphilis bacterium", "scientific": "Treponema pallidum", "parent": "spirochaetota", "rank": "species", "group": "bacteria", "appeared": 0.5, "emoji": "🔬",
+      "summary": "A thin corkscrew bacterium that causes syphilis, which spreads through sex and from a pregnant mother to her baby. Untreated, it can hide in the body for years and damage the heart, brain and eyes.",
+      "facts": ["For more than a century scientists could not grow it in a lab dish. They finally managed it in 2018, using a layer of rabbit cells.", "Where syphilis came from has been argued about for 500 years. Ancient DNA studies published in 2024 suggest its family of bacteria first spread in the Americas."],
+      "medicine": {
+        "diseases": ["Syphilis", "Congenital syphilis (passed to a baby before birth)"],
+        "treatments": [
+          { "drug": "benzathine penicillin G", "note": "first choice; one shot treats early syphilis", "from": "penicillium" },
+          { "drug": "doxycycline", "note": "for penicillin allergy, but not during pregnancy", "from": "streptomyces" }
+        ],
+        "us": { "nationwide": true, "note": "Found in every state. Cases have climbed sharply since the early 2000s, and babies born with syphilis rose more than tenfold between 2012 and 2022." },
+        "resistance": "More than 80 years on, penicillin still works every time. But it has become resistant to azithromycin, so that drug is no longer recommended."
+      },
+      "wiki": "Treponema pallidum", "confidence": "low" },
     { "id": "chlamydiota", "name": "Chlamydiae", "scientific": "Chlamydiota", "parent": "bacteria", "rank": "phylum", "group": "bacteria", "appeared": 2000, "emoji": "🎯",
       "summary": "Bacteria that can only survive inside other cells, where they steal energy and nutrients from their host. Some infect humans, and others live inside amoebas.",
       "facts": ["Chlamydiae have probably been living inside eukaryotic cells for at least 700 million years.", "The eye infection trachoma, caused by Chlamydia trachomatis, is the world's leading infectious cause of blindness."],
       "wiki": "Chlamydiota", "confidence": "low" },
+    { "id": "chlamydia-trachomatis", "name": "Chlamydia", "scientific": "Chlamydia trachomatis", "parent": "chlamydiota", "rank": "species", "group": "bacteria", "appeared": 1, "emoji": "👁️",
+      "summary": "A tiny bacterium that lives inside human cells. It causes the most commonly reported bacterial sexually transmitted infection in the US, and in poorer countries it causes the blinding eye disease trachoma.",
+      "facts": ["Most people who have it feel no symptoms, which is why doctors screen for it.", "It switches between two forms: a tough, spore-like body that travels between cells, and a bigger form that multiplies inside them."],
+      "medicine": {
+        "diseases": ["Chlamydia", "Pelvic inflammatory disease", "Trachoma (eye infection)"],
+        "treatments": [
+          { "drug": "doxycycline", "note": "first choice, a 7-day course", "from": "streptomyces" },
+          { "drug": "azithromycin", "note": "a single dose; used in pregnancy and against trachoma", "from": "actinomycetota" }
+        ],
+        "us": { "nationwide": true, "note": "Found in every state, with about 1.6 million US cases reported in 2022, more than half of them among people aged 15 to 24." }
+      },
+      "wiki": "Chlamydia trachomatis", "confidence": "low" },
     { "id": "prochlorococcus", "name": "Prochlorococcus", "parent": "cyanobacteria", "rank": "genus", "group": "bacteria", "appeared": 700, "emoji": "🌊",
       "summary": "The smallest known photosynthetic cell and the most abundant one on Earth. It floats in sunlit oceans in numbers too huge to picture.",
       "facts": ["There are roughly 3 octillion (3 followed by 27 zeros) Prochlorococcus cells in the oceans.", "Even though it is so common, nobody found it until 1988."],

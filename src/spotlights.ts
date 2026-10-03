@@ -1,10 +1,10 @@
-import type { TNode } from './model/tree';
+import type { TNode, TreeModel } from './model/tree';
 
 /**
  * Quick "spotlight" filters shown in the filter dock. They are UI, not data:
  * each is a predicate over nodes, so you can add your own (e.g. by tag).
  */
-export interface Spotlight { id: string; label: string; emoji: string; test: (n: TNode) => boolean }
+export interface Spotlight { id: string; label: string; emoji: string; test: (n: TNode, model: TreeModel) => boolean }
 
 const hasTag = (n: TNode, ...tags: string[]) => tags.some((t) => n.data.tags?.includes(t));
 
@@ -16,4 +16,5 @@ export const SPOTLIGHTS: Spotlight[] = [
   { id: 'hybrids', label: 'Hybrids & mergers', emoji: '🧬', test: (n) => n.hybrids.length > 0 },
   { id: 'ocean', label: 'Ocean life', emoji: '🌊', test: (n) => hasTag(n, 'ocean') },
   { id: 'flight', label: 'Took flight', emoji: '🪽', test: (n) => hasTag(n, 'flight') },
+  { id: 'medicine', label: 'Germs & medicine', emoji: '🩺', test: (n, model) => model.isMedical(n) },
 ];

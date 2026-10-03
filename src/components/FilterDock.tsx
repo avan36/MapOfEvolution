@@ -18,7 +18,7 @@ export function FilterDock({ model, groups, onGroups, spotlight, onSpotlight, hi
   const [open, setOpen] = useState(() => window.innerWidth > 1100);
   const counts = new Map<string, number>();
   for (const n of model.nodes) counts.set(n.data.group, (counts.get(n.data.group) ?? 0) + 1);
-  const spots = SPOTLIGHTS.filter((s) => model.nodes.some(s.test));
+  const spots = SPOTLIGHTS.filter((s) => model.nodes.some((n) => s.test(n, model)));
   const active = groups.size + (spotlight ? 1 : 0);
 
   const toggle = (id: string) => {

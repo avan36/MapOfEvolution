@@ -69,6 +69,38 @@ export interface TaxonNode {
   image?: string;
   /** How settled the science on dating/placement is. Defaults to "high". */
   confidence?: Confidence;
+  /** For germs that make people sick: the diseases, the drugs that treat them and where they turn up in the US. */
+  medicine?: Medicine;
+}
+
+/** The "In medicine" section of a germ's card. Educational, not clinical guidance. */
+export interface Medicine {
+  /** Diseases it causes, e.g. "Lyme disease". */
+  diseases: string[];
+  /** Usual treatments, first choice first. */
+  treatments: Treatment[];
+  /** Where it turns up in the United States. */
+  us?: UsRange;
+  /** One or two sentences on drug resistance, if it matters for this germ. */
+  resistance?: string;
+}
+
+export interface Treatment {
+  /** Drug name, lower case unless it is a brand or a proper noun, e.g. "doxycycline". */
+  drug: string;
+  /** Short qualifier, e.g. "first choice", "for severe cases". */
+  note?: string;
+  /** Id of the organism the drug (or the natural compound it is made from) comes from, e.g. "streptomyces". */
+  from?: string;
+}
+
+export interface UsRange {
+  /** Two-letter postal codes of the states where it is most common (DC allowed). */
+  states?: string[];
+  /** True when it occurs across the whole country. `states` then marks the hot spots, if any. */
+  nationwide?: boolean;
+  /** One sentence describing the pattern, e.g. "Mostly the Northeast and upper Midwest, where deer ticks live." */
+  note: string;
 }
 
 export interface TreeFile {

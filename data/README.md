@@ -29,6 +29,27 @@ Each file is `{ "nodes": [ ... ] }`. All files in `tree/` are merged (sorted by 
 }
 ```
 
+**Germs: the optional `medicine` field.** Add it to anything that makes people sick. It shows as an *In medicine* section on the card, puts the germ in the 🩺 *Germs & medicine* spotlight and makes its diseases and drugs searchable.
+
+```jsonc
+"medicine": {
+  "diseases": ["Lyme disease"],
+  "treatments": [                                   // first choice first
+    { "drug": "doxycycline", "note": "first choice", "from": "streptomyces" },
+    { "drug": "amoxicillin", "from": "penicillium" }
+  ],                                                // "from": the node the drug (or its parent compound) comes from.
+                                                    // That lineage's card then lists "Medicines from here".
+  "us": {                                           // drawn as a tile map of the 50 states + DC
+    "states": ["CT", "MA", "NY", "WI"],             // two-letter codes; the hot spots
+    "nationwide": false,                            // true tints every state, with "states" as the hot spots
+    "note": "One sentence on the pattern."
+  },
+  "resistance": "Optional: a sentence or two on drug resistance."
+}
+```
+
+Medical content is educational and should be checked against current CDC/IDSA guidance when you edit it.
+
 **Rules the validator enforces**
 
 - Exactly one root (`"parent": null`).
@@ -36,6 +57,7 @@ Each file is `{ "nodes": [ ... ] }`. All files in `tree/` are merged (sorted by 
 - A child cannot appear before its parent: `appeared ≤ parent.appeared`.
 - `extinct ≤ appeared`.
 - Journey steps point at real nodes.
+- `medicine` has at least one disease and treatment, every `from` is a real node, and every state code is valid.
 
 **Tags the UI understands:** `landmark` (labelled even when zoomed out), `fruit`, `vegetable`, `crop`, `food` (🍎 spotlight), `dinosaur`, `domesticated`, `ocean`, `flight`, `living-fossil`. You can add any other tags, and they are searchable.
 
