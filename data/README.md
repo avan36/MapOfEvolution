@@ -23,6 +23,8 @@ Each file is `{ "nodes": [ ... ] }`. All files in `tree/` are merged (sorted by 
   "tags": ["fruit", "domesticated"],    // free-form; see below
   "origin": "Where/when/how humans domesticated it.",
   "wiki": "Orange (fruit)",             // English Wikipedia title (photo + link)
+  "image": "Valencia orange",           // optional picture override: a Wikipedia title whose lead
+                                        // photo shows it best, or a full https:// image URL
   "confidence": "medium"                // high (default) | medium | low
 }
 ```

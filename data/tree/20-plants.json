@@ -283,6 +283,7 @@
       "emoji": "🍃",
       "summary": "The plants with true, broad leaves: ferns, horsetails and all seed plants. Their leaves evolved from flattened, webbed branches.",
       "wiki": "Euphyllophyte",
+      "image": "Fern",
       "confidence": "low"
     },
     {
@@ -2348,7 +2349,7 @@
         "domesticated"
       ],
       "origin": "Domesticated at least twice from wild melons: once in Africa and once in India, several thousand years ago.",
-      "wiki": "Melon",
+      "wiki": "Cucumis melo",
       "confidence": "low"
     },
     {

@@ -61,6 +61,12 @@ export interface TaxonNode {
   origin?: string;
   /** English Wikipedia article title (used for photos and "read more"). */
   wiki?: string;
+  /**
+   * Picture override: an English Wikipedia article title whose lead photo shows what this
+   * looks like (e.g. a well-known member of a clade), or a full https:// image URL.
+   * Defaults to the photo of `wiki`.
+   */
+  image?: string;
   /** How settled the science on dating/placement is. Defaults to "high". */
   confidence?: Confidence;
 }

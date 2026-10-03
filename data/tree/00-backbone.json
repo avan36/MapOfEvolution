@@ -5,7 +5,7 @@
     { "id": "luca", "name": "LUCA", "scientific": "Last Universal Common Ancestor", "parent": null, "rank": "root", "group": "origins", "appeared": 4200, "emoji": "✨",
       "summary": "The Last Universal Common Ancestor: a single-celled population living around 4.2 billion years ago from which every living thing — bacteria, mushrooms, oak trees and you — descends.",
       "facts": ["LUCA probably lived near hot hydrothermal vents on the sea floor.", "It already had DNA, ribosomes and a genetic code that every organism still shares today.", "LUCA was not the first life — just the last ancestor all survivors have in common."],
-      "tags": ["landmark"], "wiki": "Last universal common ancestor", "confidence": "medium" },
+      "tags": ["landmark"], "wiki": "Last universal common ancestor", "image": "Hydrothermal vent", "confidence": "medium" },
 
     { "id": "bacteria", "name": "Bacteria", "parent": "luca", "rank": "domain", "group": "bacteria", "appeared": 4100, "emoji": "🦠",
       "summary": "Tiny cells with no nucleus. Bacteria are everywhere — in soil, oceans, clouds and your gut — and outnumber the stars in the observable universe.",

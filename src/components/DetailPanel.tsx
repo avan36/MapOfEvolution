@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import type { TNode, TreeModel } from '../model/tree';
 import { formatAgo } from '../lib/format';
-import { useWiki, wikiUrl } from '../lib/wiki';
+import { usePhoto, useGallery, wikiUrl, type Photo } from '../lib/wiki';
+import { Lightbox } from './Lightbox';
 
 interface Props {
   model: TreeModel;
@@ -38,27 +39,62 @@ export function DetailPanel({ model, node, onSelect, onClose, onCompare }: Props
 
 function PanelBody({ model, node, onSelect, onCompare }: Omit<Props, 'onClose'>) {
   const d = node.data;
-  const wiki = useWiki(d.wiki);
+  const shot = usePhoto(d);
+  const lead = shot.status === 'ready' ? shot.photo : undefined;
+  const photos = useGallery(lead, [d.wiki, d.image]);
+  const [viewing, setViewing] = useState<number | null>(null);
+  // No lead photo on any candidate article? Borrow the first photo from the gallery.
+  const hero = lead ?? (shot.status === 'none' ? photos[0] : undefined);
   const group = model.groups.get(d.group);
   const period = model.spansAt(d.appeared)[0];
   const lineage = model.lineage(node);
-  const [imgOk, setImgOk] = useState(true);
 
   return (
     <>
       <motion.div className="panel__media" variants={item}>
-        {wiki?.image && imgOk ? (
-          <img src={wiki.image} alt={d.name} onError={() => setImgOk(false)} />
-        ) : (
-          <div className="panel__emoji">{d.emoji ?? '🧬'}</div>
-        )}
+        <HeroPhoto key={hero?.src ?? shot.status} state={hero ? 'ready' : shot.status} photo={hero} emoji={d.emoji} name={d.name} onOpen={() => setViewing(0)} />
         <div className="panel__media-fade" />
         <div className="panel__badges">
           <span className="badge" style={{ '--c': node.color } as React.CSSProperties}>{group?.emoji} {group?.label ?? d.group}</span>
           <span className="badge badge--muted">{d.rank}</span>
           {node.extinct ? <span className="badge badge--extinct">Extinct</span> : <span className="badge badge--alive">Living</span>}
         </div>
+        {hero && d.wiki && hero.article.toLowerCase() !== d.wiki.replace(/_/g, ' ').toLowerCase() && (
+          <span className="panel__pictured">Pictured: {hero.article}</span>
+        )}
       </motion.div>
+
+      {photos.length > 1 && (
+        <motion.div className="gallery" variants={item} aria-label="More photos">
+          {photos.map((p, i) => (
+            <motion.button
+              key={p.src}
+              className="gallery__item"
+              onClick={() => setViewing(i)}
+              initial={{ opacity: 0, scale: 0.7, y: 8 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ delay: 0.25 + i * 0.05, type: 'spring', stiffness: 380, damping: 24 }}
+              whileHover={{ y: -3, scale: 1.06 }}
+              title={p.caption ?? d.name}
+            >
+              <GalleryThumb photo={p} />
+            </motion.button>
+          ))}
+        </motion.div>
+      )}
+
+      <AnimatePresence>
+        {viewing !== null && photos.length > 0 && (
+          <Lightbox
+            photos={photos}
+            index={Math.min(viewing, photos.length - 1)}
+            title={d.name}
+            color={node.color}
+            onIndex={setViewing}
+            onClose={() => setViewing(null)}
+          />
+        )}
+      </AnimatePresence>
 
       <motion.header className="panel__head" variants={item}>
         <h2>
@@ -122,7 +158,7 @@ function PanelBody({ model, node, onSelect, onCompare }: Omit<Props, 'onClose'>)
           <span>⚖️</span> Compare with…
         </button>
         {d.wiki && (
-          <a className="btn" href={wiki?.url ?? wikiUrl(d.wiki)} target="_blank" rel="noreferrer">
+          <a className="btn" href={wikiUrl(d.wiki)} target="_blank" rel="noreferrer">
             <span>📖</span> Wikipedia
           </a>
         )}
@@ -158,6 +194,25 @@ function PanelBody({ model, node, onSelect, onCompare }: Omit<Props, 'onClose'>)
       )}
     </>
   );
+}
+
+/** The big picture at the top of the panel: shimmer while loading, then a blur-to-sharp reveal. */
+function HeroPhoto({ state, photo, emoji, name, onOpen }: { state: 'loading' | 'ready' | 'none'; photo?: Photo; emoji?: string; name: string; onOpen(): void }) {
+  const [loaded, setLoaded] = useState(false);
+  const [failed, setFailed] = useState(false);
+  if (state === 'none' || failed || (state === 'ready' && !photo)) return <div className="panel__emoji">{emoji ?? '🧬'}</div>;
+  return (
+    <button className={`panel__photo ${loaded ? 'is-loaded' : ''}`} onClick={onOpen} disabled={!loaded} aria-label={`View photos of ${name}`}>
+      {!loaded && <div className="panel__shimmer"><span>{emoji ?? '🧬'}</span></div>}
+      {photo && <img src={photo.src} alt={name} onLoad={() => setLoaded(true)} onError={() => setFailed(true)} />}
+      {loaded && <span className="panel__zoom">⤢</span>}
+    </button>
+  );
+}
+
+function GalleryThumb({ photo }: { photo: Photo }) {
+  const [ok, setOk] = useState(true);
+  return ok ? <img src={photo.thumb} alt="" loading="lazy" onError={() => setOk(false)} /> : <span className="gallery__miss">🖼️</span>;
 }
 
 function Chip({ n, onClick }: { n: TNode; onClick(n: TNode): void }) {

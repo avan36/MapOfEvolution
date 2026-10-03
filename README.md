@@ -61,4 +61,4 @@ Pure logarithmic time crushes the dinosaurs between the microbes and the last 10
 
 ## Data sources and accuracy
 
-Dates and relationships follow current mainstream phylogenetics and paleontology as summarised on Wikipedia and in recent literature. Dates are approximate, and nodes carry a `confidence` field where the science is unsettled. Photos in the detail panel come from Wikipedia's public REST API at runtime. To turn them off, set `theme.wikipediaImages = false`.
+Dates and relationships follow current mainstream phylogenetics and paleontology as summarised on Wikipedia and in recent literature. Dates are approximate, and nodes carry a `confidence` field where the science is unsettled. Photos (the detail-panel picture, its gallery and full-screen viewer, and hover-card thumbnails) are loaded from Wikipedia's public APIs at runtime, with credit and licence links for each image. A node uses the lead photo of its `image` article if it has one, otherwise its `wiki` article, then its scientific name and finally its common name. To turn photos off, set `theme.wikipediaImages = false`.

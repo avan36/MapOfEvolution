@@ -33,6 +33,7 @@
         "tags": { "type": "array", "items": { "type": "string" }, "description": "e.g. landmark, fruit, vegetable, crop, dinosaur, domesticated, ocean, flight, living-fossil" },
         "origin": { "type": "string", "description": "How humans shaped a domesticated lineage." },
         "wiki": { "type": "string", "description": "English Wikipedia article title." },
+        "image": { "type": "string", "description": "What to show as the picture: an English Wikipedia article title whose lead photo best shows what this looks like (e.g. a famous member of a clade), or a full https:// image URL. Defaults to the wiki article's own photo." },
         "confidence": { "enum": ["high", "medium", "low"] }
       }
     }

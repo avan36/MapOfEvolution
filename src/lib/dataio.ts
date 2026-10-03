@@ -15,7 +15,7 @@ export function exportJson(ds: Dataset) {
 }
 
 const CSV_COLUMNS: (keyof TaxonNode)[] = [
-  'id', 'name', 'scientific', 'parent', 'hybridOf', 'rank', 'group', 'appeared', 'extinct', 'emoji', 'summary', 'facts', 'tags', 'origin', 'wiki', 'confidence',
+  'id', 'name', 'scientific', 'parent', 'hybridOf', 'rank', 'group', 'appeared', 'extinct', 'emoji', 'summary', 'facts', 'tags', 'origin', 'wiki', 'image', 'confidence',
 ];
 
 export function exportCsv(ds: Dataset) {
