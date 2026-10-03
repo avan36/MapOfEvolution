@@ -25,7 +25,7 @@ npm run export     # write the merged dataset to one JSON file
 
 ### Publishing online
 
-- **GitHub Pages (set up already).** `.github/workflows/deploy.yml` builds and publishes the site on every push to `main`. One-time setup: in the repo go to *Settings → Pages* and set *Source* to **GitHub Actions**. The site appears at `https://<user>.github.io/<repo>/`.
+- **GitHub Pages (set up already).** `.github/workflows/deploy.yml` builds and publishes the site on every push to the repo's default branch (GitHub only lets the default branch publish to Pages). One-time setup: in the repo go to *Settings → Pages* and set *Source* to **GitHub Actions**. The site appears at `https://<user>.github.io/<repo>/`.
 - **Netlify, Vercel or Cloudflare Pages.** Import the repo and use build command `npm run build` and output directory `dist`.
 
 ## How it's built

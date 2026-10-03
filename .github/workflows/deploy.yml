@@ -2,9 +2,11 @@ name: Deploy to GitHub Pages
 
 # Builds the site (which also validates the data) and publishes dist/ to GitHub Pages.
 # One-time setup: repo Settings → Pages → Source: "GitHub Actions".
+# GitHub only lets the repo's default branch publish to Pages, so pushes to either branch
+# below trigger the workflow, and it deploys only from whichever one is currently the default.
 on:
   push:
-    branches: [main]
+    branches: [main, claude/epic-tesla-grl10q]
   workflow_dispatch:
 
 permissions:
@@ -13,11 +15,12 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.ref_name }}
   cancel-in-progress: true
 
 jobs:
   build:
+    if: github.ref_name == github.event.repository.default_branch
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
