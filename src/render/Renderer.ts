@@ -87,6 +87,8 @@ export class Renderer {
   private qtDirty = true;
   private pointer: { x: number; y: number } | null = null;
   private hoverId: string | null = null;
+  /** A mouse pan is in progress (d3-zoom is listening for its mouseup). */
+  private dragging = false;
 
   // decoration
   private particles: Particle[] = [];
@@ -115,12 +117,18 @@ export class Renderer {
       .scaleExtent([0.04, 60])
       .on('start', (e) => {
         if (e.sourceEvent) { this.fly = null; this.cb.onUserMove?.(); }
+        if (e.sourceEvent?.type === 'mousedown') this.dragging = true;
       })
       .on('zoom', (e) => {
         this.transform = e.transform;
         if (e.sourceEvent) this.fly = null;
-      });
+      })
+      .on('end', () => { this.dragging = false; });
     this.sel.call(this.zoomBehavior).on('dblclick.zoom', null);
+    // If the button is released where the page can't see it (another app, browser chrome, an OS gesture),
+    // d3-zoom never gets its mouseup and the map stays glued to the cursor. Notice and let go.
+    window.addEventListener('pointermove', this.releaseLostDrag, true);
+    window.addEventListener('blur', this.releaseLostDrag);
 
     canvas.addEventListener('pointermove', this.handleMove);
     canvas.addEventListener('pointerleave', this.handleLeave);
@@ -139,6 +147,8 @@ export class Renderer {
     this.canvas.removeEventListener('pointermove', this.handleMove);
     this.canvas.removeEventListener('pointerleave', this.handleLeave);
     this.canvas.removeEventListener('click', this.handleClick);
+    window.removeEventListener('pointermove', this.releaseLostDrag, true);
+    window.removeEventListener('blur', this.releaseLostDrag);
     this.sel.on('.zoom', null);
   }
 
@@ -373,6 +383,14 @@ export class Renderer {
     const r = this.canvas.getBoundingClientRect();
     this.pointer = { x: e.clientX - r.left, y: e.clientY - r.top };
     this.updateHover();
+  };
+
+  private releaseLostDrag = (e: Event) => {
+    if (!this.dragging) return;
+    if (e instanceof PointerEvent && (e.pointerType === 'touch' || e.buttons & 1)) return;
+    this.dragging = false;
+    // d3-zoom ends the pan on a window mouseup, so hand it the one it missed.
+    window.dispatchEvent(new MouseEvent('mouseup', { view: window }));
   };
 
   private handleLeave = () => {
