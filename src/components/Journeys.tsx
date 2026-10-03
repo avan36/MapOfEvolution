@@ -54,7 +54,7 @@ const AUTO_MS = 9000;
 
 export function StoryCard({ model, journey, step, onStep, onExit }: { model: TreeModel; journey: Journey; step: number; onStep(i: number): void; onExit(): void }) {
   const [auto, setAuto] = useState(false);
-  const s = journey.steps[step];
+  const s = journey.steps[step] ?? { node: '', text: '' };
   const node = model.byId.get(s.node);
   const last = step === journey.steps.length - 1;
 

@@ -26,7 +26,7 @@ export function Hero({ model, onEnter, onJourney }: { model: TreeModel; onEnter(
   const extinct = useCount(model.nodes.filter((n) => n.extinct).length, 1000);
   const years = useCount(Math.round(model.root.data.appeared / 100), 1100); // tenths of a billion
   const words = ['Every', 'living', 'thing', 'is'];
-  const firstJourney = model.dataset.journeys[0];
+  const firstJourney = model.dataset.journeys.find((j) => j.steps.length);
 
   return (
     <motion.section

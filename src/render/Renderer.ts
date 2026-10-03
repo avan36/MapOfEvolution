@@ -116,7 +116,10 @@ export class Renderer {
       .on('start', (e) => {
         if (e.sourceEvent) { this.fly = null; this.cb.onUserMove?.(); }
       })
-      .on('zoom', (e) => { this.transform = e.transform; });
+      .on('zoom', (e) => {
+        this.transform = e.transform;
+        if (e.sourceEvent) this.fly = null;
+      });
     this.sel.call(this.zoomBehavior).on('dblclick.zoom', null);
 
     canvas.addEventListener('pointermove', this.handleMove);
@@ -152,6 +155,7 @@ export class Renderer {
     this.rgb.clear();
     for (const n of model.nodes) this.rgb.set(n, toRgb(n.color));
     this.particles = [];
+    this.geom = { key: '', branch: [], lines: new Map() };
     this.lineage.clear();
     this.lineageB.clear();
     this.mrca = null;
@@ -191,7 +195,7 @@ export class Renderer {
   }
 
   getTimeS() { return this.sT; }
-  isPlaying() { return this.playing; }
+  isPlaying() { return this.playing || this.timeAnim !== null; }
 
   /** Grow the tree from LUCA to today. */
   grow(duration = theme.motion.grow, from = 0) {
@@ -517,7 +521,8 @@ export class Renderer {
           ctx.strokeStyle = rgba(col, (fossil ? 0.55 : 0.92) * alpha);
           ctx.lineWidth = lw;
         }
-        ctx.stroke(this.geom.branch[n.index]!);
+        const path = this.geom.branch[n.index];
+        if (path) ctx.stroke(path);
       }
     }
     ctx.globalCompositeOperation = 'source-over';
@@ -750,6 +755,7 @@ export class Renderer {
 
   private drawParticles(dt: number, m: number, rot: number, sqrtK: number) {
     const { ctx } = this;
+    if (!this.model.root.children.length) return;
     const target = theme.motion.particles;
     while (this.particles.length < target) {
       const p = this.spawn();
@@ -996,7 +1002,8 @@ export class Renderer {
       const size = important ? 13 : landmark ? 11 : clamp(spacing * 0.78, 8, 13.5);
       const ang = this.angle(n.u, rot);
       const flip = Math.cos(ang) < 0;
-      const rotA = lerp(flip ? ang + Math.PI : ang, 0, m);
+      const a0 = flip ? ang + Math.PI : ang;
+      const rotA = lerp(Math.atan2(Math.sin(a0), Math.cos(a0)), 0, m);
       const label = `${n.data.emoji ? n.data.emoji + ' ' : ''}${n.data.name}`;
       ctx.save();
       ctx.translate(x, y);

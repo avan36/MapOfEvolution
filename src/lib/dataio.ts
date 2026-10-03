@@ -44,7 +44,13 @@ export async function importFile(file: File, current: Dataset): Promise<{ datase
   let dataset: Dataset;
   let label: string;
   if (obj.format === 'map-of-evolution' && Array.isArray(obj.nodes)) {
-    dataset = { ...current, ...obj, time: obj.time ?? current.time, groups: obj.groups ?? current.groups, journeys: obj.journeys ?? [] } as Dataset;
+    dataset = {
+      ...current,
+      ...obj,
+      groups: obj.groups ?? current.groups,
+      time: { spans: obj.time?.spans ?? current.time.spans, events: obj.time?.events ?? [] },
+      journeys: obj.journeys ?? [],
+    } as Dataset;
     label = file.name;
   } else if (Array.isArray(obj.nodes)) {
     const incoming = new Map(obj.nodes.map((n) => [n.id, n]));

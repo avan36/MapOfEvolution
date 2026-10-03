@@ -19,6 +19,9 @@ export function validateDataset(ds: Dataset): ValidationReport {
   const errors: string[] = [];
   const warnings: string[] = [];
   const byId = new Map<string, Dataset['nodes'][number]>();
+  if (!Array.isArray(ds.nodes) || !Array.isArray(ds.groups) || !ds.time || !Array.isArray(ds.time.spans) || !Array.isArray(ds.time.events) || !Array.isArray(ds.journeys)) {
+    return { errors: ['dataset needs "nodes", "groups", "time.spans", "time.events" and "journeys" arrays'], warnings };
+  }
   const groupIds = new Set(ds.groups.map((g) => g.id));
 
   for (const n of ds.nodes) {
@@ -69,6 +72,7 @@ export function validateDataset(ds: Dataset): ValidationReport {
   }
 
   for (const j of ds.journeys) {
+    if (!j.steps?.length) errors.push(`journey "${j.id}": needs at least one step`);
     for (const s of j.steps) if (!byId.has(s.node)) errors.push(`journey "${j.id}": unknown node "${s.node}"`);
   }
   for (const s of ds.time.spans) if (s.start <= s.end) errors.push(`time span "${s.id}": start must be older than end`);

@@ -108,8 +108,10 @@ export default function App() {
   // ── journeys
   useEffect(() => {
     if (!journey) return;
+    // Ignore a journey left over from a dataset that has just been replaced.
+    if (!model.dataset.journeys.includes(journey.j)) return;
     const step = journey.j.steps[journey.step];
-    const n = model.byId.get(step.node);
+    const n = step && model.byId.get(step.node);
     if (!n) return;
     setSelected(n);
     rendererRef.current?.focusNode(n);
@@ -189,6 +191,9 @@ export default function App() {
   }, [search.open, journeysOpen, journey, compare, selected, intro, mode, setMode, endJourney]);
 
   const loadDataset = useCallback((ds: Dataset, label: string) => {
+    setJourney(null);
+    setSelected(null);
+    setCompare(null);
     setDataset(ds);
     toast(`Loaded ${label}: ${ds.nodes.length} lineages`, 'success');
     setTimeout(() => rendererRef.current?.grow(3000), 50);
@@ -210,7 +215,7 @@ export default function App() {
         filter={filterSet}
       />
 
-      <AnimatePresence>{intro && <Hero model={model} onEnter={enter} onJourney={() => { const j = model.dataset.journeys[0]; if (j) startJourney(j); else enter(); }} />}</AnimatePresence>
+      <AnimatePresence>{intro && <Hero model={model} onEnter={enter} onJourney={() => { const j = model.dataset.journeys.find((x) => x.steps.length); if (j) startJourney(j); else enter(); }} />}</AnimatePresence>
 
       {!intro && (
         <>
