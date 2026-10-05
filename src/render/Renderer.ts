@@ -7,6 +7,7 @@ import type { TNode, TreeModel } from '../model/tree';
 import { theme } from '../theme';
 import { formatTick } from '../lib/format';
 import { rgba, toRgb, type RGB } from './color';
+import { LabelCache } from './labelCache';
 
 export type ViewMode = 'radial' | 'linear';
 
@@ -33,6 +34,26 @@ interface Star { x: number; y: number; z: number; r: number; tw: number }
 const TAU = Math.PI * 2;
 const clamp = (x: number, a: number, b: number) => Math.max(a, Math.min(b, x));
 const lerp = (a: number, b: number, t: number) => a + (b - a) * t;
+/** Font sizes are snapped to half pixels so cached label sprites can be reused while zooming. */
+const snap = (size: number) => Math.round(size * 2) / 2;
+/**
+ * Resolution of the branch glow layer, in pixels per CSS pixel. The glow is wide and soft,
+ * so it can be rendered at low resolution and reused as a bitmap while the camera moves.
+ */
+const GLOW_RES = 0.5;
+
+interface Geometry {
+  key: string;
+  branch: (Path2D | null)[];
+  /** Per-node world bounding box of its branch: x0, y0, x1, y1. */
+  box: Float32Array;
+  batches: BranchBatch[];
+  lines: Map<string, Path2D>;
+}
+const emptyGeometry = (): Geometry => ({ key: '', branch: [], box: new Float32Array(0), batches: [], lines: new Map() });
+
+/** Branches that share a colour and thickness, stroked as one path when they also share an alpha. */
+interface BranchBatch { path: Path2D; members: number[]; col: RGB; thick: number; fossil: boolean; box: [number, number, number, number] }
 
 /**
  * Draws the tree of life on a <canvas>. Every element is positioned in an
@@ -95,8 +116,24 @@ export class Renderer {
   private stars: Star[] = [];
   private rgb = new Map<TNode, RGB>();
   private textWidths = new Map<string, number>();
+  private labels = new LabelCache();
+  /**
+   * The branch glow lives on its own canvas behind the main one, covering the screen plus half a
+   * screen on every side. Panning and zooming just move it with a CSS transform (the compositor's
+   * job); it is redrawn when the tree changes or the camera has moved too far.
+   */
+  private glow = document.createElement('canvas');
+  private glowCtx = this.glow.getContext('2d')!;
+  private glowAt: { key: string; x: number; y: number; k: number } | null = null;
+  private glowTransform = '';
+  /** Bumped whenever any node's emphasis is still animating. */
+  private alphaVersion = 0;
+  /** Clade labels in priority order; rebuilt when the highlight changes, not every frame. */
+  private internalOrder: { n: TNode; pri: number }[] = [];
+  /** Visible world rectangle (plus a margin) for culling, refreshed each frame. */
+  private view = { x0: 0, y0: 0, x1: 0, y1: 0 };
   /** Branch geometry only changes with morph / time / rotation — not with the camera. */
-  private geom: { key: string; branch: (Path2D | null)[]; lines: Map<string, Path2D> } = { key: '', branch: [], lines: new Map() };
+  private geom: Geometry = emptyGeometry();
   private resizeObserver: ResizeObserver;
 
   constructor(canvas: HTMLCanvasElement, model: TreeModel, cb: RendererCallbacks = {}) {
@@ -111,6 +148,10 @@ export class Renderer {
     for (let i = 0; i < 260; i++) {
       this.stars.push({ x: Math.random(), y: Math.random(), z: 0.2 + Math.random() * 0.8, r: Math.random() * 1.2 + 0.2, tw: Math.random() * TAU });
     }
+
+    this.glow.className = 'stage-glow';
+    this.glow.setAttribute('aria-hidden', 'true');
+    canvas.before(this.glow);
 
     this.sel = select(canvas);
     this.zoomBehavior = d3zoom<HTMLCanvasElement, unknown>()
@@ -134,6 +175,9 @@ export class Renderer {
     canvas.addEventListener('pointerleave', this.handleLeave);
     canvas.addEventListener('click', this.handleClick);
 
+    // Label sprites rendered before the web fonts arrived would keep the fallback font.
+    document.fonts?.addEventListener('loadingdone', this.clearLabels);
+
     this.resizeObserver = new ResizeObserver(() => this.resize());
     this.resizeObserver.observe(canvas);
     this.resize();
@@ -144,6 +188,8 @@ export class Renderer {
   destroy() {
     cancelAnimationFrame(this.raf);
     this.resizeObserver.disconnect();
+    this.glow.remove();
+    document.fonts?.removeEventListener('loadingdone', this.clearLabels);
     this.canvas.removeEventListener('pointermove', this.handleMove);
     this.canvas.removeEventListener('pointerleave', this.handleLeave);
     this.canvas.removeEventListener('click', this.handleClick);
@@ -165,12 +211,14 @@ export class Renderer {
     this.rgb.clear();
     for (const n of model.nodes) this.rgb.set(n, toRgb(n.color));
     this.particles = [];
-    this.geom = { key: '', branch: [], lines: new Map() };
+    this.geom = emptyGeometry();
     this.lineage.clear();
     this.lineageB.clear();
     this.mrca = null;
     this.hl = { hovered: null, selected: null, compare: null, filter: null };
     this.qtDirty = true;
+    this.labels.clear();
+    this.sortInternals();
   }
 
   getModel() { return this.model; }
@@ -258,7 +306,22 @@ export class Renderer {
       }
       this.alphaTarget[n.index] = a;
     }
+    this.sortInternals();
   }
+
+  /** Clade labels compete for room on screen; the most important claim it first. */
+  private sortInternals() {
+    this.internalOrder = this.model.nodes
+      .filter((n) => n.children.length && n !== this.model.root)
+      .map((n) => {
+        const important = this.lineage.has(n) || this.lineageB.has(n) || n === this.mrca || n === this.hl.hovered;
+        const landmark = n.data.tags?.includes('landmark') ? 1 : 0;
+        return { n, pri: (important ? 1e6 : 0) + landmark * 1e4 + n.leafCount * 10 - n.depth };
+      })
+      .sort((a, b) => b.pri - a.pri);
+  }
+
+  private clearLabels = () => this.labels.clear();
 
   /** Smoothly fly the camera to frame these nodes. */
   focusNodes(nodes: TNode[], maxK = 6, duration?: number) {
@@ -406,6 +469,11 @@ export class Renderer {
 
   private updateHover() {
     if (!this.pointer) return;
+    if (this.dragging) {
+      // No hit-testing (or hover card updates) while the map is being dragged.
+      if (this.hoverId !== null) { this.hoverId = null; this.cb.onHover?.(null, this.pointer.x, this.pointer.y); }
+      return;
+    }
     const n = this.morphAnim || this.idleSpin ? null : this.pick(this.pointer.x, this.pointer.y);
     const id = n?.id ?? null;
     if (id !== this.hoverId) {
@@ -452,6 +520,12 @@ export class Renderer {
     this.h = r.height;
     this.canvas.width = Math.round(r.width * this.dpr);
     this.canvas.height = Math.round(r.height * this.dpr);
+    this.labels.setDpr(this.dpr);
+    this.glow.width = Math.max(1, Math.ceil(r.width * 2 * GLOW_RES));
+    this.glow.height = Math.max(1, Math.ceil(r.height * 2 * GLOW_RES));
+    this.glow.style.width = `${r.width * 2}px`;
+    this.glow.style.height = `${r.height * 2}px`;
+    this.glowAt = null;
   }
 
   private frame = (now: number) => {
@@ -496,7 +570,12 @@ export class Renderer {
     // ease per-node emphasis
     const a = this.alpha, at = this.alphaTarget;
     const f = 1 - Math.pow(0.0005, dt);
-    for (let i = 0; i < a.length; i++) a[i] += (at[i] - a[i]) * f;
+    let moving = false;
+    for (let i = 0; i < a.length; i++) {
+      const d = at[i] - a[i];
+      if (d > 1e-3 || d < -1e-3) { a[i] += d * f; moving = true; } else a[i] = at[i];
+    }
+    if (moving) this.alphaVersion++;
   }
 
   private draw(dt: number) {
@@ -514,36 +593,9 @@ export class Renderer {
     this.drawBands(m, rot);
     this.drawEvents(m, rot);
 
-    const nodes = this.model.nodes;
-    const sT = this.sT;
-    this.ensureGeometry(m, rot, sT);
-    const maxLC = Math.log(1 + this.model.maxLeafCount);
-
-    // ── branches: a soft additive glow pass, then the crisp core.
-    for (const pass of [0, 1] as const) {
-      ctx.globalCompositeOperation = pass === 0 ? 'lighter' : 'source-over';
-      ctx.lineCap = 'round';
-      ctx.lineJoin = 'round';
-      for (const n of nodes) {
-        if (!n.parent || !this.visible(n.parent)) continue;
-        const alpha = this.alpha[n.index];
-        if (alpha < 0.02) continue;
-        const thick = 0.7 + 3.4 * Math.pow(Math.log(1 + n.leafCount) / maxLC, 1.35);
-        const lw = thick / sqrtK;
-        const col = this.rgb.get(n)!;
-        const fossil = n.extinct && sT >= n.sEnd - 1e-6;
-        if (pass === 0) {
-          ctx.strokeStyle = rgba(col, 0.09 * alpha);
-          ctx.lineWidth = lw * 5;
-        } else {
-          ctx.strokeStyle = rgba(col, (fossil ? 0.55 : 0.92) * alpha);
-          ctx.lineWidth = lw;
-        }
-        const path = this.geom.branch[n.index];
-        if (path) ctx.stroke(path);
-      }
-    }
-    ctx.globalCompositeOperation = 'source-over';
+    this.updateView();
+    this.ensureGeometry(m, rot, this.sT);
+    this.drawBranches(sqrtK);
 
     this.drawHybrids(m, rot);
     this.drawLineages(sqrtK);
@@ -555,17 +607,127 @@ export class Renderer {
     this.drawLabels(m, rot);
   }
 
+  /** The world-space rectangle on screen, padded so glows and dots at the edge aren't clipped. */
+  private updateView() {
+    const t = this.transform;
+    const pad = 40 / t.k;
+    this.view = { x0: -t.x / t.k - pad, y0: -t.y / t.k - pad, x1: (this.w - t.x) / t.k + pad, y1: (this.h - t.y) / t.k + pad };
+  }
+
+  private inView(x0: number, y0: number, x1: number, y1: number) {
+    const v = this.view;
+    return x1 >= v.x0 && x0 <= v.x1 && y1 >= v.y0 && y0 <= v.y1;
+  }
+
   private ensureGeometry(m: number, rot: number, sT: number) {
     const key = `${m.toFixed(4)}|${rot.toFixed(4)}|${sT.toFixed(5)}|${this.model.nodes.length}`;
     if (key === this.geom.key) return;
-    const branch: (Path2D | null)[] = new Array(this.model.nodes.length).fill(null);
+    const N = this.model.nodes.length;
+    const branch: (Path2D | null)[] = new Array(N).fill(null);
+    const box = new Float32Array(N * 4);
+    const maxLC = Math.log(1 + this.model.maxLeafCount);
+    const groups = new Map<string, BranchBatch>();
     for (const n of this.model.nodes) {
       if (!n.parent || !this.visible(n.parent)) continue;
       const p = new Path2D();
-      this.traceBranch(p, n, m, rot, sT);
+      const b: [number, number, number, number] = [Infinity, Infinity, -Infinity, -Infinity];
+      this.traceBranch(p, n, m, rot, sT, b);
       branch[n.index] = p;
+      box.set(b, n.index * 4);
+      const th = 0.7 + 3.4 * Math.pow(Math.log(1 + n.leafCount) / maxLC, 1.35);
+      const fossil = n.extinct && sT >= n.sEnd - 1e-6;
+      const gk = `${n.color}|${n.leafCount}|${fossil}`;
+      let g = groups.get(gk);
+      if (!g) { g = { path: new Path2D(), members: [], col: this.rgb.get(n)!, thick: th, fossil, box: [Infinity, Infinity, -Infinity, -Infinity] }; groups.set(gk, g); }
+      g.path.addPath(p);
+      g.members.push(n.index);
+      g.box[0] = Math.min(g.box[0], b[0]); g.box[1] = Math.min(g.box[1], b[1]);
+      g.box[2] = Math.max(g.box[2], b[2]); g.box[3] = Math.max(g.box[3], b[3]);
     }
-    this.geom = { key, branch, lines: new Map() };
+    this.geom = { key, branch, box, batches: [...groups.values()], lines: new Map() };
+  }
+
+  /** Which branches to draw for a view rectangle: whole batches where possible, else the members in view. */
+  private planBranches(inView: (x0: number, y0: number, x1: number, y1: number) => boolean) {
+    const { box, batches } = this.geom;
+    const alpha = this.alpha;
+    const plan: { b: BranchBatch; a: number; members: number[] | null }[] = [];
+    for (const b of batches) {
+      if (!inView(b.box[0], b.box[1], b.box[2], b.box[3])) continue;
+      let lo = Infinity, hi = -Infinity, onScreen = 0;
+      for (const i of b.members) {
+        const a = alpha[i];
+        if (a < lo) lo = a;
+        if (a > hi) hi = a;
+        if (inView(box[i * 4], box[i * 4 + 1], box[i * 4 + 2], box[i * 4 + 3])) onScreen++;
+      }
+      if (hi < 0.02 || !onScreen) continue;
+      if (hi === lo && onScreen * 2 >= b.members.length) { plan.push({ b, a: hi, members: null }); continue; }
+      const members = b.members.filter((i) => alpha[i] >= 0.02 && inView(box[i * 4], box[i * 4 + 1], box[i * 4 + 2], box[i * 4 + 3]));
+      plan.push({ b, a: 0, members });
+    }
+    return plan;
+  }
+
+  private strokePlan(c: CanvasRenderingContext2D, plan: ReturnType<Renderer['planBranches']>, width: (lw: number) => number, strength: (b: BranchBatch) => number, sqrtK: number) {
+    const { branch } = this.geom;
+    c.lineCap = 'round';
+    c.lineJoin = 'round';
+    for (const { b, a, members } of plan) {
+      c.lineWidth = width(b.thick / sqrtK);
+      const st = strength(b);
+      if (!members) {
+        c.strokeStyle = rgba(b.col, st * a);
+        c.stroke(b.path);
+        continue;
+      }
+      for (const i of members) {
+        c.strokeStyle = rgba(b.col, st * this.alpha[i]);
+        c.stroke(branch[i]!);
+      }
+    }
+  }
+
+  /**
+   * Branches: a soft additive glow, then the crisp core. Branches that share a colour,
+   * thickness and emphasis are stroked as one path; off-screen ones are skipped.
+   */
+  private drawBranches(sqrtK: number) {
+    this.drawGlow();
+    this.strokePlan(this.ctx, this.planBranches((x0, y0, x1, y1) => this.inView(x0, y0, x1, y1)), (lw) => lw, (b) => (b.fossil ? 0.55 : 0.92), sqrtK);
+  }
+
+  private drawGlow() {
+    const { w, h } = this;
+    const t = this.transform;
+    const key = `${this.geom.key}|${this.alphaVersion}|${w}|${h}`;
+    let at = this.glowAt;
+    let r = at ? t.k / at.k : 0;
+    // where the cached bitmap (screen + half a screen each side, as of its render) lands now
+    let left = 0, top = 0;
+    const place = () => {
+      left = (-w / 2 - at!.x) * r + t.x;
+      top = (-h / 2 - at!.y) * r + t.y;
+    };
+    if (at) place();
+    const stale = !at || at.key !== key || r < 0.8 || r > 1.25 || left > 0 || top > 0 || left + 2 * w * r < w || top + 2 * h * r < h;
+    if (stale) {
+      at = this.glowAt = { key, x: t.x, y: t.y, k: t.k };
+      r = 1;
+      place();
+      const g = this.glowCtx;
+      g.setTransform(1, 0, 0, 1, 0, 0);
+      g.clearRect(0, 0, this.glow.width, this.glow.height);
+      g.setTransform(GLOW_RES * t.k, 0, 0, GLOW_RES * t.k, GLOW_RES * (t.x + w / 2), GLOW_RES * (t.y + h / 2));
+      g.globalCompositeOperation = 'lighter';
+      const pad = 40 / t.k;
+      const vx0 = (-w / 2 - t.x) / t.k - pad, vy0 = (-h / 2 - t.y) / t.k - pad;
+      const vx1 = (1.5 * w - t.x) / t.k + pad, vy1 = (1.5 * h - t.y) / t.k + pad;
+      const plan = this.planBranches((x0, y0, x1, y1) => x1 >= vx0 && x0 <= vx1 && y1 >= vy0 && y0 <= vy1);
+      this.strokePlan(g, plan, (lw) => lw * 5, () => 0.09, Math.sqrt(t.k));
+    }
+    const tr = `translate(${left.toFixed(2)}px, ${top.toFixed(2)}px) scale(${r.toFixed(5)})`;
+    if (tr !== this.glowTransform) { this.glowTransform = tr; this.glow.style.transform = tr; }
   }
 
   /** Cached closed band (s0..s1) or open line (s) path, morph-aware. */
@@ -576,7 +738,7 @@ export class Renderer {
   }
 
   /** Path from the parent to n, then n's own lifespan if it is a leaf, clipped at time sT. */
-  private traceBranch(path: Path2D, n: TNode, m: number, rot: number, sT: number) {
+  private traceBranch(path: Path2D, n: TNode, m: number, rot: number, sT: number, b: [number, number, number, number]) {
     const p = n.parent!;
     const sp = p.sStart, sc = n.sStart;
     const span = sc - sp;
@@ -588,6 +750,7 @@ export class Renderer {
       const e = 1 - Math.pow(1 - tt, 3);
       const [x, y] = this.pos(lerp(p.u, n.u, e), sp + span * tt, m, rot);
       if (i === 0) path.moveTo(x, y); else path.lineTo(x, y);
+      if (x < b[0]) b[0] = x; if (y < b[1]) b[1] = y; if (x > b[2]) b[2] = x; if (y > b[3]) b[3] = y;
     }
     if (tEnd >= 1 && !n.children.length) {
       const end = Math.min(n.sEnd, sT);
@@ -595,6 +758,7 @@ export class Renderer {
         // straight in both views, but arcs need no subdivision here (constant u)
         const [x, y] = this.pos(n.u, end, m, rot);
         path.lineTo(x, y);
+        if (x < b[0]) b[0] = x; if (y < b[1]) b[1] = y; if (x > b[2]) b[2] = x; if (y > b[3]) b[3] = y;
       }
     }
   }
@@ -646,9 +810,6 @@ export class Renderer {
     // labels at the open wedge (radial) or along the top (timeline)
     ctx.save();
     ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
-    ctx.font = `600 10.5px ${theme.fonts.ui}`;
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
     for (const b of bands) {
       const s0 = scale.s(b.start), s1 = scale.s(b.end);
       if (s0 > this.sT) continue;
@@ -659,8 +820,8 @@ export class Renderer {
       const label = b.name.toUpperCase();
       const need = lerp(15, this.measure(label, 10.5) + 10, m);
       if (room < need) continue;
-      ctx.fillStyle = rgba(toRgb(b.color), 0.75);
-      ctx.fillText(label, (ax + bx) / 2, (ay + by) / 2);
+      const sprite = this.labels.get(label, { font: `600 10.5px ${theme.fonts.ui}`, size: 10.5, color: rgba(toRgb(b.color), 0.75) });
+      ctx.drawImage(sprite.canvas, (ax + bx) / 2 - sprite.w / 2, (ay + by) / 2 - sprite.h / 2, sprite.w, sprite.h);
     }
     ctx.restore();
   }
@@ -684,15 +845,14 @@ export class Renderer {
     // emoji markers at the wedge / top
     ctx.save();
     ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.font = `14px ${theme.fonts.ui}`;
     for (const ev of this.model.dataset.time.events) {
       const s = scale.s(ev.time);
       if (s > this.sT) continue;
       const [x, y] = this.toScreen(this.pos(lerp(-6.5, -9, m), s, m, rot));
       ctx.globalAlpha = ev.kind === 'extinction' ? 0.95 : 0.6;
-      ctx.fillText(ev.emoji, x, y);
+      // drawn in the fill colour left over from the era bands, which keeps the markers faint
+      const sprite = this.labels.get(ev.emoji, { font: `14px ${theme.fonts.ui}`, size: 14, color: String(ctx.fillStyle) });
+      ctx.drawImage(sprite.canvas, x - sprite.w / 2, y - sprite.h / 2, sprite.w, sprite.h);
     }
     ctx.restore();
   }
@@ -748,9 +908,10 @@ export class Renderer {
         if (pass === 0) { ctx.strokeStyle = rgba(rgb, 0.08); ctx.lineWidth = base * 7; }
         else if (pass === 1) { ctx.strokeStyle = rgba(rgb, 0.22); ctx.lineWidth = base * 2.6; }
         else { ctx.strokeStyle = rgba(rgb, 0.95); ctx.lineWidth = base * 0.8; }
+        const { branch, box } = this.geom;
         for (const n of set) {
-          const path = this.geom.branch[n.index];
-          if (path) ctx.stroke(path);
+          const path = branch[n.index], i = n.index * 4;
+          if (path && this.inView(box[i], box[i + 1], box[i + 2], box[i + 3])) ctx.stroke(path);
         }
       }
     }
@@ -798,6 +959,7 @@ export class Renderer {
       if (a < 0.1) continue;
       const e = 1 - Math.pow(1 - p.t, 3);
       const [x, y] = this.pos(lerp(par.u, n.u, e), sNow, m, rot);
+      if (!this.inView(x, y, x, y)) continue;
       const tb = Math.max(0, p.t - 0.06);
       const eb = 1 - Math.pow(1 - tb, 3);
       const [bx, by] = this.pos(lerp(par.u, n.u, eb), par.sStart + span * tb, m, rot);
@@ -819,12 +981,28 @@ export class Renderer {
   private drawNodes(m: number, rot: number, sqrtK: number) {
     const { ctx } = this;
     const k = this.transform.k;
+    // Dots and rings are collected per style and drawn with one fill/stroke each.
+    const fills = new Map<string, Path2D>();
+    const outlines = new Map<string, Path2D>();
+    const add = (map: Map<string, Path2D>, style: string, x: number, y: number, r: number) => {
+      let p = map.get(style);
+      if (!p) { p = new Path2D(); map.set(style, p); }
+      p.moveTo(x + r, y);
+      p.arc(x, y, r, 0, TAU);
+    };
+    const v = this.view;
     for (const n of this.model.nodes) {
       if (!this.visible(n)) continue;
       const a = this.alpha[n.index];
       if (a < 0.04) continue;
       const col = this.rgb.get(n)!;
       const [x, y] = this.pos(n.u, n.sStart, m, rot);
+      const isLeaf = !n.children.length;
+      if (isLeaf) {
+        // a leaf's dots span its whole lifespan; cull on the segment's bounds
+        const [ex, ey] = this.pos(n.u, n.sEnd, m, rot);
+        if (Math.max(x, ex) < v.x0 || Math.min(x, ex) > v.x1 || Math.max(y, ey) < v.y0 || Math.min(y, ey) > v.y1) continue;
+      } else if (n !== this.model.root && !this.inView(x, y, x, y)) continue;
       const landmark = n.data.tags?.includes('landmark');
       if (n === this.model.root) {
         const pulse = 1 + 0.15 * Math.sin(this.clock * 2.2);
@@ -839,28 +1017,24 @@ export class Renderer {
         ctx.fill();
         continue;
       }
-      const isLeaf = !n.children.length;
       const r = (isLeaf ? 1.5 : landmark ? 3.2 : 2) / sqrtK;
       if (k * r < 0.6 && !landmark) continue;
-      ctx.fillStyle = rgba(col, a);
-      ctx.beginPath();
-      ctx.arc(x, y, r, 0, TAU);
-      ctx.fill();
-      if (landmark) {
-        ctx.strokeStyle = rgba(col, 0.6 * a);
-        ctx.lineWidth = 1 / sqrtK;
-        ctx.beginPath();
-        ctx.arc(x, y, r * 2, 0, TAU);
-        ctx.stroke();
-      }
+      const fill = rgba(col, a);
+      add(fills, fill, x, y, r);
+      if (landmark) add(outlines, `${rgba(col, 0.6 * a)}|1`, x, y, r * 2);
       // leaf tips: a dot for the living, a hollow ring for the extinct
       if (isLeaf && this.sT >= n.sEnd - 1e-6) {
         const [ex, ey] = this.pos(n.u, n.sEnd, m, rot);
-        ctx.beginPath();
-        ctx.arc(ex, ey, 2 / sqrtK, 0, TAU);
-        if (n.extinct) { ctx.strokeStyle = rgba(col, 0.8 * a); ctx.lineWidth = 0.9 / sqrtK; ctx.stroke(); }
-        else { ctx.fillStyle = rgba(col, a); ctx.fill(); }
+        if (n.extinct) add(outlines, `${rgba(col, 0.8 * a)}|0.9`, ex, ey, 2 / sqrtK);
+        else add(fills, fill, ex, ey, 2 / sqrtK);
       }
+    }
+    for (const [style, p] of fills) { ctx.fillStyle = style; ctx.fill(p); }
+    for (const [key, p] of outlines) {
+      const bar = key.lastIndexOf('|');
+      ctx.strokeStyle = key.slice(0, bar);
+      ctx.lineWidth = +key.slice(bar + 1) / sqrtK;
+      ctx.stroke(p);
     }
 
     // pulse rings for selection, hover, comparison
@@ -958,17 +1132,8 @@ export class Renderer {
     const onScreen = (x: number, y: number, pad = 60) => x > -pad && x < w + pad && y > -pad && y < h + pad;
 
     // 1) Clade labels (internal nodes): pill labels, collision-culled by importance.
-    const internals = this.model.nodes
-      .filter((n) => n.children.length && n !== this.model.root && this.visible(n))
-      .map((n) => {
-        const important = this.lineage.has(n) || this.lineageB.has(n) || n === this.mrca || n === this.hl.hovered;
-        const landmark = n.data.tags?.includes('landmark') ? 1 : 0;
-        return { n, pri: (important ? 1e6 : 0) + landmark * 1e4 + n.leafCount * 10 - n.depth };
-      })
-      .sort((a, b) => b.pri - a.pri);
-
-    ctx.textBaseline = 'middle';
-    for (const { n, pri } of internals) {
+    for (const { n, pri } of this.internalOrder) {
+      if (!this.visible(n)) continue;
       const a = this.alpha[n.index];
       if (a < 0.25) continue;
       const [x, y] = this.toScreen(this.pos(n.u, n.sStart, m, rot));
@@ -976,7 +1141,7 @@ export class Renderer {
       // room the clade occupies on screen
       const arc = n.leafCount * theme.layout.leafSpacing * k * lerp(Math.max(n.sStart, 0.25), 1, m);
       const important = pri >= 1e6;
-      const size = important ? 13 : clamp(9 + Math.log2(1 + arc / 80), 10, 14);
+      const size = important ? 13 : snap(clamp(9 + Math.log2(1 + arc / 80), 10, 14));
       const label = `${n.data.emoji ? n.data.emoji + ' ' : ''}${n.data.name}`;
       const tw = this.measure(label, size);
       if (!important && arc < tw * 0.9) continue;
@@ -986,17 +1151,18 @@ export class Renderer {
       placed.push([bx, by, bx + bw, by + bh]);
       const col = this.rgb.get(n)!;
       ctx.globalAlpha = Math.min(1, a * 1.15);
-      ctx.fillStyle = important ? 'rgba(14,18,40,0.92)' : 'rgba(8,10,26,0.72)';
-      roundRect(ctx, bx, by, bw, bh, bh / 2);
-      ctx.fill();
-      ctx.strokeStyle = rgba(col, important ? 0.9 : 0.35);
-      ctx.lineWidth = 1;
-      ctx.stroke();
-      ctx.fillStyle = important ? '#fff' : rgba(col, 0.95);
-      ctx.font = `${important ? 650 : 560} ${size}px ${theme.fonts.ui}`;
-      ctx.textAlign = 'center';
-      ctx.fillText(label, x, by + bh / 2 + 0.5);
+      const sprite = this.labels.get(label, {
+        font: `${important ? 650 : 560} ${size}px ${theme.fonts.ui}`,
+        size,
+        color: important ? '#fff' : rgba(col, 0.95),
+        bg: important ? 'rgba(14,18,40,0.92)' : 'rgba(8,10,26,0.72)',
+        border: rgba(col, important ? 0.9 : 0.35),
+        padX: 7,
+        boxH: bh,
+      });
+      ctx.drawImage(sprite.canvas, x - sprite.w / 2, by + bh / 2 - sprite.h / 2, sprite.w, sprite.h);
       // little stem to the node
+      ctx.lineWidth = 1;
       ctx.strokeStyle = rgba(col, 0.35);
       ctx.beginPath();
       ctx.moveTo(x, by + bh);
@@ -1017,41 +1183,29 @@ export class Renderer {
       if (spacing < 8.5 && !important && !landmark) continue;
       const [x, y] = this.toScreen(this.pos(n.u, end, m, rot));
       if (!onScreen(x, y, 200)) continue;
-      const size = important ? 13 : landmark ? 11 : clamp(spacing * 0.78, 8, 13.5);
+      const size = important ? 13 : landmark ? 11 : snap(clamp(spacing * 0.78, 8, 13.5));
       const ang = this.angle(n.u, rot);
       const flip = Math.cos(ang) < 0;
       const a0 = flip ? ang + Math.PI : ang;
       const rotA = lerp(Math.atan2(Math.sin(a0), Math.cos(a0)), 0, m);
       const label = `${n.data.emoji ? n.data.emoji + ' ' : ''}${n.data.name}`;
-      ctx.save();
-      ctx.translate(x, y);
-      ctx.rotate(rotA);
       const right = m > 0.5 || !flip;
-      ctx.textAlign = right ? 'left' : 'right';
-      ctx.font = `${important ? 650 : 500} ${size}px ${theme.fonts.ui}`;
       const col = this.rgb.get(n)!;
+      const sprite = this.labels.get(label, {
+        font: `${important ? 650 : 500} ${size}px ${theme.fonts.ui}`,
+        size,
+        color: important ? '#fff' : n.extinct ? rgba(col, 0.62) : rgba(col, 0.92),
+        bg: important ? 'rgba(10,12,30,0.85)' : undefined,
+        padX: important ? 5 : 0,
+      });
+      const cos = Math.cos(rotA), sin = Math.sin(rotA), d = this.dpr;
+      ctx.setTransform(d * cos, d * sin, -d * sin, d * cos, d * x, d * y);
       ctx.globalAlpha = a;
-      if (important) {
-        const tw = this.measure(label, size);
-        ctx.fillStyle = 'rgba(10,12,30,0.85)';
-        roundRect(ctx, right ? 4 : -tw - 14, -size * 0.8, tw + 10, size * 1.6, 5);
-        ctx.fill();
-      }
-      ctx.fillStyle = important ? '#fff' : n.extinct ? rgba(col, 0.62) : rgba(col, 0.92);
-      ctx.fillText(label, right ? 9 : -9, 0.5);
-      ctx.restore();
+      // the sprite has a 1px margin; keep the text 9px from the tip (the box 4px)
+      const off = important ? 3 : 8;
+      ctx.drawImage(sprite.canvas, right ? off : -off - sprite.w, -sprite.h / 2, sprite.w, sprite.h);
     }
+    ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
     ctx.globalAlpha = 1;
   }
 }
-
-function roundRect(ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, r: number) {
-  ctx.beginPath();
-  ctx.moveTo(x + r, y);
-  ctx.arcTo(x + w, y, x + w, y + h, r);
-  ctx.arcTo(x + w, y + h, x, y + h, r);
-  ctx.arcTo(x, y + h, x, y, r);
-  ctx.arcTo(x, y, x + w, y, r);
-  ctx.closePath();
-}
-
