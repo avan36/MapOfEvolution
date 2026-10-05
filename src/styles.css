@@ -69,14 +69,24 @@ kbd {
   width: 60vmax;
   height: 60vmax;
   border-radius: 50%;
-  filter: blur(90px);
+  /* A soft-edged gradient in place of filter: blur(90px), which is costly to composite under a
+     live canvas. The box is grown by the blur's reach and the stops follow its falloff. */
+  margin: -180px;
+  padding: 180px;
+  box-sizing: content-box;
+  background: radial-gradient(closest-side,
+    var(--c) 36%,
+    color-mix(in srgb, var(--c) 78%, transparent) 50%,
+    color-mix(in srgb, var(--c) 42%, transparent) 64%,
+    color-mix(in srgb, var(--c) 14%, transparent) 80%,
+    transparent 100%);
   opacity: 0.22;
   mix-blend-mode: screen;
   animation: drift 38s var(--ease) infinite alternate;
 }
-.aurora span:nth-child(1) { background: #1f6dff; left: -20vmax; top: -25vmax; }
-.aurora span:nth-child(2) { background: #8a2bff; right: -25vmax; top: 10vmax; animation-duration: 46s; animation-delay: -12s; opacity: 0.16; }
-.aurora span:nth-child(3) { background: #00d6a4; left: 20vmax; bottom: -35vmax; animation-duration: 52s; animation-delay: -20s; opacity: 0.12; }
+.aurora span:nth-child(1) { --c: #1f6dff; left: -20vmax; top: -25vmax; }
+.aurora span:nth-child(2) { --c: #8a2bff; right: -25vmax; top: 10vmax; animation-duration: 46s; animation-delay: -12s; opacity: 0.16; }
+.aurora span:nth-child(3) { --c: #00d6a4; left: 20vmax; bottom: -35vmax; animation-duration: 52s; animation-delay: -20s; opacity: 0.12; }
 @keyframes drift {
   0% { transform: translate(0, 0) scale(1); }
   50% { transform: translate(8vmax, 6vmax) scale(1.15); }
@@ -85,6 +95,7 @@ kbd {
 
 .stage { position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: grab; touch-action: none; }
 .stage:active { cursor: grabbing; }
+.stage-glow { position: absolute; left: 0; top: 0; transform-origin: 0 0; pointer-events: none; will-change: transform; }
 .is-intro .stage { pointer-events: none; }
 
 /* ───────────────────────── Hero ───────────────────────── */
